@@ -6,22 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
 
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <!-- end -->
+
+    <link href="css/style.css" rel="stylesheet" />
+
 </head>
 <body>
 <!-- Общая шапка -->
 <header class="header">
+
     <div class="header__container">
+
         <ul class="header-list">
             <li class="header-item">Добрый день, <a href="#" id="user_name">авторизуйтесь</a></li>
             <li class="header-item">
-                <a href="#" class="header-item-link">Вход</a>
+                <a href="#" class="header-item-link auth">Вход</a>
             </li>
             <li class="header-item">
-                <a href="#" class="header-item-link">Регистрация</a>
+                <a href="#" class="header-item-link auth">Регистрация</a>
             </li>
         </ul>
 
-        <img src="assets/img" class="header-logo" alt=""/>
+        <a href="#"><img src="assets/img/svg/logo.svg" class="header-logo" alt=""/></a>
 
         <ul class="header-list">
             <li class="header-item">
@@ -33,18 +41,26 @@
             <li class="header-item">
                 <a href="#" class="header-item-link">Контакты</a>
             </li>
-            <li class="header-item">
+            <li class="header-item good">
                 <a href="#"  class="header-good-link">
                     <span id="good_count">5 товаров</span>
                     <span id="good_notification" class="cart-icon"></span>
                 </a>
+                <div class="header-good__container">
+                    <span class="header-good-icon close"></span>
+                    <p class="header-good-text">Товар успешно добавлен в корзину</p>
+                </div>
             </li>
         </ul>
     </div>
+
+    <a href="#" class="header-link">интернет-магазин</a>
+
     <section class="header-special__container">
         <span class="header-special-icon"></span>
         <a href="#" class="header-special-text">Специальное предложение. Брекеты со скидкой 30%</a>
     </section>
+
 </header>
 <!-- end -->
 
@@ -76,6 +92,439 @@
         </li>
     </ul>
 </nav>
+<!-- end -->
+
+<main class="main">
+
+    <!-- Популярные товары -->
+    <div class="main-good-wrapper">
+
+        <h2 class="main-caption">Популярные товары</h2>
+
+        <article class="main-good__container">
+            <div class="main-good-img-wrapper">
+                <img src="assets/img/png/1.png" class="main-good-img" alt="" />
+            </div>
+            <h3 class="main-good-caption">Mirafluor C</h3>
+            <p class="main-good-text">Зубная паста для комплексной защиты</p>
+            <section class="main-good__box">
+                <p class="main-good-box-text"><span class="main-price">350</span> ₽</p>
+                <p class="main-good-box-btn"></p>
+            </section>
+            <footer class="main-good__footer">
+                <span class="main-good-tag">Восстановление эмали</span>
+                <span class="main-good-tag">Зубной налет</span>
+                <span class="main-good-tag">Кариес</span>
+            </footer>
+        </article>
+        <article class="main-good__container">
+            <div class="main-good-img-wrapper">
+                <img src="assets/img/png/1.png" class="main-good-img" alt="" />
+            </div>
+            <h3 class="main-good-caption">Mirafluor C</h3>
+            <p class="main-good-text">Зубная паста для комплексной защиты</p>
+            <section class="main-good__box">
+                <p class="main-good-box-text"><span class="main-price">350</span> ₽</p>
+                <p class="main-good-box-btn"></p>
+            </section>
+            <footer class="main-good__footer">
+                <span class="main-good-tag">Восстановление эмали</span>
+                <span class="main-good-tag">Зубной налет</span>
+                <span class="main-good-tag">Кариес</span>
+            </footer>
+        </article>
+        <article class="main-good__container">
+            <div class="main-good-img-wrapper">
+                <img src="assets/img/png/2.png" class="main-good-img" alt="" />
+            </div>
+            <h3 class="main-good-caption">Curapox Curasept</h3>
+            <p class="main-good-text">Ополаскиватель с хлоргексидином 0,20%, 900 мл</p>
+            <section class="main-good__box">
+                <p class="main-good-box-text"><span class="main-price">4 510</span> ₽</p>
+                <p class="main-good-box-btn"></p>
+            </section>
+            <footer class="main-good__footer">
+                <span class="main-good-tag">Восстановление эмали</span>
+                <span class="main-good-tag">Зубной налет</span>
+                <span class="main-good-tag">Кариес</span>
+            </footer>
+        </article>
+        <article class="main-good__container">
+            <div class="main-good-img-wrapper">
+                <img src="assets/img/png/3.png" class="main-good-img" alt="" />
+            </div>
+            <h3 class="main-good-caption">Curaprox CS 1006 single</h3>
+            <p class="main-good-text">Зубная щетка</p>
+            <section class="main-good__box">
+                <p class="main-good-box-text"><span class="main-price">533</span> ₽</p>
+                <p class="main-good-box-btn"></p>
+            </section>
+            <footer class="main-good__footer">
+                <span class="main-good-tag">Восстановление эмали</span>
+                <span class="main-good-tag">Зубной налет</span>
+                <span class="main-good-tag">Кариес</span>
+            </footer>
+        </article>
+        <article class="main-good__container">
+            <div class="main-good-img-wrapper">
+                <img src="assets/img/png/4.png" class="main-good-img" alt="" />
+            </div>
+            <h3 class="main-good-caption">Curaprox BDC 150/152</h3>
+            <p class="main-good-text">Щетка для зубных протезов</p>
+            <section class="main-good__box">
+                <p class="main-good-box-text"><span class="main-price">1 620</span> ₽</p>
+                <p class="main-good-box-btn"></p>
+            </section>
+            <footer class="main-good__footer">
+                <span class="main-good-tag">Восстановление эмали</span>
+                <span class="main-good-tag">Зубной налет</span>
+                <span class="main-good-tag">Кариес</span>
+            </footer>
+        </article>
+
+        <div class="main-catalog__container">
+            <h2 class="main-catalog-caption">Каталог</h2>
+        </div>
+
+    </div>
+    <!-- end -->
+
+    <!-- Продукция брендов -->
+    <div class="brand-good-wrapper">
+
+        <div class="brand-good__container">
+            <h2 class="brand-good-caption"><a href="#">Curaprox, Щвейцария</a></h2>
+            <p class="brand-good-text">CURADEN была основана в 1940 году семьей Брейтшмид в Швейцарии</p>
+        </div>
+        <div class="brand-good__container">
+            <h2 class="brand-good-caption"><a href="#">Swiss smile, Швейцария</a></h2>
+            <p class="brand-good-text">Сочетание швейцарских научных исследований и 40 лет опыта.</p>
+        </div>
+        <div class="brand-good__container">
+            <h2 class="brand-good-caption"><a href="#">Ormco</a></h2>
+        </div>
+        <div class="brand-good__container">
+            <h2 class="brand-good-caption"><a href="#">Paro, Швейцария</a></h2>
+            <p class="brand-good-text">Производитель ESRO AG, Швейцария</p>
+            <a href="#" class="brand-good-link">paro.com</a>
+        </div>
+
+    </div>
+    <!-- end -->
+
+    <!-- Картинка во всю ширину -->
+    <section class="main-img__container">
+        <h3 class="main-img-caption">Улыбайтесь смелее</h3>
+    </section>
+    <!-- end -->
+
+    <!-- Статьи -->
+    <div class="article-wrapper">
+
+        <article class="article__container">
+            <a href="#">
+                <div class="article-img-wrapper">
+                    <img src="assets/img/png/5.png" class="article-img" alt="" />
+                </div>
+                <h4 class="article-caption">Абразивные зубные пасты, в чем их опасность для эмали?</h4>
+            </a>
+        </article>
+        <article class="article__container">
+            <a href="#">
+                <div class="article-img-wrapper">
+                    <img src="assets/img/png/6.png" class="article-img" alt="" />
+                </div>
+                <h4 class="article-caption">Проблема прикуса, нужны ли брекеты?</h4>
+            </a>
+        </article>
+        <article class="article__container">
+            <a href="#">
+                <div class="article-img-wrapper">
+                    <img src="assets/img/png/7.png" class="article-img" alt="" />
+                </div>
+                <h4 class="article-caption">Как правильно чистить зубы ребенку? С какого возраста?</h4>
+            </a>
+        </article>
+
+        <a href="#" class="article-link all-article">Все статьи</a>
+
+    </div>
+    <!-- end -->
+
+    <!-- Подбор зубной щетки -->
+    <section class="choose-brush__container">
+        <img src="assets/img/png" class="choose-brush-img" alt="" />
+        <a href="#" class="choose-brush-link">Подберите подходящую вам зубную щетку </a>
+    </section>
+    <!-- end -->
+
+    <!-- Специальное предложение -->
+    <div class="special-wrapper">
+
+        <h2 class="special-caption">Специальные предложения</h2>
+
+        <ul class="special-list">
+            <li class="special-item">
+                <div class="main-good-img-wrapper">
+                    <img src="assets/img/png/1.png" class="main-good-img" alt="" />
+                </div>
+                <h3 class="main-good-caption">Mirafluor C</h3>
+                <p class="main-good-text">Зубная паста для комплексной защиты</p>
+                <section class="main-good__box">
+                    <p class="main-good-box-text"><span class="main-price">350</span> ₽</p>
+                    <p class="main-good-box-btn"></p>
+                </section>
+                <footer class="main-good__footer">
+                    <span class="main-good-tag">Восстановление эмали</span>
+                    <span class="main-good-tag">Зубной налет</span>
+                    <span class="main-good-tag">Кариес</span>
+                </footer>
+            </li>
+            <li class="special-item">
+                <div class="main-good-img-wrapper">
+                    <img src="assets/img/png/8.png" class="main-good-img" alt="" />
+                </div>
+                <h3 class="main-good-caption">Super Floss</h3>
+                <p class="main-good-text">Зубная нить антибактериальная для протезов и брекетов</p>
+                <section class="main-good__box">
+                    <p class="main-good-box-text"><span class="main-price">620</span> ₽</p>
+                    <p class="main-good-box-btn"></p>
+                </section>
+                <footer class="main-good__footer">
+                    <span class="main-good-tag">Зубной налет</span>
+                    <span class="main-good-tag">Кариес</span>
+                    <span class="main-good-tag">Гигиена</span>
+                    <span class="main-good-tag">Зубной камень</span>
+                </footer>
+            </li>
+            <li class="special-item">
+                <div class="main-good-img-wrapper">
+                    <img src="assets/img/png/9.png" class="main-good-img" alt="" />
+                </div>
+                <h3 class="main-good-caption">Diamond glow</h3>
+                <p class="main-good-text">Ультрамягкие Зубные Щетки</p>
+                <section class="main-good__box">
+                    <p class="main-good-box-text"><span class="main-price">2 460</span> ₽</p>
+                    <p class="main-good-box-btn"></p>
+                </section>
+                <footer class="main-good__footer">
+                    <span class="main-good-tag">Восстановление эмали</span>
+                    <span class="main-good-tag">Гигиена</span>
+                    <span class="main-good-tag">Кариес</span>
+                </footer>
+            </li>
+            <li class="special-item">
+                <div class="main-good-img-wrapper">
+                    <img src="assets/img/png/3.png" class="main-good-img" alt="" />
+                </div>
+                <h3 class="main-good-caption">Curaprox CS 1006 single</h3>
+                <p class="main-good-text">Зубная щетка</p>
+                <section class="main-good__box">
+                    <p class="main-good-box-text"><span class="main-price">533</span> ₽</p>
+                    <p class="main-good-box-btn"></p>
+                </section>
+                <footer class="main-good__footer">
+                    <span class="main-good-tag">Восстановление эмали</span>
+                    <span class="main-good-tag">Зубной налет</span>
+                    <span class="main-good-tag">Кариес</span>
+                </footer>
+            </li>
+        </ul>
+
+        <span class="special-btn prev"></span>
+        <span class="special-btn next"></span>
+
+    </div>
+    <!-- end -->
+
+    <!-- Поиск. Проблемы -->
+    <div class="trouble-wrapper">
+        <h2 class="trouble-caption">Qui quaerit, reperit </h2>
+        <p class="trouble-text">Кто ищет, обретет</p>
+
+        <section class="trouble__container trouble--blue">
+
+            <h2 class="trouble-caption">Какую проблему вы хотели бы решить?</h2>
+
+            <!-- Частозадаваемые вопросы -->
+            <div class="trouble-tag_-container">
+                <p class="trouble-tag">Чувствительные зубы</p>
+                <p class="trouble-tag">Уход и хранение брекетов</p>
+                <p class="trouble-tag">Заболевания полости рта</p>
+                <p class="trouble-tag">Отбеливание зубов</p>
+                <p class="trouble-tag">Храп</p>
+                <p class="trouble-tag">Световое отбеливание</p>
+                <p class="trouble-tag">Неприятный запах</p>
+                <p class="trouble-tag">Для детей</p>
+                <p class="trouble-tag">Для беременных</p>
+                <p class="trouble-tag">Восстановление эмали</p>
+                <p class="trouble-tag">Ночное восстановление эмали</p>
+                <p class="trouble-tag">Парадантоз</p>
+            </div>
+            <!-- end -->
+
+            <!-- Поиск по вопросу -->
+            <form class="trouble-form" method="post" action="">
+                <label for="trouble_search"></label>
+                <input type="search" name="trouble-search" id="trouble_search" class="trouble-field" />
+                <span class="trouble-error">Введите интересующий вопрос</span>
+                <button type="submit" class="trouble-btn disable"></button>
+            </form>
+            <!-- end -->
+
+        </section>
+        <section class="trouble__container trouble--light-green">
+
+            <div class="trouble__box">
+                <h2 class="trouble-box-caption">О компании</h2>
+                <p class="trouble-box-text">Мы являемся 100% официальным поставщиком брендов.</p>
+                <p class="trouble-box-text">Прикладываем все сертификаты и лиценции, которые являются не просто
+                картинками, а документами подтверждающими качество продукции и наши профессиональные компетенции по
+                подбору и рекомендации товаров.</p>
+            </div>
+
+            <div class="trouble__box">
+                <img src="assets/img/png/10.png" class="trouble-img" alt="" />
+                <img src="assets/img/png/11.png" class="trouble-img" alt="" />
+                <img src="assets/img/png/12.png" class="trouble-img" alt="" />
+            </div>
+
+        </section>
+    </div>
+    <!-- end -->
+
+</main>
+
+<!-- Общий подвал -->
+<footer class="footer">
+
+    <ul class="footer-list--double">
+        <li class="footer-item--double">
+            <ul class="footer-list">
+                <li class="footer-item-caption">
+                    <a href="#" class="footer-item-link">Продукты</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">Зубные щетки</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">Корректоры</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">Брекет системы</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-item--double">
+            <ul class="footer-list">
+                <li class="footer-item-caption">
+                    <a href="#" class="footer-item-link">Бренды</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">Curaprox</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">Swiss smile</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">Paro</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">Oral B</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">MRS</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">LM-активаторы</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">dr.Hinz</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="footer-list">
+        <li class="footer-item-caption">
+            <a href="#" class="footer-item-link">Проблемы</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Отбеливание</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Зубной налет</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Кариес</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Проблемы с деснами</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Чувствительность</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Неприятный запах изо рта</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Защита эмали</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Восстановление эмали</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Уход за брекетами</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Уход за детскими забами</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Уход за полостью рта младенцев</a>
+        </li>
+    </ul>
+
+    <ul class="footer-list--double">
+        <li class="footer-list--double">
+            <ul class="footer-list">
+                <li class="footer-item-caption">
+                    <a href="#" class="footer-item-link">Свяжитесь с нами</a>
+                </li>
+                <li class="footer-item">
+                    <a href="tel:+78312222222" class="footer-item-link">8 (831) 222 22 22</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-item-link">Нижний Новогород
+                        <br>ул. Белинского, 153</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-list--double footer-list--double--img">
+            <span class="footer-list-text">Ваш пакетик<br>с улыбкой</span>
+            <img src="assets/img/png/13.png" class="footer-list-img" alt="" />
+        </li>
+    </ul>
+
+    <ul class="footer-list footer-list--last">
+        <li class="footer-item-caption">
+            <a href="#" class="footer-item-link">Новинки и специальные предложения</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Наконец-то мы онлайн — первым 100
+                <br>покупателям мы дарим беспрецендентную
+                <br>скидку 20% на всю продукция премиум класса.</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Самые современные зубные щетки — звуковые
+                <br>зубные щетки PARO SONIC HYDRO DYNAMIC</a>
+        </li>
+        <li class="footer-item">
+            <a href="#" class="footer-item-link">Самые современные зубные щетки —
+                <br>ультразвуковые щетки Curaprox</a>
+        </li>
+    </ul>
+
+</footer>
 <!-- end -->
 
 </body>
