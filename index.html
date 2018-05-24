@@ -66,9 +66,14 @@
 
 <!-- Шапка на главной странице -->
 <section class="main-header__container">
-    <img src="assets/img" class="main-header-img mount--big" alt="" />
-    <img src="assets/img" class="main-header-img mount--medium" alt="" />
-    <h1 class="main-header-caption">Дело в деталях</h1>
+    <div class="main-header__box">
+        <div class="main-header-wrapper">
+            <img src="assets/img/png/mount-big.png" class="main-header-img mount--big" alt="" />
+            <img src="assets/img/png/mount-medium.png" class="main-header-img mount--medium" alt="" />
+            <img src="assets/img/png/sky-bg.png" class="main-header-img sky" alt="" />
+            <img src="assets/img/svg/details.svg" class="main-header-caption" alt="" />
+        </div>
+    </div>
 </section>
 <!-- end -->
 
@@ -101,89 +106,125 @@
 
         <h2 class="main-caption">Популярные товары</h2>
 
-        <article class="main-good__container">
-            <div class="main-good-img-wrapper">
-                <img src="assets/img/png/1.png" class="main-good-img" alt="" />
-            </div>
-            <h3 class="main-good-caption">Mirafluor C</h3>
-            <p class="main-good-text">Зубная паста для комплексной защиты</p>
-            <section class="main-good__box">
-                <p class="main-good-box-text"><span class="main-price">350</span> ₽</p>
-                <p class="main-good-box-btn"></p>
-            </section>
-            <footer class="main-good__footer">
-                <span class="main-good-tag">Восстановление эмали</span>
-                <span class="main-good-tag">Зубной налет</span>
-                <span class="main-good-tag">Кариес</span>
-            </footer>
-        </article>
-        <article class="main-good__container">
-            <div class="main-good-img-wrapper">
-                <img src="assets/img/png/1.png" class="main-good-img" alt="" />
-            </div>
-            <h3 class="main-good-caption">Mirafluor C</h3>
-            <p class="main-good-text">Зубная паста для комплексной защиты</p>
-            <section class="main-good__box">
-                <p class="main-good-box-text"><span class="main-price">350</span> ₽</p>
-                <p class="main-good-box-btn"></p>
-            </section>
-            <footer class="main-good__footer">
-                <span class="main-good-tag">Восстановление эмали</span>
-                <span class="main-good-tag">Зубной налет</span>
-                <span class="main-good-tag">Кариес</span>
-            </footer>
-        </article>
-        <article class="main-good__container">
-            <div class="main-good-img-wrapper">
-                <img src="assets/img/png/2.png" class="main-good-img" alt="" />
-            </div>
-            <h3 class="main-good-caption">Curapox Curasept</h3>
-            <p class="main-good-text">Ополаскиватель с хлоргексидином 0,20%, 900 мл</p>
-            <section class="main-good__box">
-                <p class="main-good-box-text"><span class="main-price">4 510</span> ₽</p>
-                <p class="main-good-box-btn"></p>
-            </section>
-            <footer class="main-good__footer">
-                <span class="main-good-tag">Восстановление эмали</span>
-                <span class="main-good-tag">Зубной налет</span>
-                <span class="main-good-tag">Кариес</span>
-            </footer>
-        </article>
-        <article class="main-good__container">
-            <div class="main-good-img-wrapper">
-                <img src="assets/img/png/3.png" class="main-good-img" alt="" />
-            </div>
-            <h3 class="main-good-caption">Curaprox CS 1006 single</h3>
-            <p class="main-good-text">Зубная щетка</p>
-            <section class="main-good__box">
-                <p class="main-good-box-text"><span class="main-price">533</span> ₽</p>
-                <p class="main-good-box-btn"></p>
-            </section>
-            <footer class="main-good__footer">
-                <span class="main-good-tag">Восстановление эмали</span>
-                <span class="main-good-tag">Зубной налет</span>
-                <span class="main-good-tag">Кариес</span>
-            </footer>
-        </article>
-        <article class="main-good__container">
-            <div class="main-good-img-wrapper">
-                <img src="assets/img/png/4.png" class="main-good-img" alt="" />
-            </div>
-            <h3 class="main-good-caption">Curaprox BDC 150/152</h3>
-            <p class="main-good-text">Щетка для зубных протезов</p>
-            <section class="main-good__box">
-                <p class="main-good-box-text"><span class="main-price">1 620</span> ₽</p>
-                <p class="main-good-box-btn"></p>
-            </section>
-            <footer class="main-good__footer">
-                <span class="main-good-tag">Восстановление эмали</span>
-                <span class="main-good-tag">Зубной налет</span>
-                <span class="main-good-tag">Кариес</span>
-            </footer>
-        </article>
+        <div class="main-good__block">
 
-        <div class="main-catalog__container">
-            <h2 class="main-catalog-caption">Каталог</h2>
+            <article class="main-good__container">
+                <div class="main-good-img-wrapper">
+                    <a href="#">
+                        <img src="assets/img/png/1.png" class="main-good-img" alt="" />
+                    </a>
+                </div>
+                <h3 class="main-good-caption">Mirafluor C</h3>
+                <p class="main-good-text">Зубная паста для комплексной защиты</p>
+                <section class="main-good__box">
+                    <p class="main-good-box-text"><span class="main-price">350 ₽</span></p>
+                    <p class="main-good-box-btn">Купить</p>
+                </section>
+                <footer class="main-good__footer">
+                    <span class="main-good-tag">Восстановление эмали</span>
+                    <span class="main-good-tag">Зубной налет</span>
+                    <span class="main-good-tag">Кариес</span>
+                </footer>
+            </article>
+            <article class="main-good__container">
+                <div class="main-good-img-wrapper">
+                    <a href="#">
+                        <img src="assets/img/png/1.png" class="main-good-img" alt="" />
+                    </a>
+                </div>
+                <h3 class="main-good-caption">Mirafluor C</h3>
+                <p class="main-good-text">Зубная паста для комплексной защиты</p>
+                <section class="main-good__box">
+                    <p class="main-good-box-text"><span class="main-price">350 ₽</span></p>
+                    <p class="main-good-box-btn">Купить</p>
+                </section>
+                <footer class="main-good__footer">
+                    <span class="main-good-tag">Восстановление эмали</span>
+                    <span class="main-good-tag">Зубной налет</span>
+                    <span class="main-good-tag">Кариес</span>
+                </footer>
+            </article>
+            <article class="main-good__container">
+                <div class="main-good-img-wrapper">
+                    <a href="#">
+                        <img src="assets/img/png/2.png" class="main-good-img" alt="" />
+                    </a>
+                </div>
+                <h3 class="main-good-caption">Curapox Curasept</h3>
+                <p class="main-good-text">Ополаскиватель с хлоргексидином 0,20%, 900 мл</p>
+                <section class="main-good__box">
+                    <p class="main-good-box-text"><span class="main-price">4 510 ₽</span></p>
+                    <p class="main-good-box-btn">Купить</p>
+                </section>
+                <footer class="main-good__footer">
+                    <span class="main-good-tag">Восстановление эмали</span>
+                    <span class="main-good-tag">Зубной налет</span>
+                    <span class="main-good-tag">Кариес</span>
+                </footer>
+            </article>
+            <article class="main-good__container">
+                <div class="main-good-img-wrapper">
+                    <a href="#">
+                        <img src="assets/img/png/3.png" class="main-good-img" alt="" />
+                    </a>
+                </div>
+                <h3 class="main-good-caption">Curaprox CS 1006 single</h3>
+                <p class="main-good-text">Зубная щетка</p>
+                <section class="main-good__box">
+                    <p class="main-good-box-text"><span class="main-price">533 ₽</span></p>
+                    <p class="main-good-box-btn">Купить</p>
+                </section>
+                <footer class="main-good__footer">
+                    <span class="main-good-tag">Восстановление эмали</span>
+                    <span class="main-good-tag">Зубной налет</span>
+                    <span class="main-good-tag">Кариес</span>
+                </footer>
+            </article>
+            <article class="main-good__container">
+                <div class="main-good-img-wrapper">
+                    <a href="#">
+                        <img src="assets/img/png/4.png" class="main-good-img" alt="" />
+                    </a>
+                </div>
+                <h3 class="main-good-caption">Curaprox BDC 150/152</h3>
+                <p class="main-good-text">Щетка для зубных протезов</p>
+                <section class="main-good__box">
+                    <p class="main-good-box-text"><span class="main-price">1 620 ₽</span></p>
+                    <p class="main-good-box-btn">Купить</p>
+                </section>
+                <footer class="main-good__footer">
+                    <span class="main-good-tag">Восстановление эмали</span>
+                    <span class="main-good-tag">Зубной налет</span>
+                    <span class="main-good-tag">Кариес</span>
+                </footer>
+            </article>
+            <article class="main-good__container">
+                <div class="main-good-img-wrapper">
+                    <a href="#">
+                        <img src="assets/img/png/2.png" class="main-good-img" alt="" />
+                    </a>
+                </div>
+                <h3 class="main-good-caption">Curapox Curasept</h3>
+                <p class="main-good-text">Ополаскиватель с хлоргексидином 0,20%, 900 мл</p>
+                <section class="main-good__box">
+                    <p class="main-good-box-text"><span class="main-price">4 510 ₽</span></p>
+                    <p class="main-good-box-btn">Купить</p>
+                </section>
+                <footer class="main-good__footer">
+                    <span class="main-good-tag">Восстановление эмали</span>
+                    <span class="main-good-tag">Зубной налет</span>
+                    <span class="main-good-tag">Кариес</span>
+                </footer>
+            </article>
+
+            <div class="main-catalog__container">
+                <a href="#" class="main-catalog-link">
+                    <h2 class="main-catalog-caption">Каталог</h2>
+                    <a href="#" class="main-catalog-btn">Посмотреть весь</a>
+                    <img src="assets/img/png/14.png" class="main-catalog-img" alt="Каталог" />
+                </a>
+            </div>
+
         </div>
 
     </div>
@@ -192,21 +233,25 @@
     <!-- Продукция брендов -->
     <div class="brand-good-wrapper">
 
-        <div class="brand-good__container">
-            <h2 class="brand-good-caption"><a href="#">Curaprox, Щвейцария</a></h2>
-            <p class="brand-good-text">CURADEN была основана в 1940 году семьей Брейтшмид в Швейцарии</p>
-        </div>
-        <div class="brand-good__container">
-            <h2 class="brand-good-caption"><a href="#">Swiss smile, Швейцария</a></h2>
-            <p class="brand-good-text">Сочетание швейцарских научных исследований и 40 лет опыта.</p>
-        </div>
-        <div class="brand-good__container">
-            <h2 class="brand-good-caption"><a href="#">Ormco</a></h2>
-        </div>
-        <div class="brand-good__container">
-            <h2 class="brand-good-caption"><a href="#">Paro, Швейцария</a></h2>
-            <p class="brand-good-text">Производитель ESRO AG, Швейцария</p>
-            <a href="#" class="brand-good-link">paro.com</a>
+        <h2 class="brand-caption">Продукция брендов</h2>
+
+        <div class="brand__box">
+            <div class="brand-good__container">
+                <h2 class="brand-good-caption"><a href="#">Curaprox, Щвейцария</a></h2>
+                <p class="brand-good-text">CURADEN была основана в 1940 году семьей Брейтшмид в Швейцарии</p>
+            </div>
+            <div class="brand-good__container">
+                <h2 class="brand-good-caption"><a href="#">Swiss smile, Швейцария</a></h2>
+                <p class="brand-good-text">Сочетание швейцарских научных исследований и 40 лет опыта.</p>
+            </div>
+            <div class="brand-good__container">
+                <h2 class="brand-good-caption"><a href="#">Ormco</a></h2>
+            </div>
+            <div class="brand-good__container">
+                <h2 class="brand-good-caption"><a href="#">Paro, Швейцария</a></h2>
+                <p class="brand-good-text">Производитель ESRO AG, Швейцария</p>
+                <a href="#" class="brand-good-link">paro.com</a>
+            </div>
         </div>
 
     </div>
@@ -221,39 +266,46 @@
     <!-- Статьи -->
     <div class="article-wrapper">
 
-        <article class="article__container">
-            <a href="#">
-                <div class="article-img-wrapper">
-                    <img src="assets/img/png/5.png" class="article-img" alt="" />
-                </div>
-                <h4 class="article-caption">Абразивные зубные пасты, в чем их опасность для эмали?</h4>
-            </a>
-        </article>
-        <article class="article__container">
-            <a href="#">
-                <div class="article-img-wrapper">
-                    <img src="assets/img/png/6.png" class="article-img" alt="" />
-                </div>
-                <h4 class="article-caption">Проблема прикуса, нужны ли брекеты?</h4>
-            </a>
-        </article>
-        <article class="article__container">
-            <a href="#">
-                <div class="article-img-wrapper">
-                    <img src="assets/img/png/7.png" class="article-img" alt="" />
-                </div>
-                <h4 class="article-caption">Как правильно чистить зубы ребенку? С какого возраста?</h4>
-            </a>
-        </article>
+        <h2 class="articles-caption">Статьи</h2>
 
-        <a href="#" class="article-link all-article">Все статьи</a>
+        <div class="articles__container">
+            <article class="article__container">
+                <a href="#" class="article-container-link">
+                    <div class="article-img-wrapper">
+                        <img src="assets/img/png/5.png" class="article-img" alt="" />
+                    </div>
+                    <h4 class="article-caption">Абразивные зубные пасты, в чем их опасность для эмали?</h4>
+                </a>
+            </article>
+            <article class="article__container">
+                <a href="#" class="article-container-link">
+                    <div class="article-img-wrapper">
+                        <img src="assets/img/png/6.png" class="article-img" alt="" />
+                    </div>
+                    <h4 class="article-caption">Проблема прикуса, нужны ли брекеты?</h4>
+                </a>
+            </article>
+            <article class="article__container">
+                <a href="#" class="article-container-link">
+                    <div class="article-img-wrapper">
+                        <img src="assets/img/png/7.png" class="article-img" alt="" />
+                    </div>
+                    <h4 class="article-caption">Как правильно чистить зубы ребенку? С какого возраста?</h4>
+                </a>
+            </article>
+
+        </div>
+
+        <p class="all-article">
+            <a href="#" class="article-link">Все статьи</a>
+        </p>
 
     </div>
     <!-- end -->
 
     <!-- Подбор зубной щетки -->
     <section class="choose-brush__container">
-        <img src="assets/img/png" class="choose-brush-img" alt="" />
+        <img src="assets/img/png/brush.png" class="choose-brush-img" alt="" />
         <a href="#" class="choose-brush-link">Подберите подходящую вам зубную щетку </a>
     </section>
     <!-- end -->
@@ -265,68 +317,75 @@
 
         <ul class="special-list">
             <li class="special-item">
-                <div class="main-good-img-wrapper">
-                    <img src="assets/img/png/1.png" class="main-good-img" alt="" />
+                <div class="special-img-wrapper">
+                    <a href="#" class="special-img-link">
+                        <img src="assets/img/png/1.png" class="special-img" alt="" />
+                    </a>
                 </div>
-                <h3 class="main-good-caption">Mirafluor C</h3>
-                <p class="main-good-text">Зубная паста для комплексной защиты</p>
-                <section class="main-good__box">
-                    <p class="main-good-box-text"><span class="main-price">350</span> ₽</p>
-                    <p class="main-good-box-btn"></p>
+                <h3 class="special-item-caption">Mirafluor C</h3>
+                <p class="special-text">Зубная паста для комплексной защиты</p>
+                <section class="special__box">
+                    <p class="special-box-text"><span class="main-price">350 ₽</span></p>
+                    <p class="special-box-btn">Купить</p>
                 </section>
-                <footer class="main-good__footer">
-                    <span class="main-good-tag">Восстановление эмали</span>
-                    <span class="main-good-tag">Зубной налет</span>
-                    <span class="main-good-tag">Кариес</span>
+                <footer class="special__footer">
+                    <span class="special-tag">Восстановление эмали</span>
+                    <span class="special-tag">Зубной налет</span>
+                    <span class="special-tag">Кариес</span>
                 </footer>
             </li>
             <li class="special-item">
-                <div class="main-good-img-wrapper">
-                    <img src="assets/img/png/8.png" class="main-good-img" alt="" />
+                <div class="special-img-wrapper">
+                    <a href="#" class="special-img-link">
+                        <img src="assets/img/png/1.png" class="special-img" alt="" />
+                    </a>
                 </div>
-                <h3 class="main-good-caption">Super Floss</h3>
-                <p class="main-good-text">Зубная нить антибактериальная для протезов и брекетов</p>
-                <section class="main-good__box">
-                    <p class="main-good-box-text"><span class="main-price">620</span> ₽</p>
-                    <p class="main-good-box-btn"></p>
+                <h3 class="special-item-caption">Mirafluor C</h3>
+                <p class="special-text">Зубная паста для комплексной защиты</p>
+                <section class="special__box">
+                    <p class="special-box-text"><span class="main-price">350 ₽</span></p>
+                    <p class="special-box-btn">Купить</p>
                 </section>
-                <footer class="main-good__footer">
-                    <span class="main-good-tag">Зубной налет</span>
-                    <span class="main-good-tag">Кариес</span>
-                    <span class="main-good-tag">Гигиена</span>
-                    <span class="main-good-tag">Зубной камень</span>
+                <footer class="special__footer">
+                    <span class="special-tag">Восстановление эмали</span>
+                    <span class="special-tag">Зубной налет</span>
+                    <span class="special-tag">Кариес</span>
                 </footer>
             </li>
             <li class="special-item">
-                <div class="main-good-img-wrapper">
-                    <img src="assets/img/png/9.png" class="main-good-img" alt="" />
+                <div class="special-img-wrapper">
+                    <a href="#" class="special-img-link">
+                        <img src="assets/img/png/1.png" class="special-img" alt="" />
+                    </a>
                 </div>
-                <h3 class="main-good-caption">Diamond glow</h3>
-                <p class="main-good-text">Ультрамягкие Зубные Щетки</p>
-                <section class="main-good__box">
-                    <p class="main-good-box-text"><span class="main-price">2 460</span> ₽</p>
-                    <p class="main-good-box-btn"></p>
+                <h3 class="special-item-caption">Mirafluor C</h3>
+                <p class="special-text">Зубная паста для комплексной защиты</p>
+                <section class="special__box">
+                    <p class="special-box-text"><span class="main-price">350 ₽</span></p>
+                    <p class="special-box-btn">Купить</p>
                 </section>
-                <footer class="main-good__footer">
-                    <span class="main-good-tag">Восстановление эмали</span>
-                    <span class="main-good-tag">Гигиена</span>
-                    <span class="main-good-tag">Кариес</span>
+                <footer class="special__footer">
+                    <span class="special-tag">Восстановление эмали</span>
+                    <span class="special-tag">Зубной налет</span>
+                    <span class="special-tag">Кариес</span>
                 </footer>
             </li>
             <li class="special-item">
-                <div class="main-good-img-wrapper">
-                    <img src="assets/img/png/3.png" class="main-good-img" alt="" />
+                <div class="special-img-wrapper">
+                    <a href="#" class="special-img-link">
+                        <img src="assets/img/png/1.png" class="special-img" alt="" />
+                    </a>
                 </div>
-                <h3 class="main-good-caption">Curaprox CS 1006 single</h3>
-                <p class="main-good-text">Зубная щетка</p>
-                <section class="main-good__box">
-                    <p class="main-good-box-text"><span class="main-price">533</span> ₽</p>
-                    <p class="main-good-box-btn"></p>
+                <h3 class="special-item-caption">Mirafluor C</h3>
+                <p class="special-text">Зубная паста для комплексной защиты</p>
+                <section class="special__box">
+                    <p class="special-box-text"><span class="main-price">350 ₽</span></p>
+                    <p class="special-box-btn">Купить</p>
                 </section>
-                <footer class="main-good__footer">
-                    <span class="main-good-tag">Восстановление эмали</span>
-                    <span class="main-good-tag">Зубной налет</span>
-                    <span class="main-good-tag">Кариес</span>
+                <footer class="special__footer">
+                    <span class="special-tag">Восстановление эмали</span>
+                    <span class="special-tag">Зубной налет</span>
+                    <span class="special-tag">Кариес</span>
                 </footer>
             </li>
         </ul>
