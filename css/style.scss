@@ -879,8 +879,7 @@ body {
     color: #012D48;
     &:after {
       height: 100%;
-      width: 80%;
-      left: -3%;
+      width: 140%;
     }
   }
 }
@@ -1090,6 +1089,7 @@ body {
 .article-text {
   @include medium-caption-pt;
   @include transition-cb-all;
+  text-transform: uppercase;
   transition-delay: 40ms;
   position: absolute;
   z-index: 4;
@@ -1135,8 +1135,7 @@ body {
     color: #012D48;
     &:after {
       height: 100%;
-      width: 80%;
-      left: -3%;
+      width: 140%;
     }
   }
 }

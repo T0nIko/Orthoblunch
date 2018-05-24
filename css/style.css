@@ -782,8 +782,7 @@ body {
     color: #012D48; }
     .main-catalog-btn:hover:after {
       height: 100%;
-      width: 80%;
-      left: -3%; }
+      width: 140%; }
 
 /*end*/
 /*Brand good*/
@@ -1033,6 +1032,7 @@ body {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+  text-transform: uppercase;
   transition-delay: 40ms;
   position: absolute;
   z-index: 4;
@@ -1082,8 +1082,7 @@ body {
     color: #012D48; }
     .article-btn:hover:after {
       height: 100%;
-      width: 80%;
-      left: -3%; }
+      width: 140%; }
 
 .article-img {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
