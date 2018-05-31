@@ -27,6 +27,15 @@
   cursor: default;
 }
 
+@mixin light-caption-pt {
+  font: {
+    family: "PT Sans";
+    size: 24px;
+    style: normal;
+    weight: bold;
+  }
+}
+
 @mixin medium-caption-cg {
   font: {
     family: "Century Gothic";
@@ -114,8 +123,6 @@
     size: 10px;
   }
   line-height: 14px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 @mixin description-text {
@@ -560,8 +567,12 @@ body {
 
 /*Navigation*/
 .main-header__container ~ .navigation {
+  @include flex-horizontal;
+  @include flex-end;
   position: absolute;
+  top: 145px;
   left: 0;
+  height: 640px;
   width: 100%;
 }
 
@@ -580,10 +591,12 @@ body {
   max-width: 1570px;
   margin: 0 auto;
   background: #FFFFFF;
+  position: relative;
 }
 
 .navigation-item {
   position: relative;
+  z-index: 2;
   &:before,
   &:after {
     content: '';
@@ -619,13 +632,147 @@ body {
   }
 }
 
+.navigation-item.active,
+.navigation-item.active ~ .navigation-item{
+  z-index: 5;
+}
+
+.navigation-item.active ~ .navigation-item .navigation-item-link {
+  color: #5B858C;
+}
+
 .navigation-item-link {
-  @include text-nav;
+  @include medium-caption-cg;
   color: #012D48;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
+.navigation-item.active .navigation-item-link {
+  color: #FFFFFF;
+}
+
+.navigation-all__container {
+  @include flex-horizontal;
+  @include flex-start;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  left: 0;
+  bottom: 0;
+  max-width: 1570px;
+  width: 100%;
+  height: 640px;
+  background: rgba(1, 45, 72, 0.9);
+  padding: 55px 195px 0;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.navigation-all__container.active {
+  z-index: 3;
+  opacity: 1;
+}
+
+.navigation-all-wrapper {
+
+  @include flex-horizontal;
+  width: 100%;
+}
+
+.navigation-all-list {
+  @include flex-horizontal;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.navigation-all-list.active {
+  position: relative !important;
+  opacity: 1;
+}
+
+.navigation-all-item {
+  margin-right: 100px;
+  pointer-events: none;
+}
+
+.navigation-all-item-caption {
+  @include light-caption-pt;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+}
+
+.navigation-submenu-item-link {
+  @include transition-cb-all;
+  @include header-nav-text;
+  color: #FFFFFF;
+  opacity: .9;
+  &:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, .5);
+    opacity: 1;
+  }
+  &:active {
+    text-shadow: 0 0 10px rgba(255, 255, 255, .5);
+    opacity: 1;
+  }
+  &:visited {
+    opacity: .6;
+  }
+}
+
+.navigation-all-special {
+  @include flex-vertical;
+  margin: 0 0 auto auto;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  background: #CFE2E8;
+  &:after {
+    position: absolute;
+    content: '';
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, #CFE2E8 38.83%, rgba(207, 226, 232, .3) 80%, rgba(207, 226, 232, 0) 100%);
+  }
+}
+
+.navigation-all-special-image {
+  height: auto;
+  width: 70%;
+  position: absolute;
+  z-index: 1;
+  bottom: 140px;
+}
+
+.navigation-all-special-caption {
+  @include header-nav-text;
+  color: #1A425A !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 25px;
+  margin: auto auto 50px !important;
+  position: relative;
+  z-index: 3;
+}
+
+.navigation-all-special-text {
+  @include text-smallest;
+  color: #1A425A;
+  text-align: center;
+  margin: 0 auto 10px;
+  position: relative;
+  z-index: 3;
+}
 /*END*/
 
 /*Main*/
@@ -736,11 +883,18 @@ article.main-good__container {
 
 .main-good-state {
   @include text-smallest;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   display: block;
-  color: #012D48;
   margin-bottom: 20px;
   position: relative;
   z-index: 2;
+}
+.main-good-state.state-in-stock {
+  color: #012D48;
+}
+.main-good-state.state-not-available {
+  color: #FF5C00;
 }
 
 .main-good-caption {
@@ -784,13 +938,18 @@ article.main-good__container {
   @include medium-caption-pt;
   cursor: pointer;
   color: #FFFFFF;
-  background: #3EC2CF;
   border-radius: 5px;
   padding: 10px 20px;
   &:hover {
     background: #012D48;
     color: #FCFCFC;
   }
+}
+.main-good-state.state-in-stock ~ .main-good__box .main-good-box-btn {
+  background: #3EC2CF;
+}
+.main-good-state.state-not-available ~ .main-good__box .main-good-box-btn {
+  background: #C8D4D7;
 }
 
 .main-good__footer {

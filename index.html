@@ -12,6 +12,12 @@
 
     <link href="css/style.css" rel="stylesheet" />
 
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
 </head>
 <body>
 <!-- Общая шапка -->
@@ -81,20 +87,688 @@
 <nav class="navigation">
     <ul class="navigation-list">
         <li class="navigation-item">
-            <a href="#" class="navigation-item-link">Профессиональная<br>гигиеная полости рта</a>
+            <p class="navigation-item-link" data-listid="professional-hygiene">Профессиональная<br>гигиеная полости рта</p>
         </li>
         <li class="navigation-item">
-            <a href="#" class="navigation-item-link">Коррекция<br>прикуса</a>
+            <p class="navigation-item-link" data-listid="bite-correction">Коррекция<br>прикуса</p>
         </li>
         <li class="navigation-item">
-            <a href="#" class="navigation-item-link">Ортодонтическая<br>продукция</a>
+            <p class="navigation-item-link" data-listid="orthodontic-products">Ортодонтическая<br>продукция</p>
         </li>
         <li class="navigation-item">
-            <a href="#" class="navigation-item-link">Специальные<br>предложения</a>
+            <p class="navigation-item-link" data-listid="useful-materials">Специальные<br>предложения</p>
         </li>
         <li class="navigation-item">
-            <a href="#" class="navigation-item-link">Полезные<br>материалы</a>
+            <p class="navigation-item-link" data-listid="useful-materials">Полезные<br>материалы</p>
         </li>
+
+        <!-- Блок с расширенным меню по разделам -->
+        <li class="navigation-all__container">
+            <section class="navigation-all-wrapper">
+
+                <!-- Профессиональная гигиена -->
+                <ul class="navigation-all-list" data-list="professional-hygiene">
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Каталог</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубная паста и ополаскиватели</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Звуковые зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Электрические зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Сменные насадки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Обычные зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Отбеливающая серия</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубные био-пасты</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубные нити</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Детская продукция</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Средства с хлоргекседином</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Ершики и чистка языка</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Наборы</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Новинки</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Проблемы</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Отбеливание</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубной налет</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Кариес</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Проблемы с деснами</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Чувствительность зубов</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Неприятный запах</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Защита эмали</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Восстановление эмали</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Уход за брекетами</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Уход за детскими зубами</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Бренды</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Curaprox</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Swiss smile</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Paro</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Oral B</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">MRS</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">LM-активаторы</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">dr.Hinz</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+                </ul>
+                <!-- end -->
+
+                <!-- Коррекция прикуса -->
+                <ul class="navigation-all-list" data-list="bite-correction">
+
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Проблемы</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Отбеливание</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубной налет</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Кариес</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Проблемы с деснами</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Чувствительность зубов</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Неприятный запах</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Защита эмали</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Восстановление эмали</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Уход за брекетами</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Уход за детскими зубами</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Каталогlol</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубная паста и ополаскиватели</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Звуковые зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Электрические зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Сменные насадки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Обычные зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Отбеливающая серия</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубные био-пасты</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубные нити</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Детская продукция</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Средства с хлоргекседином</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Ершики и чистка языка</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Наборы</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Новинки</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Бренды</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Curaprox</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Swiss smile</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Paro</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Oral B</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">MRS</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">LM-активаторы</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">dr.Hinz</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+                </ul>
+                <!-- end -->
+
+                <!-- Ортодонтическая продукция -->
+                <ul class="navigation-all-list" data-list="orthodontic-products">
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Каталог</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубная паста и ополаскиватели</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Звуковые зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Электрические зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Сменные насадки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Обычные зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Отбеливающая серия</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубные био-пасты</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубные нити</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Детская продукция</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Средства с хлоргекседином</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Ершики и чистка языка</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Наборы</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Новинки</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Проблемы</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Отбеливание</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубной налет</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Кариес</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Проблемы с деснами</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Чувствительность зубов</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Неприятный запах</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Защита эмали</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Восстановление эмали</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Уход за брекетами</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Уход за детскими зубами</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Бренды</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Curaprox</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Swiss smile</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Paro</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Oral B</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">MRS</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">LM-активаторы</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">dr.Hinz</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+                </ul>
+                <!-- end -->
+
+                <!-- Специальные предложения -->
+                <ul class="navigation-all-list" data-list="special-offers">
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Каталог</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубная паста и ополаскиватели</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Звуковые зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Электрические зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Сменные насадки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Обычные зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Отбеливающая серия</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубные био-пасты</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубные нити</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Детская продукция</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Средства с хлоргекседином</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Ершики и чистка языка</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Наборы</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Новинки</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Проблемы</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Отбеливание</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубной налет</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Кариес</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Проблемы с деснами</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Чувствительность зубов</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Неприятный запах</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Защита эмали</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Восстановление эмали</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Уход за брекетами</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Уход за детскими зубами</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Бренды</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Curaprox</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Swiss smile</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Paro</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Oral B</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">MRS</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">LM-активаторы</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">dr.Hinz</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+                </ul>
+                <!-- end -->
+
+                <!-- Полезные материалы -->
+                <ul class="navigation-all-list" data-list="useful-materials">
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Каталог</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубная паста и ополаскиватели</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Звуковые зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Электрические зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Сменные насадки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Обычные зубные щетки</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Отбеливающая серия</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубные био-пасты</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубные нити</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Детская продукция</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Средства с хлоргекседином</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Ершики и чистка языка</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Наборы</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Новинки</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Проблемы</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Отбеливание</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Зубной налет</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Кариес</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Проблемы с деснами</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Чувствительность зубов</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Неприятный запах</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Защита эмали</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Восстановление эмали</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Уход за брекетами</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Уход за детскими зубами</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+
+                    <!-- Элемент раздела -->
+                    <li class="navigation-all-item">
+                        <h2 class="navigation-all-item-caption">Бренды</h2>
+
+                        <!-- Подсписок -->
+                        <ul class="navigation-submenu-list">
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Curaprox</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Swiss smile</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Paro</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">Oral B</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">MRS</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">LM-активаторы</a>
+                            </li>
+                            <li class="navigation-submenu-item">
+                                <a href="#" class="navigation-submenu-item-link">dr.Hinz</a>
+                            </li>
+                        </ul>
+                        <!-- end -->
+
+                    </li>
+                    <!-- end -->
+                </ul>
+                <!-- end -->
+
+
+                <!-- Элемент раздела. Блок с картинкой. Специальное предложение -->
+                <div class="navigation-all-special">
+                    <img src="assets/img/png/spetial-img.png" class="navigation-all-special-image" alt="" />
+                    <h3 class="navigation-all-special-caption">Купи 5 товаров через интернет магазин и получи пасту в
+                        подарок</h3>
+                    <span class="navigation-all-special-text">До 25.05.18</span>
+                </div>
+                <!-- end -->
+
+            </section>
+        </li>
+        <!-- end -->
     </ul>
 </nav>
 <!-- end -->
@@ -115,7 +789,7 @@
                             <img src="assets/img/png/1.png" class="main-good-img" alt="" />
                         </a>
                     </div>
-                    <span class="main-good-state">Товар есть в наличии</span>
+                    <span class="main-good-state state-in-stock"></span>
                     <h3 class="main-good-caption">Mirafluor C</h3>
                     <p class="main-good-text">Зубная паста для комплексной защиты</p>
                     <section class="main-good__box">
@@ -141,7 +815,7 @@
                             <img src="assets/img/png/1.png" class="main-good-img" alt="" />
                         </a>
                     </div>
-                    <span class="main-good-state">Товар есть в наличии</span>
+                    <span class="main-good-state state-not-available"></span>
                     <h3 class="main-good-caption">Mirafluor C</h3>
                     <p class="main-good-text">Зубная паста для комплексной защиты</p>
                     <section class="main-good__box">
@@ -167,7 +841,7 @@
                             <img src="assets/img/png/1.png" class="main-good-img" alt="" />
                         </a>
                     </div>
-                    <span class="main-good-state">Товар есть в наличии</span>
+                    <span class="main-good-state state-in-stock"></span>
                     <h3 class="main-good-caption">Mirafluor C</h3>
                     <p class="main-good-text">Зубная паста для комплексной защиты</p>
                     <section class="main-good__box">
@@ -193,7 +867,7 @@
                             <img src="assets/img/png/1.png" class="main-good-img" alt="" />
                         </a>
                     </div>
-                    <span class="main-good-state">Товар есть в наличии</span>
+                    <span class="main-good-state state-in-stock"></span>
                     <h3 class="main-good-caption">Mirafluor C</h3>
                     <p class="main-good-text">Зубная паста для комплексной защиты</p>
                     <section class="main-good__box">
@@ -219,7 +893,7 @@
                             <img src="assets/img/png/1.png" class="main-good-img" alt="" />
                         </a>
                     </div>
-                    <span class="main-good-state">Товар есть в наличии</span>
+                    <span class="main-good-state state-in-stock"></span>
                     <h3 class="main-good-caption">Mirafluor C</h3>
                     <p class="main-good-text">Зубная паста для комплексной защиты</p>
                     <section class="main-good__box">
@@ -245,7 +919,7 @@
                             <img src="assets/img/png/1.png" class="main-good-img" alt="" />
                         </a>
                     </div>
-                    <span class="main-good-state">Товар есть в наличии</span>
+                    <span class="main-good-state state-in-stock"></span>
                     <h3 class="main-good-caption">Mirafluor C</h3>
                     <p class="main-good-text">Зубная паста для комплексной защиты</p>
                     <section class="main-good__box">
