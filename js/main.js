@@ -24,14 +24,45 @@ $(document).ready(function () {
         let popup = $('.active');
         if (!popup.is(e.target) && popup.has(e.target).length === 0) {
             $(popup).removeClass('active');
+            $('.navigation-item').removeClass('next');
         }
     });
 
+    // Открыть меню в шапке
     $(document).on('click', '.navigation-item', function () {
         let list_id = $(this).find('.navigation-item-link').data('listid');
+
+        $('.navigation-item').addClass('next');
         $(this).addClass('active');
+
         $('.navigation-all__container').addClass('active');
         $('[data-list = ' + list_id + ']').addClass('active')
     });
 
+    // Фиксация шапки и навигации, если доскроллили до навигации
+    let $window = $(window);
+    let $sidebar = $("#navigation");
+    let $header = $(".header");
+    let $sidebarHeight = $sidebar.innerHeight();
+    let $footerOffsetTop = $(".footer").offset().top;
+    let $sidebarOffset = $sidebar.offset();
+
+    $window.scroll(function () {
+        if ($window.scrollTop() > $sidebarOffset.top + 40) {
+            $sidebar.addClass("fixed");
+            $header.addClass("fixed");
+        } else {
+            $sidebar.removeClass("fixed");
+            $header.removeClass("fixed");
+        }
+        if ($window.scrollTop() + $sidebarHeight > $footerOffsetTop) {
+            $sidebar.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
+            $header.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
+        } else {
+            $sidebar.css({"top": "150px",});
+            $header.css({"top": "0",});
+        }
+    });
+
 });
+
