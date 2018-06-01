@@ -48,7 +48,7 @@ $(document).ready(function () {
     let $sidebarOffset = $sidebar.offset();
 
     $window.scroll(function () {
-        if ($window.scrollTop() > $sidebarOffset.top + 40) {
+        if ($window.scrollTop() > $sidebarOffset.top + 110) {
             $sidebar.addClass("fixed");
             $header.addClass("fixed");
         } else {
@@ -59,10 +59,11 @@ $(document).ready(function () {
             $sidebar.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
             $header.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
         } else {
-            $sidebar.css({"top": "150px",});
-            $header.css({"top": "0",});
+            console.log('It is work');
         }
     });
+
+
 
 });
 
