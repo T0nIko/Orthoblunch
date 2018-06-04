@@ -3,7 +3,7 @@ $(document).ready(function () {
     $(function () {
 
         // Изменение текста в зависимости от состояния: есть или нет в наличии
-        $('.main-good-state').each(function () {
+        $('.state').each(function () {
             if ($(this).hasClass('state-in-stock')) {
                 $(this).text('Товар есть в наличии');
             }
@@ -47,6 +47,7 @@ $(document).ready(function () {
     let $footerOffsetTop = $(".footer").offset().top;
     let $sidebarOffset = $sidebar.offset();
 
+    // Скролл до определенного момента
     $window.scroll(function () {
         if ($window.scrollTop() > $sidebarOffset.top + 110) {
             $sidebar.addClass("fixed");
@@ -63,7 +64,46 @@ $(document).ready(function () {
         }
     });
 
+    // Иницализация параллакса
+    $(window).scroll(function (e) {
+        parallaxScroll();
+    });
 
+    // Функция генерация скорости для параллакса
+    function parallaxScroll() {
+        let scrolled = $(window).scrollTop();
+
+        this.speed03 = .05 * $(this).scrollTop();
+        this.speed1 = .1 * $(this).scrollTop();
+        this.speed2 = .2 * $(this).scrollTop();
+        this.speed3 = .15 * $(this).scrollTop();
+        this.speed4 = .4 * $(this).scrollTop();
+
+        // БГ в швейцарском блоке
+        $('.brand-good-bg').css({
+            transform: "translate3d(0," + this.speed4 + "px,0)",
+            "-webkit-transform": "translate3d(0," + this.speed4 + "px,0)",
+            "-moz-transform": "translate3d(0," + this.speed4 + "px,0)",
+            "-o-transform": "translate3d(0," + this.speed4 + "px,0)",
+            "-ms-transform": "translate3d(0," + this.speed4 + "px,0)"
+        });
+    }
+
+    // Слайдер на главной
+    let swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 125,
+        grabCursor: true,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+            dragSize: 300,
+        },
+        navigation: {
+            nextEl: '.special-btn.next',
+            prevEl: '.special-btn.prev',
+        }
+    });
 
 });
 
