@@ -11,13 +11,18 @@
 @mixin dark-caption {
   font: {
     family: "Century Gothic";
-    size: 24px;
+    size: 36px;
     style: normal;
     weight: normal;
   }
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: default;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    font: {
+      size: 24px;
+    }
+  }
 }
 
 @mixin light-caption {
@@ -135,8 +140,6 @@
     weight: normal;
     size: 14px;
   }
-  line-height: 22px;
-  color: #4C7790;
 }
 
 @mixin flex-horizontal {
@@ -813,6 +816,7 @@ body {
   }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     max-width: 1175px;
+    height: 80px;
   }
 }
 
@@ -1091,7 +1095,10 @@ body {
 
 /*Main*/
 .main-header__container ~ .navigation ~ .main {
-  margin: 75px 0;
+  margin: 145px 0 100px;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    margin: 115px 0 80px;
+  }
 }
 
 .main {
@@ -1118,7 +1125,7 @@ body {
 }
 
 .main-good__block {
-  margin: 60px auto 0;
+  margin: 80px auto 0;
   @include flex-horizontal;
   align-items: stretch;
   flex-wrap: wrap;
@@ -1230,8 +1237,8 @@ article.main-good__container {
 }
 
 .main-good-text {
-  @include text-small;
-  color: #4C7790;
+  @include description-text;
+  color: #012D48;
   margin: 10px auto 25px;
   cursor: default;
   position: relative;
@@ -1254,6 +1261,9 @@ article.main-good__container {
   margin-bottom: 20px;
   font-weight: bold !important;
   cursor: default;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    font-size: 18px;
+  }
 }
 
 .main-good-box-btn {
@@ -1307,7 +1317,7 @@ article.main-good__container {
   padding: 4px 9px;
   cursor: pointer;
   border: 1px solid #A1DBE4;
-  margin: 0 10px 5px 0;
+  margin: 0 10px 10px 0;
   &:hover {
     background: transparent;
     border: 1px solid #3EC2CF;
@@ -1494,6 +1504,9 @@ article.main-good__container {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
     z-index: 2;
   }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    padding: 55px 195px 100px;
+  }
 }
 
 .brand-good-bg {
@@ -1507,7 +1520,6 @@ article.main-good__container {
 
 .brand-caption {
   @include dark-caption;
-  font-size: 36px !important;
   padding-left: 50px;
   color: #012D48;
   position: relative;
@@ -1515,6 +1527,9 @@ article.main-good__container {
   max-width: 1570px;
   width: 100%;
   margin: 0 auto;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    padding-left: 35px;
+  }
   &:before {
     position: absolute;
     content: '';
@@ -1524,6 +1539,11 @@ article.main-good__container {
     height: 26px;
     background: url("../assets/img/svg/swich-flag.svg") no-repeat 50% 50%;
     background-size: cover;
+    @media screen and (min-width: 1366px) and (max-width: 1600px) {
+      width: 20px;
+      height: 20px;
+      bottom: 5px;
+    }
   }
 }
 
@@ -1572,6 +1592,7 @@ article.main-good__container {
 .brand-good-text {
   @include description-text;
   color: #012D48;
+  line-height: 22px;
 }
 
 .brand-good-link {
@@ -1601,17 +1622,16 @@ article.main-good__container {
 /*Articles*/
 .article-wrapper {
   width: 100%;
-  margin: 15px 0 120px;
+  margin: 25px 0 120px;
   position: relative;
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
-    margin: 15px 0 75px;
+    margin: 35px 0 80px;
   }
 }
 
 .articles-caption {
   @include dark-caption;
   width: 100%;
-  font-size: 36px !important;
   max-width: 1570px;
   margin: 0 auto;
   color: #012D48;
@@ -1632,6 +1652,7 @@ article.main-good__container {
   margin: 55px auto 0;
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     max-width: 1175px;
+    margin: 75px auto 0;
   }
 }
 
@@ -1656,6 +1677,7 @@ article.main-good__container {
     opacity: .7;
   }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    max-width: 295px;
     &:nth-child(4) {
       display: none;
     }
@@ -1711,6 +1733,13 @@ article.main-good__container {
     -ms-transform: translateY(-220px);
     -o-transform: translateY(-220px);
     transform: translateY(-220px);
+    @media screen and (min-width: 1366px) and (max-width: 1600px) {
+      -webkit-transform: translateY(-200px);
+      -moz-transform: translateY(-200px);
+      -ms-transform: translateY(-200px);
+      -o-transform: translateY(-200px);
+      transform: translateY(-200px);
+    }
   }
   &:hover .article-btn {
     -webkit-transform: translateY(-120px);
@@ -1718,6 +1747,16 @@ article.main-good__container {
     -ms-transform: translateY(-120px);
     -o-transform: translateY(-120px);
     transform: translateY(-120px);
+    @media screen and (min-width: 1366px) and (max-width: 1600px) {
+      -webkit-transform: translateY(-80px);
+      -moz-transform: translateY(-80px);
+      -ms-transform: translateY(-80px);
+      -o-transform: translateY(-80px);
+      transform: translateY(-80px);
+    }
+  }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    height: 260px;
   }
 }
 
@@ -1792,6 +1831,7 @@ article.main-good__container {
   }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     font-size: 18px !important;
+    margin-bottom: 20px;
   }
 }
 
@@ -1803,16 +1843,22 @@ article.main-good__container {
   @include header-nav-text;
   color: #FCFCFC;
   position: absolute;
-  top: calc(50% - 20px);
-  right: -100px;
+  bottom: 120px;
+  right: -120px;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  width: 240px;
-  height: 40px;
+  width: 300px;
+  height: 60px;
   background: #3EC2CF;
   &:hover {
     background: #012D48;
+  }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    bottom: 110px;
+    right: -110px;
+    width: 260px;
+    height: 40px;
   }
 }
 
@@ -1838,6 +1884,10 @@ article.main-good__container {
       opacity: 0;
     }
   }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    max-width: 1175px;
+    margin: 80px auto 0;
+  }
 }
 
 .choose-brush-img {
@@ -1845,6 +1895,9 @@ article.main-good__container {
   margin: 90px auto 0;
   height: 80px;
   width: auto;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    margin: 65px auto 0;
+  }
 }
 
 .choose-brush-link {
@@ -1875,6 +1928,9 @@ article.main-good__container {
       opacity: 0;
     }
   }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    margin: 65px auto 75px;
+  }
 }
 /*end*/
 
@@ -1886,6 +1942,10 @@ article.main-good__container {
   padding: 65px 0 0;
   position: relative;
   overflow-x: hidden;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    margin: 80px 0 0;
+    padding: 75px 0 0;
+  }
 }
 
 .special-btn {
@@ -2014,11 +2074,17 @@ article.main-good__container {
   max-width: 1570px;
   width: 100%;
   margin: 0 auto;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    max-width: 1175px;
+  }
 }
 
 .special__container {
   width: 100%;
   margin: 45px auto 0;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    margin: 40px auto 0;
+  }
 }
 
 .special-list-wrapper {
@@ -2028,6 +2094,10 @@ article.main-good__container {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    max-width: 1175px;
+    padding: 20px 20px 80px !important;
+  }
 }
 
 .special-list {
@@ -2222,7 +2292,7 @@ article.main-good__container {
   padding: 4px 9px;
   cursor: pointer;
   border: 1px solid #CBD6DC;
-  margin: 0 10px 5px 0;
+  margin: 0 10px 10px 0;
   &:hover {
     background: transparent;
     border: 1px solid #3EC2CF;
@@ -2253,16 +2323,23 @@ article.main-good__container {
   max-width: 1570px;
   width: 100%;
   margin: 80px auto 0;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    max-width: 1175px;
+  }
 }
 
 .trouble-caption {
   font-family: 'Arapey Italic', sans-serif;
   text-align: center;
   font-size: 24px;
+  font-weight: 300;
   letter-spacing: 0.05em;
   color: #012D48;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   cursor: default;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    margin-bottom: 25px;
+  }
 }
 
 .trouble-text {
@@ -2278,8 +2355,12 @@ article.main-good__container {
 .trouble--blue {
   background: #A1DBE4;
   border-radius: 20px 20px 0 0;
-  margin: 50px 0 0;
-  padding: 75px 0 60px;
+  margin: 120px 0 0;
+  padding: 100px 0;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    margin: 80px 0 0;
+    padding: 75px 0 60px;
+  }
 }
 
 .trouble-container-caption {
@@ -2291,9 +2372,12 @@ article.main-good__container {
 .trouble-tag__container {
   @include flex-horizontal;
   flex-wrap: wrap;
-  margin: 60px auto 100px;
+  margin: 80px auto;
   max-width: 740px;
   width: 100%;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    margin: 60px auto 80px;
+  }
 }
 
 .trouble-tag {
@@ -2407,14 +2491,20 @@ article.main-good__container {
   @include flex-horizontal;
   background: #EFF4F3;
   border-radius: 0 0 20px 20px;
-  padding: 60px 95px 100px;
+  padding: 85px 95px 100px;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    padding: 55px 95px 100px;
+  }
 }
 
 .trouble__box {
   &:first-child {
     @include flex-vertical;
     margin: 0 auto auto 0;
-    padding-right: 100px;
+    padding-right: 140px;
+    @media screen and (min-width: 1366px) and (max-width: 1600px) {
+      padding-right: 70px;
+    }
   }
   &:last-child {
     @include flex-horizontal;
@@ -2435,11 +2525,28 @@ article.main-good__container {
   cursor: default;
 }
 
-.trouble-img {
-  margin-right: 35px;
+.trouble-img-wrapper {
+  width: 200px;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 45px;
   &:last-child {
     margin-right: 0;
   }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    width: 142px;
+    height: 200px;
+    margin-right: 35px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.trouble-img {
+  height: 100%;
+  width: auto;
 }
 /*end*/
 
@@ -2456,11 +2563,18 @@ article.main-good__container {
   max-width: 1570px;
   width: 100%;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 75px 0 95px;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    max-width: 1175px;
+    padding: 100px 0 125px;
+  }
 }
 
 .footer-list--double .footer-item--double {
   margin-bottom: 45px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .footer-item-caption {
@@ -2468,8 +2582,11 @@ article.main-good__container {
 }
 
 .footer-item-caption .footer-item-link {
-  @include medium-caption-bold-pt;
+  @include light-caption-pt;
   color: #012D48;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    font-size: 18px;
+  }
 }
 
 .footer-item {
@@ -2484,19 +2601,28 @@ article.main-good__container {
 }
 
 .footer-item.tel .footer-item-link {
-  @include medium-caption-pt;
   @include transition-cb-all;
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
   margin-bottom: 25px !important;
   color: #012D48;
   cursor: pointer !important;
   &:hover {
     color: #3EC2CF;
   }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    font-size: 18px;
+  }
 }
 
 .footer-item .footer-item-link {
-  @include text-nav;
+  @include medium-caption-pt;
   color: #012D48;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    font-size: 14px;
+  }
 }
 
 .underline .footer-item-caption .footer-item-link,
@@ -2629,6 +2755,9 @@ article.main-good__container {
   width: 100%;
   height: 40px;
   margin: 0 auto;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    max-width: 1175px;
+  }
 }
 
 .footer-year,
