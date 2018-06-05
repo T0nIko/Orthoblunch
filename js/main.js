@@ -12,14 +12,12 @@ $(document).ready(function () {
             }
         });
 
-        // посчет ширины картинки и расположение ее по центру
+        // Посчет ширины картинки и расположение ее по центру
         // Выпадающий блок из навигации
         $('.navigation-all-special-image').each(function () {
             let width = $(this).width();
             $(this).attr('style', 'left: calc(50% - ' + (width / 2) + 'px);');
         });
-
-
 
     });
 
@@ -122,6 +120,21 @@ $(document).ready(function () {
             nextEl: '.special-btn.next',
             prevEl: '.special-btn.prev',
         }
+    });
+
+
+    $(document).on('click', '.open-list', function () {
+
+        if ($(this).hasClass('cart-select-wrapper')) {
+            $(this).addClass('active');
+            $(this).siblings('.choose-list').addClass('active');
+        }
+        else {
+            $(this).closest('.cart-select-wrapper').addClass('active');
+            $(this).parent('.cart-select-wrapper').siblings('.choose-list').addClass('active');
+        }
+
+
     });
 
 });
