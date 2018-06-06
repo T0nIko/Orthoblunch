@@ -20,8 +20,11 @@
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.2/amplify.core.min.js"></script>
+
+    <script src="js/main.js"></script>
     <!-- end -->
 
 </head>
@@ -773,71 +776,85 @@
 </nav>
 <!-- end -->
 
-<main class="main auth">
+<div class="wrapper">
 
-    <header class="auth__header">
-        <h1 class="auth-caption">Регистрация</h1>
-        <a href="#" class="auth-link">Вход</a>
-    </header>
+    <main class="main auth">
 
-    <form class="auth-form" action="" method="post">
+        <header class="auth__header">
+            <h1 class="auth-caption">Регистрация</h1>
+            <a href="#" class="auth-link">Вход</a>
+        </header>
 
-        <div class="auth-field-wrapper">
-            <input type="text" name="first-name" id="first_name" class="auth-field"/>
-            <label for="first_name" class="auth-label">Имя</label>
-            <span class="focus-border"></span>
-        </div>
-
-        <div class="auth-field-wrapper">
-            <input type="text" name="last-name" id="last_name" class="auth-field"/>
-            <label for="last_name" class="auth-label">Фамилия</label>
-            <span class="focus-border"></span>
-        </div>
-
-        <div class="auth-field-wrapper">
-            <input type="tel" name="phone-number" id="phone_num" class="auth-field"/>
-            <label for="phone_num" class="auth-label">Телефон</label>
-            <span class="focus-border"></span>
-        </div>
-
-        <div class="auth-field-wrapper">
-            <input type="email" name="email" id="email" class="auth-field"/>
-            <label for="email" class="auth-label">Электронная почта</label>
-            <span class="focus-border"></span>
-        </div>
-
-        <div class="auth-field-wrapper">
-            <input type="password" name="password" id="password" class="auth-field"/>
-            <label for="password" class="auth-label">Пароль</label>
-            <span class="focus-border"></span>
-        </div>
-
-        <div class="auth-field-wrapper">
-            <input type="password" name="repeat-password" id="repeat_password" class="auth-field"/>
-            <label for="repeat_password" class="auth-label">Подтвердите пароль</label>
-            <span class="focus-border"></span>
-        </div>
-
-        <footer class="auth__footer">
+        <form class="auth-form" action="" method="post">
 
             <div class="auth-field-wrapper">
-                <input type="checkbox" id="auth_checkbox" name="auth-checkbox" class="auth-checkbox" />
-                <label for="auth_checkbox" class="auth-checkbox-label">
-                    <span class="auth-checkbox-label-text">Настоящим подтверждаю, что я ознакомлен и согласен с
-                        <a href="#" class="auth-checkbox-label-link">условиями политики конфиденциальности.</a>
-                    </span>
-                </label>
+                <input type="text" name="first-name" id="first_name" class="auth-field"/>
+                <label for="first_name" class="auth-label">Имя</label>
+                <span class="focus-border"></span>
             </div>
 
-            <div class="auth-btn-wrapper">
-                <p><button type="submit" class="auth-btn">Зарегистрироваться</button></p>
+            <div class="auth-field-wrapper">
+                <input type="text" name="last-name" id="last_name" class="auth-field"/>
+                <label for="last_name" class="auth-label">Фамилия</label>
+                <span class="focus-border"></span>
             </div>
 
-        </footer>
+            <div class="auth-field-wrapper">
+                <input type="tel" name="phone-number" id="phone_num" class="auth-field" placeholder="+7"/>
+                <label for="phone_num" class="auth-label">Телефон</label>
+                <span class="focus-border"></span>
+            </div>
 
-    </form>
+            <div class="auth-field-wrapper">
+                <input type="email" name="email" id="email" class="auth-field"/>
+                <label for="email" class="auth-label">Электронная почта</label>
+                <span class="focus-border"></span>
+            </div>
 
-</main>
+            <div class="auth-field-wrapper">
+                <input type="password" name="password" id="password" class="auth-field"/>
+                <label for="password" class="auth-label">Пароль</label>
+                <span class="focus-border"></span>
+            </div>
+
+            <div class="auth-field-wrapper">
+                <input type="password" name="repeat-password" id="repeat_password" class="auth-field"/>
+                <label for="repeat_password" class="auth-label">Подтвердите пароль</label>
+                <span class="focus-border"></span>
+            </div>
+
+            <footer class="auth__footer">
+
+                <div class="auth-field-wrapper">
+                    <label for="auth_checkbox" class="auth-checkbox-label check">
+                        <input type="checkbox" id="auth_checkbox" name="auth-checkbox" class="auth-checkbox" />
+                        <span class="label"></span>
+                        <p class="auth-checkbox-label-text">Настоящим подтверждаю, что я ознакомлен и согласен с
+                            <a href="#" class="auth-checkbox-label-link">условиями политики конфиденциальности.</a>
+                        </p>
+                    </label>
+                </div>
+
+                <div class="auth-btn-wrapper sign-in">
+                    <p><button type="submit" class="auth-btn">Зарегистрироваться</button></p>
+                </div>
+
+            </footer>
+
+        </form>
+
+        <div class="auth-catalog__container">
+            <a href="#" class="auth-catalog-link">
+                <h2 class="auth-catalog-caption">Каталог</h2>
+                <a href="#" class="auth-catalog-btn">Посмотреть весь</a>
+                <img src="assets/img/png/cap.png" class="auth-catalog-img cap" alt="Каталог"/>
+                <img src="assets/img/png/tube.png" class="auth-catalog-img tube" alt="Каталог"/>
+            </a>
+        </div>
+
+    </main>
+
+</div>
 
 <!-- Общий подвал -->
 <footer class="footer">
