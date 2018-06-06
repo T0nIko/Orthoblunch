@@ -152,7 +152,7 @@ $(document).ready(function () {
         $("#phone_num").mask("+7(999) 999-99-99");
     });
 
-    // если галочка проставлена, то кнопка становится кликабельной
+    // Если галочка проставлена, то кнопка становится кликабельной
     $(document).on('click', '.check', function () {
         if ($(this).find('input[type = checkbox]').prop('checked') === true) {
             $('.auth-btn-wrapper.sign-in').addClass('active-btn');
@@ -160,6 +160,17 @@ $(document).ready(function () {
         else  {
             $('.auth-btn-wrapper.sign-in').removeClass('active-btn');
         }
+    });
+
+    // Смена активной вкладки
+    $(document).on('click', '.contact-caption', function (e) {
+        e.preventDefault();
+        $('.contact-caption').removeClass('active-btn');
+        $(this).addClass('active-btn');
+
+        let item_id = $(this).data('itemid');
+        $('.contact-item').removeClass('active-item');
+        $('[data-item = ' + item_id + ']').addClass('active-item');
     });
 
 });

@@ -4153,9 +4153,17 @@ article.main-good__container {
 }
 
 .contact-caption {
+  @include transition-cb-all;
   @include dark-caption;
   color: #012D48;
   margin-bottom: 60px;
+  opacity: .6;
+  &:hover {
+    opacity: .8;
+  }
+  &.active-btn {
+    opacity: 1;
+  }
 }
 
 .contact__block {
@@ -4397,13 +4405,34 @@ article.main-good__container {
   }
 }
 
+.contact-list {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  flex: 1;
+}
+
+.contact-item {
+  @include ease-in-out-3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  &.active-item {
+    z-index: 1;
+    opacity: 1;
+  }
+}
+
 .contact-map {
   width: 100%;
+  height: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  background: #3EC2CF;
-  flex: 1;
 }
 /*end*/
 
