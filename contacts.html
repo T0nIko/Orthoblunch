@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile</title>
+    <title>Контакты</title>
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -810,12 +810,18 @@
         <div class="contact__container right">
 
             <header class="contact__header">
-                <h3 class="contact-caption">Карта</h3>
-                <h3 class="contact-caption">Парковка</h3>
-                <h3 class="contact-caption">Фото</h3>
+                <h3 class="contact-caption active-btn" data-itemid="map">Карта</h3>
+                <h3 class="contact-caption" data-itemid="parking">Парковка</h3>
+                <h3 class="contact-caption" data-itemid="photo">Фото</h3>
             </header>
 
-            <section class="contact-map" id="contact_map"></section>
+            <ul class="contact-list">
+                <li class="contact-item active-item" data-item="map">
+                    <section class="contact-map" id="contact_map"></section>
+                </li>
+                <li class="contact-item" data-item="parking"></li>
+                <li class="contact-item" data-item="photo"></li>
+            </ul>
 
         </div>
 
@@ -963,6 +969,30 @@
 
 </footer>
 <!-- end -->
+
+<script>
+    // Инициализация карты на странице контактов
+    function initMap() {
+        let uluru = {
+            lat: 56.3151723,
+            lng: 44.0142004
+        };
+        let map = new google.maps.Map(document.getElementById('contact_map'), {
+            zoom: 17,
+            center: uluru,
+            mapTypeControl: true
+        });
+        let marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            animation: google.maps.Animation.DROP,
+            icon: 'assets/img/svg/placeholder.svg'
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm6AwMozfIITSLq5y8Q3Ebag75YnTFxl8&callback=initMap">
+</script>
 
 </body>
 </html>

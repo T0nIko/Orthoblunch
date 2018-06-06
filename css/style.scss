@@ -813,6 +813,7 @@ input::-webkit-inner-spin-button {
   left: 0;
   height: 640px;
   width: 100%;
+  z-index: 10;
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     height: 460px;
   }
@@ -2938,7 +2939,7 @@ article.main-good__container {
   top: 110%;
   left: calc(50% - 440px);
   z-index: 100;
-  .active {
+  &.active {
     top: 0;
   }
 }
@@ -4153,17 +4154,9 @@ article.main-good__container {
 }
 
 .contact-caption {
-  @include transition-cb-all;
   @include dark-caption;
   color: #012D48;
   margin-bottom: 60px;
-  opacity: .6;
-  &:hover {
-    opacity: .8;
-  }
-  &.active-btn {
-    opacity: 1;
-  }
 }
 
 .contact__block {
@@ -4178,6 +4171,7 @@ article.main-good__container {
   color: #012D48;
   font-weight: 400 !important;
   margin-bottom: 20px;
+  display: block;
 }
 
 .contact-text {
@@ -4388,17 +4382,24 @@ article.main-good__container {
 }
 
 .contact__header .contact-caption {
+  @include transition-cb-all;
   font-family: 'Century Gothic', sans-serif;
   font-size: 24px;
   line-height: 30px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #012D48;
+  color: #9FA8AA;
   margin-right: 65px;
   margin-bottom: 0;
   cursor: pointer;
   &:last-child {
     margin-right: 0;
+  }
+  &:hover {
+    color: #647e8f;
+  }
+  &.active-btn {
+    color: #012D48;
   }
   @media screen and (min-width: 1366px) and (max-width: 1600px){
     font-size: 18px;
@@ -4436,3 +4437,217 @@ article.main-good__container {
 }
 /*end*/
 
+/*Result order*/
+.main.result {
+  @include flex-horizontal;
+  @include space-between;
+  @include stretch;
+  flex-wrap: wrap;
+  max-width: 1570px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    max-width: 1175px;
+  }
+}
+
+.result__header {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.result-header-caption {
+  @include dark-caption;
+  color: #012D48;
+  margin-bottom: 0;
+}
+
+.result-info-wrapper {
+  @include flex-vertical;
+  @include space-between;
+  max-width: 300px;
+}
+
+.result-info__container {
+  @include flex-vertical;
+  width: 100%;
+  padding-bottom: 35px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+span.result-info-text {
+  @include description-text;
+  letter-spacing: 0.05em;
+  color: #4C7790;
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+p.result-info-text {
+  @include medium-caption-pt;
+  color: #012D48;
+  cursor: default;
+}
+
+.result-wrapper {
+  @include flex-vertical;
+  @include  flex-start;
+  max-width: 400px;
+  width: 100%;
+}
+
+.result-text {
+  @include medium-caption-pt;
+  padding: 30px;
+  color: #20465E;
+  line-height: 28px !important;
+  background: #FFFFFF;
+  border: 1px solid #012D48;
+  border-radius: 20px;
+  margin: auto 0 0;
+  cursor: default;
+}
+
+.result-btn {
+  @include transition-cb-all;
+  @include medium-caption-pt;
+  color: #FFFFFF;
+  padding: 15px 25px;
+  background: #3EC2CF;
+  border-radius: 5px;
+  margin: 80px auto 0 0;
+  &:hover {
+    -webkit-box-shadow: 0 10px 20px 2px rgba(62,194,207,0.4);
+    -moz-box-shadow: 0 10px 20px 2px rgba(62,194,207,0.4);
+    box-shadow: 0 10px 20px 2px rgba(62,194,207,0.4);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  &:active {
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+}
+
+.result__aside {
+  @include flex-vertical;
+  max-width: 380px;
+  width: 100%;
+}
+
+.result-aside-icon {
+  width: 100%;
+  height: 290px;
+  background: url("../assets/img/png/orthoblunch-shopbag.png") no-repeat 50% 50%;
+  background-size: cover;
+  margin: auto auto 0;
+}
+
+.result-aside-caption {
+  @include medium-caption-pt;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #012D48;
+  margin: 25px auto 0;
+  cursor: default;
+}
+
+.result-aside-text {
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  color: #3EC2CF;
+  margin: 15px auto 0;
+  cursor: default;
+}
+/*end*/
+
+/*Order*/
+.main.order {
+  @include flex-horizontal;
+  flex-wrap: wrap;
+  max-width: 1570px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    max-width: 1175px;
+  }
+}
+
+.order-caption {
+  @include dark-caption;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #012D48;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.order-form {
+  @include flex-horizontal;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.order-list-wrapper {
+  @include flex-vertical;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.order-list {
+  @include flex-horizontal;
+  @include stretch;
+  width: 100%;
+  border-bottom: 1px solid #CAD6DC;
+}
+
+.order-item {
+  @include flex-horizontal;
+  @include center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  &.description {
+    width: 50%;
+  }
+  &.color {
+    width: 4.5%;
+  }
+  &.size {
+    width: 20.4%;
+  }
+  &.value {
+    width: 12.8%;
+  }
+  &.price {
+    width: 11.3%;
+  }
+  &.remove {
+    width: 1%;
+  }
+}
+
+.order-item-caption {
+  @include medium-caption-cg;
+  letter-spacing: 0.05em;
+  color: #012D48;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.order-item-text {
+  @include text-nav;
+  color: #4C7790;
+}
+/*end*/

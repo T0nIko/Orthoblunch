@@ -173,4 +173,33 @@ $(document).ready(function () {
         $('[data-item = ' + item_id + ']').addClass('active-item');
     });
 
+    // Изменение количества товара
+    let count = 1;
+    $(document).on('click', '.cart-control.add', function () {
+        let input_id = '#' + $(this).data('countid');
+        let price_id = '#' + $(this).data('priceid');
+        let base_summ = $(price_id).text();
+
+        count++;
+        $(input_id).attr('value',count);
+
+        let new_summ = base_summ * count;
+        console.log(new_summ);
+        //$(price_id).text(new_summ);
+    });
+    $(document).on('click', '.cart-control.remove', function () {
+        let input_id = '#' + $(this).data('countid');
+        let price_id = '#' + $(this).data('priceid');
+        let base_summ = $(price_id).text();
+
+        if (count > 1) {
+            count--;
+            $(input_id).attr('value',count);
+
+            let new_summ = base_summ / count;
+            console.log(new_summ);
+        }
+    });
+
+
 });

@@ -4,7 +4,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Main page</title>
+    <link rel="shortcut icon" href="assets/img/png/orthoblunch-logo.png" type="image/png">
+    <title>Ортобланш</title>
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -1571,7 +1572,7 @@
 </footer>
 <!-- end -->
 
-<div class="cart__popup">
+<div class="cart__popup active">
     <span class="cart-popup--close"></span>
 
     <form class="cart-form" action="" method="">
@@ -1654,8 +1655,8 @@
                 <div class="cart-select__container value">
                     <input type="number" id="cart_value" min="1" name="cart-value" value="1" class="cart-value"/>
                     <div class="cart-control-wrapper">
-                        <span class="cart-control add"></span>
-                        <span class="cart-control remove"></span>
+                        <span class="cart-control add" data-countid="cart_value" data-priceid="price"></span>
+                        <span class="cart-control remove" data-countid="cart_value" data-priceid="price"></span>
                     </div>
                 </div>
 

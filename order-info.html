@@ -4,7 +4,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Добро пожаловать</title>
+    <link rel="shortcut icon" href="assets/img/png/orthoblunch-logo.png" type="image/png">
+    <title>Информация о заказе</title>
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -778,57 +779,48 @@
 
 <div class="wrapper">
 
-    <main class="main auth login">
+    <main class="main result">
 
-        <header class="auth__header">
-            <h1 class="auth-caption">Добро пожаловать</h1>
-            <a href="#" class="auth-link">Регистрация</a>
+        <header class="result__header">
+            <h1 class="result-header-caption">Информация о заказе</h1>
         </header>
 
-        <form class="auth-form" action="" method="post">
+        <section class="result-info-wrapper">
 
-            <div class="auth-field-wrapper">
-                <input type="text" name="first-name" id="first_name" class="auth-field"/>
-                <label for="first_name" class="auth-label">Телефон или электронная почта</label>
-                <span class="focus-border"></span>
+            <div class="result-info__container">
+                <span class="result-info-text">Имя</span>
+                <p class="result-info-text">Константин Константинопольский</p>
             </div>
 
-            <div class="auth-field-wrapper">
-                <input type="text" name="last-name" id="last_name" class="auth-field"/>
-                <label for="last_name" class="auth-label">Пароль</label>
-                <span class="focus-border"></span>
+            <div class="result-info__container">
+                <span class="result-info-text">Телефон</span>
+                <p class="result-info-text">+7 900 90 90 90</p>
             </div>
 
-            <footer class="auth__footer">
-
-                <div class="auth-field-wrapper">
-                    <label for="auth_checkbox" class="auth-checkbox-label check">
-                        <input type="checkbox" id="auth_checkbox" name="auth-checkbox" class="auth-checkbox" />
-                        <span class="label"></span>
-                        <p class="auth-checkbox-label-text">Запомнить меня</p>
-                    </label>
-                </div>
-
-                <div class="auth-field-wrapper">
-                    <a href="#" class="auth-field-link">Забыли пароль?</a>
-                </div>
-
-            </footer>
-
-            <div class="auth-btn-wrapper">
-                <p><button type="submit" class="auth-btn">Продолжить</button></p>
+            <div class="result-info__container">
+                <span class="result-info-text">Адрес доствки</span>
+                <p class="result-info-text">пр. Гагарина, 78 б</p>
             </div>
 
-        </form>
+            <div class="result-info__container">
+                <span class="result-info-text">Электронная почта</span>
+                <p class="result-info-text">konstantinopolsky_83@yandex.ru</p>
+            </div>
 
-        <div class="auth-catalog__container">
-            <a href="#" class="auth-catalog-link">
-                <h2 class="auth-catalog-caption">Каталог</h2>
-                <a href="#" class="auth-catalog-btn">Посмотреть весь</a>
-                <img src="assets/img/png/cap.png" class="auth-catalog-img cap" alt="Каталог"/>
-                <img src="assets/img/png/tube.png" class="auth-catalog-img tube" alt="Каталог"/>
-            </a>
-        </div>
+        </section>
+
+        <section class="result-wrapper">
+            <p class="result-text">Пиьмо с деталями заказа и счетом
+                на оплату в ближайшее время будут  отправлены на вашу почту. Наш специалист свяжется с вами для
+                уточнения заказа.</p>
+            <a href="#" class="result-btn">Вернутся к покупкам</a>
+        </section>
+
+        <aside class="result__aside">
+            <span class="result-aside-icon"></span>
+            <h3 class="result-aside-caption">Спасибо за покупку!</h3>
+            <p class="result-aside-text">Улыбайтесь смелее</p>
+        </aside>
 
     </main>
 
