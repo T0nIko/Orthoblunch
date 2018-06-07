@@ -779,149 +779,187 @@
 
 <div class="wrapper">
 
-    <main class="main order">
+    <main class="main basket">
 
-        <h1 class="order-caption">Подтверждение заказа и оплата</h1>
+        <h1 class="basket-caption">Оформление заказа</h1>
 
-        <form class="order-form" method="post" action="">
+        <form class="basket-form" method="post" action="">
 
-            <!-- Контейнер из списка выбранных товаров -->
-            <div class="order-list-wrapper">
-                <ul class="order-list">
-                    <li class="order-item description">
-                        <h2 class="order-item-caption">Swiss Smile diamond glow</h2>
-                        <p class="order-item-description">Набор ультрамягких щеток</p>
-                        <input type="hidden" name="good-info" value="123" />
-                    </li>
-                    <li class="order-item color">
-                        <p class="order-item-color">Blue</p>
-                        <input type="hidden" name="good-color" value="Blue" />
-                    </li>
-                    <li class="order-item size">
-                        <p class="order-item-text">Размер № <span id="size">9</span></p>
-                        <input type="hidden" name="good-size" value="9"/>
-                    </li>
-                    <li class="order-item value">
-                        <p class="order-item-text">Количество: <span id="value">1</span></p>
-                        <input type="hidden" name="good-value" value="1"/>
-                    </li>
-                    <li class="order-item price">
-                        <input type="hidden" name="good-price" value="2 460"/>
-                        <p class="order-item-text"><span id="price">2 460</span> <span class="rub">₽</span></p>
-                    </li>
-                    <li class="order-item remove">
-                        <span class="order-item-remove delete"></span>
-                    </li>
-                </ul>
-            </div>
-            <!-- end -->
+            <!-- Секций может быть N количество -->
+            <section class="basket__row">
 
-            <section class="order-wrapper">
+                <span class="basket-delete delete"></span>
 
-                <div class="order__container">
-                    <h3 class="order-container-caption">Доставка</h3>
-
-                    <div class="order-field-wrapper radio">
-                        <label for="courier_box" class="order-checkbox-label">
-                            <input type="radio" id="courier_box" name="courier" class="order-checkbox" />
-                            <span class="label"></span>
-                            <span>Курьером</span>
-                        </label>
-                    </div>
-                    <div class="order-field-wrapper radio">
-                        <label for="pickup_box" class="order-checkbox-label">
-                            <input type="radio" id="pickup_box" name="courier" class="order-checkbox" />
-                            <span class="label"></span>
-                            <span>Самовывоз</span>
-                        </label>
-                    </div>
-
-                    <span class="order-field-hint">Курьер доставит заказ в удобное для вас время по указанному адресу.</span>
-                    <span class="order-field-hint">Вы можете забрать заказ самостоятельно в магазине.</span>
-
-                    <p class="order-field-text">При заказе от 3 000 ₽ доставка бесплатна.</p>
-                    <p class="order-field-text">ул. Белинского, 55 по будням с 8:00 - 17:00</p>
-
+                <div class="basket-img-wrapper">
+                    <img src="assets/img/png/1.png" class="basket-img" alt="" />
                 </div>
 
-                <div class="order__container">
-                    <h3 class="order-container-caption">Оплата</h3>
+                <div class="basket__description">
+                    <h2 class="basket-name">Swiss Smile diamond glow</h2>
+                    <input type="hidden" name="good-name" value="Swiss Smile diamond glow">
 
-                    <div class="order-field-wrapper radio">
-                        <label for="non_cash_box" class="order-checkbox-label">
-                            <input type="radio" id="non_cash_box" name="cash" class="order-checkbox" />
-                            <span class="label"></span>
-                            <span>Оплата по счету</span>
-                        </label>
+                    <p class="basket-text">Набор ультрамягких щеток</p>
+                    <input type="hidden" name="good-description" value="Набор ультрамягких щеток">
+
+                    <p class="basket-color">Blue</p>
+                    <input type="hidden" name="good-color" value="Blue">
+
+                    <p class="basket-size">Размер № 9</p>
+                    <input type="hidden" name="good-size" value="Размер № 9">
+                </div>
+
+                <div class="basket__container">
+                    <div class="basket__value">
+                        <input type="number" name="good-value" id="basket_value" class="basket-value" min="1" value="1" />
+                        <label for="basket_value"></label>
+                        <div class="basket-value__container">
+                            <span class="basket-control add"></span>
+                            <span class="basket-control remove"></span>
+                        </div>
                     </div>
-                    <div class="order-field-wrapper radio">
-                        <label for="cash_box" class="order-checkbox-label">
-                            <input type="radio" id="cash_box" name="cash" class="order-checkbox" />
-                            <span class="label"></span>
-                            <span>Наличными</span>
-                        </label>
-                    </div>
 
-                    <span class="order-field-hint">На почту пришлем счет для оплаты. Для физ. лиц — оплата по квитанции в любом банке. Для юр. лиц — оплата с расчетного счета организации.</span>
-                    <span class="order-field-hint">Оплата наличным расчетом курьеру или в магазине.</span>
-
+                    <p class="basket-price"><span id="basket_price">2 460</span> <span class="rub">₽</span></p>
                 </div>
 
             </section>
+            <!-- end -->
 
-            <aside class="order__aside">
-                <h2 class="order-aside-caption">Укажите свои персональные данные</h2>
-
-                <div class="order-field-wrapper">
-                    <input type="text" name="first-name" id="full_name" class="order-field"/>
-                    <label for="full_name" class="order-label">Имя</label>
-                    <span class="focus-border"></span>
-                </div>
-
-                <div class="order-field-wrapper">
-                    <input type="text" name="first-name" id="address" class="order-field"/>
-                    <label for="address" class="order-label">Адрес</label>
-                    <span class="focus-border"></span>
-                </div>
-
-                <div class="order-field-wrapper">
-                    <input type="tel" name="phone-number" id="phone_num" class="order-field" placeholder="+7"/>
-                    <label for="phone_num" class="order-label">Телефон</label>
-                    <span class="focus-border"></span>
-                </div>
-
-                <div class="order-field-wrapper">
-                    <input type="email" name="email" id="email" class="order-field"/>
-                    <label for="email" class="order-label">Электронная почта</label>
-                    <span class="focus-border"></span>
-                </div>
-
-                <div class="order-field-wrapper">
-                    <label for="order_checkbox" class="order-checkbox-label check">
-                        <input type="checkbox" id="order_checkbox" name="order-checkbox" data-buttonid="send_order" class="order-checkbox" />
-                        <span class="label"></span>
-                        <span class="order-checkbox-label-text">Настоящим подтверждаю, что я ознакомлен и согласен с
-                            <a href="#" class="order-checkbox-label-link">условиями политики конфиденциальности.</a>
-                        </span>
-                    </label>
-                </div>
-
-            </aside>
-
-            <footer class="order__footer">
-
-                <section class="order-footer__container">
-                    <p class="order-footer-text">Курьер: <span id="courier_price">300</span> <span class="rub">₽</span></p>
-                    <p class="order-footer-text">персональная скидка <span id="discount">10</span> %</p>
-                    <p class="order-footer-text"><span id="payment">Наличный</span> расчет</p>
-                    <p class="order-footer-text">Итого: <span id="total_price">2 460</span> <span class="rub">₽</span></p>
-                </section>
-
-                <button type="button" class="order-btn" id="send_order">Завершить</button>
-
+            <footer class="basket__footer">
+                <p class="basket-footer-text">Итого: <span id="basket_total_price">2 460</span> <span class="rub">₽</span></p>
+                <button type="submit" class="basket-btn">Оформить заказ</button>
+                <a href="#" class="basket-link">Продолжить покупки</a>
             </footer>
 
         </form>
+
+        <section class="basket__special">
+
+            <h2 class="basket-special-caption">Вы недавно смотрели</h2>
+
+            <div class="basket-special-wrapper">
+                <form class="basket-special__container" method="post" action="">
+
+                    <div class="basket-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                    </div>
+
+                    <div class="basket-special__description">
+                        <h3 class="basket-special-name">Mirafluor C</h3>
+                        <input type="hidden" name="good-name" value="Mirafluor C" />
+
+                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
+
+                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <input type="hidden" name="good-price" value="350" />
+
+                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                    </div>
+
+                </form>
+                <form class="basket-special__container" method="post" action="">
+
+                    <div class="basket-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                    </div>
+
+                    <div class="basket-special__description">
+                        <h3 class="basket-special-name">Mirafluor C</h3>
+                        <input type="hidden" name="good-name" value="Mirafluor C" />
+
+                        <p class="basket-special-text">Зубная паста для комплексной защитЗубная паста для комплексной защитыЗубная паста для комплексной защитыы</p>
+                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
+
+                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <input type="hidden" name="good-price" value="350" />
+
+                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                    </div>
+
+                </form>
+                <form class="basket-special__container" method="post" action="">
+
+                    <div class="basket-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                    </div>
+
+                    <div class="basket-special__description">
+                        <h3 class="basket-special-name">Mirafluor C</h3>
+                        <input type="hidden" name="good-name" value="Mirafluor C" />
+
+                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
+
+                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <input type="hidden" name="good-price" value="350" />
+
+                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                    </div>
+
+                </form>
+                <form class="basket-special__container" method="post" action="">
+
+                    <div class="basket-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                    </div>
+
+                    <div class="basket-special__description">
+                        <h3 class="basket-special-name">Mirafluor C</h3>
+                        <input type="hidden" name="good-name" value="Mirafluor C" />
+
+                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
+
+                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <input type="hidden" name="good-price" value="350" />
+
+                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                    </div>
+
+                </form>
+                <form class="basket-special__container" method="post" action="">
+
+                    <div class="basket-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                    </div>
+
+                    <div class="basket-special__description">
+                        <h3 class="basket-special-name">Mirafluor C</h3>
+                        <input type="hidden" name="good-name" value="Mirafluor C" />
+
+                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
+
+                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <input type="hidden" name="good-price" value="350" />
+
+                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                    </div>
+
+                </form>
+                <form class="basket-special__container" method="post" action="">
+
+                    <div class="basket-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                    </div>
+
+                    <div class="basket-special__description">
+                        <h3 class="basket-special-name">Mirafluor C</h3>
+                        <input type="hidden" name="good-name" value="Mirafluor C" />
+
+                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
+
+                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <input type="hidden" name="good-price" value="350" />
+
+                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
 
     </main>
 
