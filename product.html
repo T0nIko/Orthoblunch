@@ -63,7 +63,7 @@
             <li class="header-item good">
                 <a href="#" class="header-good-link">
                     <span id="good_count">5 товаров</span>
-                    <span id="good_notification" class="cart-icon"></span>
+                    <span id="good_notification" class="product-icon"></span>
                 </a>
                 <div class="header-good__container">
                     <span class="header-good-icon close"></span>
@@ -779,147 +779,366 @@
 
 <div class="wrapper">
 
-    <main class="main basket">
+    <main class="main product">
 
-        <h1 class="basket-caption">Оформление заказа</h1>
+        <header class="product__header">
+            <span class="product-header-state">Товар есть в наличии</span>
+            <h1 class="product-header-name">Swiss Smile diamond glow</h1>
+            <p class="product-header-description">Набор ультрамягких щеток</p>
+        </header>
 
-        <form class="basket-form" method="post" action="">
+        <!-- Инфа товара -->
+        <div class="product__container">
 
-            <!-- Секций может быть N количество -->
-            <section class="basket__row">
+            <aside class="product__aside"></aside>
 
-                <span class="basket-delete delete"></span>
+            <div class="product__info">
+                <h3 class="product-caption">Описание</h3>
+                <p class="product-text">Cверкающие бриллиантовые зубные щетки diamond glow цвета rose quartz и serenity
+                    ice blue, украшенные стильными кристаллами Swarovski. Ультра мягкие зубные щетки swiss smile имеют
+                    до девяти раз больше щетинок, что делает их гораздо тоньше и плотнее, чем у их обычных аналогов.
+                    Cверкающие бриллиантовые зубные щетки diamond glow цвета rose quartz и serenity ice blue, украшенные
+                    стильными кристаллами Swarovski. Ультра мягкие зубные щетки swiss smile имеют до девяти раз больше
+                    щетинок, что делает их гораздо тоньше и плотнее, чем у их обычных аналогов.</p>
 
-                <div class="basket-img-wrapper">
-                    <img src="assets/img/png/1.png" class="basket-img" alt="" />
-                </div>
+                <form class="product-form" method="post" action="">
 
-                <div class="basket__description">
-                    <h2 class="basket-name">Swiss Smile diamond glow</h2>
-                    <input type="hidden" name="good-name" value="Swiss Smile diamond glow">
+                    <h4 class="product-form-caption">Характеристики</h4>
 
-                    <p class="basket-text">Набор ультрамягких щеток</p>
-                    <input type="hidden" name="good-description" value="Набор ультрамягких щеток">
+                    <section class="product__fields">
+                        <div class="product-field__container">
+                            <div class="product-select-wrapper open-list">
+                                <p class="product-field-text open-list">Blue</p>
+                                <input type="hidden" class="product-field" id="product_color" name="product-color"/>
+                                <label for="product_color" class="product-label open-list"></label>
+                            </div>
 
-                    <p class="basket-color">Blue</p>
-                    <input type="hidden" name="good-color" value="Blue">
-
-                    <p class="basket-size">Размер № 9</p>
-                    <input type="hidden" name="good-size" value="Размер № 9">
-                </div>
-
-                <div class="basket__container">
-                    <div class="basket__value">
-                        <input type="number" name="good-value" id="basket_value" class="basket-value" min="1" value="1" />
-                        <label for="basket_value"></label>
-                        <div class="basket-value__container">
-                            <span class="basket-control add"></span>
-                            <span class="basket-control remove"></span>
+                            <ul class="product-list choose-list">
+                                <li class="product-item choose-item" data-valueid="1" data-name="blue">Blue</li>
+                                <li class="product-item choose-item" data-valueid="2" data-name="orange">Orange</li>
+                                <li class="product-item choose-item" data-valueid="3" data-name="yellow">Yellow</li>
+                                <li class="product-item choose-item" data-valueid="4" data-name="pink">Pink</li>
+                            </ul>
                         </div>
+
+                        <div class="product-select__container">
+                            <div class="product-select-wrapper open-list">
+                                <p class="product-field-text open-list">Размер №1</p>
+                                <input type="hidden" class="product-field" id="product_size" name="product-size"/>
+                                <label for="product_size" class="product-label open-list"></label>
+                            </div>
+
+                            <ul class="product-list choose-list">
+                                <li class="product-item choose-item" data-valueid="1" data-name="Размер №3">Размер №1</li>
+                                <li class="product-item choose-item" data-valueid="1" data-name="Размер №3">Размер №3</li>
+                                <li class="product-item choose-item" data-valueid="1" data-name="Размер №5">Размер №5</li>
+                                <li class="product-item choose-item" data-valueid="1" data-name="Размер №7">Размер №7</li>
+                                <li class="product-item choose-item" data-valueid="1" data-name="Размер №9">Размер №9</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-select__container">
+                            <div class="product-select-wrapper open-list">
+                                <p class="product-field-text open-list">Жесткость №1</p>
+                                <input type="hidden" class="product-field" id="product_hard" name="product-hard"/>
+                                <label for="product_hard" class="product-label open-list"></label>
+                            </div>
+
+                            <ul class="product-list choose-list">
+                                <li class="product-item choose-item" data-valueid="1" data-name="Жесткость №1">Жесткость №1</li>
+                                <li class="product-item choose-item" data-valueid="1" data-name="Жесткость №2">Жесткость №2</li>
+                                <li class="product-item choose-item" data-valueid="1" data-name="Жесткость №3">Жесткость №3</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <footer class="product-form__footer">
+                        <p class="product-price"><span id="price">2456</span> <span class="rub">₽</span></p>
+
+                        <div class="product-select__container value">
+                            <input type="number" id="product_value" min="1" name="product-value" value="1" class="product-value"/>
+                            <div class="product-control-wrapper">
+                                <span class="product-control add" data-countid="product_value" data-priceid="price"></span>
+                                <span class="product-control remove" data-countid="product_value" data-priceid="price"></span>
+                            </div>
+                        </div>
+
+                        <button class="product-btn" type="submit">Добавить в корзину</button>
+                        <a href="#" class="product-link">Задать вопрос</a>
+                    </footer>
+
+                </form>
+            </div>
+
+        </div>
+        <!-- end -->
+
+        <!-- Товары -->
+        <div class="catalog-good-wrapper">
+
+            <h2 class="catalog-caption">Часто с этим товаром покупают</h2>
+
+            <div class="catalog-good__block">
+                <article class="catalog-good__container">
+                    <div class="catalog-good">
+                        <div class="catalog-good-img-wrapper">
+                            <a href="#">
+                                <img src="assets/img/png/1.png" class="catalog-good-img" alt=""/>
+                            </a>
+                        </div>
+                        <span class="catalog-good-state state state-in-stock"></span>
+                        <h3 class="catalog-good-caption">Mirafluor C</h3>
+                        <p class="catalog-good-text">Зубная паста для комплексной защиты</p>
+                        <section class="catalog-good__box">
+                            <p class="catalog-good-box-text"><span class="catalog-price">350 <span class="rub">₽</span></span></p>
+                            <p class="catalog-good-box-btn">Добавить в корзину</p>
+                        </section>
+                        <footer class="catalog-good__footer">
+                            <span class="catalog-good-tag">Восстановление эмали</span>
+                            <span class="catalog-good-tag">Зубной налет</span>
+                            <span class="catalog-good-tag">Кариес</span>
+                            <div class="catalog-good-footer__container">
+                                <span class="catalog-good-tag">Восстановление эмали</span>
+                                <span class="catalog-good-tag">Зубной налет</span>
+                                <span class="catalog-good-tag">Кариес</span>
+                            </div>
+                        </footer>
+                    </div>
+                </article>
+                <article class="catalog-good__container">
+                    <div class="catalog-good">
+                        <div class="catalog-good-img-wrapper">
+                            <a href="#">
+                                <img src="assets/img/png/1.png" class="catalog-good-img" alt=""/>
+                            </a>
+                        </div>
+                        <span class="catalog-good-state state state-in-stock"></span>
+                        <h3 class="catalog-good-caption">Mirafluor C</h3>
+                        <p class="catalog-good-text">Зубная паста для комплексной защиты</p>
+                        <section class="catalog-good__box">
+                            <p class="catalog-good-box-text"><span class="catalog-price">350 <span class="rub">₽</span></span></p>
+                            <p class="catalog-good-box-btn">Добавить в корзину</p>
+                        </section>
+                        <footer class="catalog-good__footer">
+                            <span class="catalog-good-tag">Восстановление эмали</span>
+                            <span class="catalog-good-tag">Зубной налет</span>
+                            <span class="catalog-good-tag">Кариес</span>
+                            <div class="catalog-good-footer__container">
+                                <span class="catalog-good-tag">Восстановление эмали</span>
+                                <span class="catalog-good-tag">Зубной налет</span>
+                                <span class="catalog-good-tag">Кариес</span>
+                            </div>
+                        </footer>
+                    </div>
+                </article>
+                <article class="catalog-good__container">
+                    <div class="catalog-good">
+                        <div class="catalog-good-img-wrapper">
+                            <a href="#">
+                                <img src="assets/img/png/1.png" class="catalog-good-img" alt=""/>
+                            </a>
+                        </div>
+                        <span class="catalog-good-state state state-in-stock"></span>
+                        <h3 class="catalog-good-caption">Mirafluor C</h3>
+                        <p class="catalog-good-text">Зубная паста для комплексной защиты</p>
+                        <section class="catalog-good__box">
+                            <p class="catalog-good-box-text"><span class="catalog-price">350 <span class="rub">₽</span></span></p>
+                            <p class="catalog-good-box-btn">Добавить в корзину</p>
+                        </section>
+                        <footer class="catalog-good__footer">
+                            <span class="catalog-good-tag">Восстановление эмали</span>
+                            <span class="catalog-good-tag">Зубной налет</span>
+                            <span class="catalog-good-tag">Кариес</span>
+                            <div class="catalog-good-footer__container">
+                                <span class="catalog-good-tag">Восстановление эмали</span>
+                                <span class="catalog-good-tag">Зубной налет</span>
+                                <span class="catalog-good-tag">Кариес</span>
+                            </div>
+                        </footer>
+                    </div>
+                </article>
+                <article class="catalog-good__container">
+                    <div class="catalog-good">
+                        <div class="catalog-good-img-wrapper">
+                            <a href="#">
+                                <img src="assets/img/png/1.png" class="catalog-good-img" alt=""/>
+                            </a>
+                        </div>
+                        <span class="catalog-good-state state state-in-stock"></span>
+                        <h3 class="catalog-good-caption">Mirafluor C</h3>
+                        <p class="catalog-good-text">Зубная паста для комплексной защиты</p>
+                        <section class="catalog-good__box">
+                            <p class="catalog-good-box-text"><span class="catalog-price">350 <span class="rub">₽</span></span></p>
+                            <p class="catalog-good-box-btn">Добавить в корзину</p>
+                        </section>
+                        <footer class="catalog-good__footer">
+                            <span class="catalog-good-tag">Восстановление эмали</span>
+                            <span class="catalog-good-tag">Зубной налет</span>
+                            <span class="catalog-good-tag">Кариес</span>
+                            <div class="catalog-good-footer__container">
+                                <span class="catalog-good-tag">Восстановление эмали</span>
+                                <span class="catalog-good-tag">Зубной налет</span>
+                                <span class="catalog-good-tag">Кариес</span>
+                            </div>
+                        </footer>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+        <!-- end -->
+
+
+        <!-- Таблица сравнений -->
+        <div class="">
+
+        </div>
+        <!-- end -->
+
+        <!-- Рекомендованные материалы -->
+        <div class="article-wrapper">
+
+            <h2 class="articles-caption">Полезные материалы</h2>
+
+            <div class="articles__container">
+                <article class="article__container">
+                    <a href="#" class="article-container-link">
+                        <h4 class="article-caption">Абразивные зубные пасты, в чем их опасность для эмали?</h4>
+                        <div class="article-img-wrapper">
+                            <img src="assets/img/png/5.png" class="article-img" alt=""/>
+                            <h4 class="article-text">Абразивные зубные пасты, в чем их опасность для эмали?</h4>
+                            <p class="article-btn">Читать статью</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="article__container">
+                    <a href="#" class="article-container-link">
+                        <h4 class="article-caption">Проблема прикуса, нужны ли брекеты?Проблема прикуса, нужны ли
+                            брекеты?</h4>
+                        <div class="article-img-wrapper">
+                            <img src="assets/img/png/6.png" class="article-img" alt=""/>
+                            <h4 class="article-text">Проблема прикуса, нужны ли брекеты?</h4>
+                            <p class="article-btn">Читать статью</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="article__container">
+                    <a href="#" class="article-container-link">
+                        <h4 class="article-caption">Как правильно чистить зубы ребенку? С какого возраста?</h4>
+                        <div class="article-img-wrapper">
+                            <img src="assets/img/png/7.png" class="article-img" alt=""/>
+                            <h4 class="article-text">Как правильно чистить зубы ребенку? С какого возраста?</h4>
+                            <p class="article-btn">Читать статью</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="article__container">
+                    <a href="#" class="article-container-link">
+                        <h4 class="article-caption">Абразивные зубные пасты, в чем их опасность для эмали?</h4>
+                        <div class="article-img-wrapper">
+                            <img src="assets/img/png/5.png" class="article-img" alt=""/>
+                            <h4 class="article-text">Абразивные зубные пасты, в чем их опасность для эмали?</h4>
+                            <p class="article-btn">Читать статью</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <a href="#" class="all-article">Все статьи</a>
+
+        </div>
+        <!-- end -->
+
+        <!-- Недавно смотрели -->
+        <section class="catalog__special">
+
+            <h2 class="catalog-special-caption">Вы недавно смотрели</h2>
+
+            <div class="catalog-special-wrapper">
+                <form class="catalog-special__container" method="post" action="">
+
+                    <div class="catalog-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="catalog-special-img" alt="" />
                     </div>
 
-                    <p class="basket-price"><span id="basket_price">2 460</span> <span class="rub">₽</span></p>
-                </div>
-
-            </section>
-            <!-- end -->
-
-            <footer class="basket__footer">
-                <p class="basket-footer-text">Итого: <span id="basket_total_price">2 460</span> <span class="rub">₽</span></p>
-                <button type="submit" class="basket-btn">Оформить заказ</button>
-                <a href="#" class="basket-link">Продолжить покупки</a>
-            </footer>
-
-        </form>
-
-        <section class="basket__special">
-
-            <h2 class="basket-special-caption">Вы недавно смотрели</h2>
-
-            <div class="basket-special-wrapper">
-                <form class="basket-special__container" method="post" action="">
-
-                    <div class="basket-special-img-wrapper">
-                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
-                    </div>
-
-                    <div class="basket-special__description">
-                        <h3 class="basket-special-name">Mirafluor C</h3>
+                    <div class="catalog-special__description">
+                        <h3 class="catalog-special-name">Mirafluor C</h3>
                         <input type="hidden" name="good-name" value="Mirafluor C" />
 
-                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                        <p class="catalog-special-text">Зубная паста для комплексной защиты</p>
                         <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
 
-                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <p class="catalog-special-price"><span class="catalog-special-price">350</span> <span class="rub">₽</span></p>
                         <input type="hidden" name="good-price" value="350" />
 
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                        <button type="submit" class="catalog-special-btn">Добавить в корзину</button>
                     </div>
 
                 </form>
-                <form class="basket-special__container" method="post" action="">
+                <form class="catalog-special__container" method="post" action="">
 
-                    <div class="basket-special-img-wrapper">
-                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                    <div class="catalog-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="catalog-special-img" alt="" />
                     </div>
 
-                    <div class="basket-special__description">
-                        <h3 class="basket-special-name">Mirafluor C</h3>
+                    <div class="catalog-special__description">
+                        <h3 class="catalog-special-name">Mirafluor C</h3>
                         <input type="hidden" name="good-name" value="Mirafluor C" />
 
-                        <p class="basket-special-text">Зубная паста для комплексной защитЗубная паста для комплексной защитыЗубная паста для комплексной защитыы</p>
+                        <p class="catalog-special-text">Зубная паста для комплексной защиты</p>
                         <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
 
-                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <p class="catalog-special-price"><span class="catalog-special-price">350</span> <span class="rub">₽</span></p>
                         <input type="hidden" name="good-price" value="350" />
 
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                        <button type="submit" class="catalog-special-btn">Добавить в корзину</button>
                     </div>
 
                 </form>
-                <form class="basket-special__container" method="post" action="">
+                <form class="catalog-special__container" method="post" action="">
 
-                    <div class="basket-special-img-wrapper">
-                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                    <div class="catalog-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="catalog-special-img" alt="" />
                     </div>
 
-                    <div class="basket-special__description">
-                        <h3 class="basket-special-name">Mirafluor C</h3>
+                    <div class="catalog-special__description">
+                        <h3 class="catalog-special-name">Mirafluor C</h3>
                         <input type="hidden" name="good-name" value="Mirafluor C" />
 
-                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                        <p class="catalog-special-text">Зубная паста для комплексной защиты</p>
                         <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
 
-                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <p class="catalog-special-price"><span class="catalog-special-price">350</span> <span class="rub">₽</span></p>
                         <input type="hidden" name="good-price" value="350" />
 
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                        <button type="submit" class="catalog-special-btn">Добавить в корзину</button>
                     </div>
 
                 </form>
-                <form class="basket-special__container" method="post" action="">
+                <form class="catalog-special__container" method="post" action="">
 
-                    <div class="basket-special-img-wrapper">
-                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                    <div class="catalog-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="catalog-special-img" alt="" />
                     </div>
 
-                    <div class="basket-special__description">
-                        <h3 class="basket-special-name">Mirafluor C</h3>
+                    <div class="catalog-special__description">
+                        <h3 class="catalog-special-name">Mirafluor C</h3>
                         <input type="hidden" name="good-name" value="Mirafluor C" />
 
-                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                        <p class="catalog-special-text">Зубная паста для комплексной защиты</p>
                         <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
 
-                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <p class="catalog-special-price"><span class="catalog-special-price">350</span> <span class="rub">₽</span></p>
                         <input type="hidden" name="good-price" value="350" />
 
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                        <button type="submit" class="catalog-special-btn">Добавить в корзину</button>
                     </div>
 
                 </form>
             </div>
 
         </section>
+        <!-- end -->
 
     </main>
 

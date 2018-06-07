@@ -204,5 +204,16 @@ $(document).ready(function () {
         }
     });
 
+    $(document).on('click', '.choose-item', function () {
+        if ($(this).hasClass('catalog-tag-item')) {
+            $(this).toggleClass('active-item');
+        }
+    });
+
+    $(document).on('click', '.remove', function () {
+        if ($(this).hasClass('catalog-tag-item-icon')) {
+            $(this).parent('.catalog-tag-item').toggleClass('active-item');
+        }
+    });
 
 });

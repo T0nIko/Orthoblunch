@@ -779,147 +779,398 @@
 
 <div class="wrapper">
 
-    <main class="main basket">
+    <main class="main post">
 
-        <h1 class="basket-caption">Оформление заказа</h1>
+        <header class="post__header">
+            <h1 class="post-caption">Как правильно чистить зубы ребенку? С какого возраста?</h1>
+            <div class="post-header-img-wrapper">
+                <img src="assets/img/png/article-header-img.png" class="post-header-img" alt="" />
+            </div>
+            <a href="#" class="post-header-link">Все статьи</a>
+        </header>
 
-        <form class="basket-form" method="post" action="">
+        <div class="post-wrapper">
 
-            <!-- Секций может быть N количество -->
-            <section class="basket__row">
+            <div class="post__container">
 
-                <span class="basket-delete delete"></span>
+                <h1>Гигиена полости рта новорожденного - пример h1</h1>
+                <h2>Гигиена полости рта новорожденного - пример h2</h2>
+                <h3>Гигиена полости рта новорожденного - пример h3</h3>
+                <h4>Гигиена полости рта новорожденного - пример h4</h4>
 
-                <div class="basket-img-wrapper">
-                    <img src="assets/img/png/1.png" class="basket-img" alt="" />
-                </div>
+                <p>Многие родители считают, что если у ребёнка нет зубов, то за гигиеной полости рта можно не следить. Но
+                    это не правильно. Профилактику кариеса зубов необходимо начинать в период новорожденности, когда ещё
+                    не прорезались молочные зубы. В первые полгода жизни идет массовое заселение ротовой полости
+                    микробами.</p>
 
-                <div class="basket__description">
-                    <h2 class="basket-name">Swiss Smile diamond glow</h2>
-                    <input type="hidden" name="good-name" value="Swiss Smile diamond glow">
+                <h5>Это происходит во время: - пример h5</h5>
+                <h6>Это происходит во время: - пример h6</h6>
 
-                    <p class="basket-text">Набор ультрамягких щеток</p>
-                    <input type="hidden" name="good-description" value="Набор ультрамягких щеток">
+                <ul>
+                    <li>поцелуев родителей и родственников;</li>
+                    <li>при облизывании соски, выпавшей изо рта ребенка;</li>
+                    <li>пробовании пищи для ребёнка перед кормлением с детской ложечки;</li>
+                    <li>при отсутствии у малыша индивидуальной посуды.</li>
+                </ul>
 
-                    <p class="basket-color">Blue</p>
-                    <input type="hidden" name="good-color" value="Blue">
+                <ol>
+                    <li>поцелуев родителей и родственников;</li>
+                    <li>при облизывании соски, выпавшей изо рта ребенка;</li>
+                    <li>пробовании пищи для ребёнка перед кормлением с детской ложечки;</li>
+                    <li>при отсутствии у малыша индивидуальной посуды.</li>
+                </ol>
 
-                    <p class="basket-size">Размер № 9</p>
-                    <input type="hidden" name="good-size" value="Размер № 9">
-                </div>
+                <p><i>Всё это приводит к тому, что в полость рта ребёнка попадает огромное количество патогенной микрофлоры,
+                    в числе прочего, вызывающей развитие кариеса, воспалительных процессов на слизистой полости рта,
+                    молочницы полости рта.</i></p>
 
-                <div class="basket__container">
-                    <div class="basket__value">
-                        <input type="number" name="good-value" id="basket_value" class="basket-value" min="1" value="1" />
-                        <label for="basket_value"></label>
-                        <div class="basket-value__container">
-                            <span class="basket-control add"></span>
-                            <span class="basket-control remove"></span>
-                        </div>
-                    </div>
+                <p>После приема пищи <strong>остатки</strong> еды, находясь в <b>полости</b> рта ребенка, являются хорошей питательной средой для
+                    всех видов микробов. Поэтому необходимо после каждого кормления протирать десна малышу салфетками. Это
+                    могут быть марлевые салфетки, смоченные кипяченой водой или специальные салфетки Spiffies с пропиткой,
+                    содержащей ксилит, который подавляет рост бактерий. Рекомендуется использовать салфетки Spiffies даже
+                    до появления зубов для протирания десен и языка малыша с 3-4 месяцев после каждого кормления ребенка.
+                    Особенно важно очищать полость рта, когда в рацион  ребенка вводится прикорм. Материнское молоко
+                    содержит природные антимикробные вещества, защищающие от кариеса, но молочные смеси таких компонентов
+                    не содержат. Мельчайшие остатки молока из молочной смеси или твердой пищи являются питательной средой
+                    для роста микроорганизмов, вызывающих кариес.</p>
 
-                    <p class="basket-price"><span id="basket_price">2 460</span> <span class="rub">₽</span></p>
-                </div>
+                <p>Особенно удобны влажные салфетки перед сном, после вечернего кормления.</p>
 
-            </section>
-            <!-- end -->
-
-            <footer class="basket__footer">
-                <p class="basket-footer-text">Итого: <span id="basket_total_price">2 460</span> <span class="rub">₽</span></p>
-                <button type="submit" class="basket-btn">Оформить заказ</button>
-                <a href="#" class="basket-link">Продолжить покупки</a>
-            </footer>
-
-        </form>
-
-        <section class="basket__special">
-
-            <h2 class="basket-special-caption">Вы недавно смотрели</h2>
-
-            <div class="basket-special-wrapper">
-                <form class="basket-special__container" method="post" action="">
-
-                    <div class="basket-special-img-wrapper">
-                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
-                    </div>
-
-                    <div class="basket-special__description">
-                        <h3 class="basket-special-name">Mirafluor C</h3>
-                        <input type="hidden" name="good-name" value="Mirafluor C" />
-
-                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
-                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
-
-                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
-                        <input type="hidden" name="good-price" value="350" />
-
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
-                    </div>
-
-                </form>
-                <form class="basket-special__container" method="post" action="">
-
-                    <div class="basket-special-img-wrapper">
-                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
-                    </div>
-
-                    <div class="basket-special__description">
-                        <h3 class="basket-special-name">Mirafluor C</h3>
-                        <input type="hidden" name="good-name" value="Mirafluor C" />
-
-                        <p class="basket-special-text">Зубная паста для комплексной защитЗубная паста для комплексной защитыЗубная паста для комплексной защитыы</p>
-                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
-
-                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
-                        <input type="hidden" name="good-price" value="350" />
-
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
-                    </div>
-
-                </form>
-                <form class="basket-special__container" method="post" action="">
-
-                    <div class="basket-special-img-wrapper">
-                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
-                    </div>
-
-                    <div class="basket-special__description">
-                        <h3 class="basket-special-name">Mirafluor C</h3>
-                        <input type="hidden" name="good-name" value="Mirafluor C" />
-
-                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
-                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
-
-                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
-                        <input type="hidden" name="good-price" value="350" />
-
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
-                    </div>
-
-                </form>
-                <form class="basket-special__container" method="post" action="">
-
-                    <div class="basket-special-img-wrapper">
-                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
-                    </div>
-
-                    <div class="basket-special__description">
-                        <h3 class="basket-special-name">Mirafluor C</h3>
-                        <input type="hidden" name="good-name" value="Mirafluor C" />
-
-                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
-                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
-
-                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
-                        <input type="hidden" name="good-price" value="350" />
-
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
-                    </div>
-
-                </form>
             </div>
 
-        </section>
+            <aside class="post__aside">
+                <h2 class="post-aside-caption">Другие статьи</h2>
+
+                <article class="post-aside__container">
+                    <a href="" class="post-aside-link">
+                        <h3 class="post-aside-container-caption">Проблема прикуса, нужны ли брекеты?</h3>
+                        <div class="post-aside-img__container">
+                            <img src="assets/img/png/5.png" class="post-aside-img" alt="" />
+                            <h4 class="post-aside-img-caption">Проблема прикуса, нужны ли брекеты?</h4>
+                            <p class="post-aside-img-text">Перейти</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="post-aside__container">
+                    <a href="" class="post-aside-link">
+                        <h3 class="post-aside-container-caption">Абразивные зубные пасты, в чем их опасность для эмали?</h3>
+                        <div class="post-aside-img__container">
+                            <img src="assets/img/png/6.png" class="post-aside-img" alt="" />
+                            <h4 class="post-aside-img-caption">Абразивные зубные пасты, в чем их опасность для эмали?</h4>
+                            <p class="post-aside-img-text">Перейти</p>
+                        </div>
+                    </a>
+                </article>
+
+            </aside>
+
+        </div>
+
+        <!-- Специальное предложение -->
+        <div class="special-wrapper">
+
+            <h2 class="special-caption">Специальные предложения</h2>
+
+            <div class="special__container">
+                <div class="special-list-wrapper swiper-container">
+                    <ul class="special-list swiper-wrapper">
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="special-item swiper-slide">
+                            <div class="special-item-wrapper">
+                                <div class="special-img-wrapper">
+                                    <a href="#" class="special-img-link">
+                                        <img src="assets/img/png/1.png" class="special-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="special-state state state-in-stock"></span>
+                                <h3 class="special-item-caption">Mirafluor C</h3>
+                                <p class="special-text">Зубная паста для комплексной защиты</p>
+                                <section class="special__box">
+                                    <p class="special-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="special-box-btn">Добавить в корзину</p>
+                                </section>
+                                <footer class="special__footer">
+                                    <span class="special-tag">Восстановление эмали</span>
+                                    <span class="special-tag">Зубной налет</span>
+                                    <span class="special-tag">Кариес</span>
+                                    <div class="special-footer__container">
+                                        <span class="special-tag">Восстановление эмали</span>
+                                        <span class="special-tag">Зубной налет</span>
+                                        <span class="special-tag">Кариес</span>
+                                    </div>
+                                </footer>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Add Scrollbar -->
+                <div class="swiper-scrollbar special-scrollbar"></div>
+
+                <span class="special-btn prev"></span>
+                <span class="special-btn next"></span>
+            </div>
+
+        </div>
+        <!-- end -->
 
     </main>
 
