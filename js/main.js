@@ -154,11 +154,14 @@ $(document).ready(function () {
 
     // Если галочка проставлена, то кнопка становится кликабельной
     $(document).on('click', '.check', function () {
+        let button = '#' + $(this).find('input').data('buttonid');
+
         if ($(this).find('input[type = checkbox]').prop('checked') === true) {
-            $('.auth-btn-wrapper.sign-in').addClass('active-btn');
+            $(button).addClass('active-btn');
         }
         else  {
-            $('.auth-btn-wrapper.sign-in').removeClass('active-btn');
+            $(button).removeClass('active-btn');
+            console.log(button);
         }
     });
 

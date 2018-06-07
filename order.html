@@ -790,7 +790,7 @@
                 <ul class="order-list">
                     <li class="order-item description">
                         <h2 class="order-item-caption">Swiss Smile diamond glow</h2>
-                        <p class="order-item-text">Набор ультрамягких щеток</p>
+                        <p class="order-item-description">Набор ультрамягких щеток</p>
                         <input type="hidden" name="good-info" value="123" />
                     </li>
                     <li class="order-item color">
@@ -807,7 +807,7 @@
                     </li>
                     <li class="order-item price">
                         <input type="hidden" name="good-price" value="2 460"/>
-                        <p class="order-item-text"><span id="price">1</span> <span class="rub">₽</span></p>
+                        <p class="order-item-text"><span id="price">2 460</span> <span class="rub">₽</span></p>
                     </li>
                     <li class="order-item remove">
                         <span class="order-item-remove"></span>
@@ -821,13 +821,19 @@
                 <div class="order__container">
                     <h3 class="order-container-caption">Доставка</h3>
 
-                    <div class="order-field-wrapper">
-                        <input type="radio" id="courier_box" name="courier" class="order-field" />
-                        <label for="courier_box" class="order-field-label">Курьером</label>
+                    <div class="order-field-wrapper radio">
+                        <label for="courier_box" class="order-checkbox-label">
+                            <input type="radio" id="courier_box" name="courier" class="order-checkbox" />
+                            <span class="label"></span>
+                            <span>Курьером</span>
+                        </label>
                     </div>
-                    <div class="order-field-wrapper">
-                        <input type="radio" id="pickup_box" name="courier" class="order-field" />
-                        <label for="pickup_box" class="order-field-label">Самовывоз</label>
+                    <div class="order-field-wrapper radio">
+                        <label for="pickup_box" class="order-checkbox-label">
+                            <input type="radio" id="pickup_box" name="courier" class="order-checkbox" />
+                            <span class="label"></span>
+                            <span>Самовывоз</span>
+                        </label>
                     </div>
 
                     <span class="order-field-hint">Курьер доставит заказ в удобное для вас время по указанному адресу.</span>
@@ -838,7 +844,82 @@
 
                 </div>
 
+                <div class="order__container">
+                    <h3 class="order-container-caption">Оплата</h3>
+
+                    <div class="order-field-wrapper radio">
+                        <label for="non_cash_box" class="order-checkbox-label">
+                            <input type="radio" id="non_cash_box" name="cash" class="order-checkbox" />
+                            <span class="label"></span>
+                            <span>Оплата по счету</span>
+                        </label>
+                    </div>
+                    <div class="order-field-wrapper radio">
+                        <label for="cash_box" class="order-checkbox-label">
+                            <input type="radio" id="cash_box" name="cash" class="order-checkbox" />
+                            <span class="label"></span>
+                            <span>Наличными</span>
+                        </label>
+                    </div>
+
+                    <span class="order-field-hint">На почту пришлем счет для оплаты. Для физ. лиц — оплата по квитанции в любом банке. Для юр. лиц — оплата с расчетного счета организации.</span>
+                    <span class="order-field-hint">Оплата наличным расчетом курьеру или в магазине.</span>
+
+                </div>
+
             </section>
+
+            <aside class="order__aside">
+                <h2 class="order-aside-caption">Укажите свои персональные данные</h2>
+
+                <div class="order-field-wrapper">
+                    <input type="text" name="first-name" id="full_name" class="order-field"/>
+                    <label for="full_name" class="order-label">Имя</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="order-field-wrapper">
+                    <input type="text" name="first-name" id="address" class="order-field"/>
+                    <label for="address" class="order-label">Адрес</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="order-field-wrapper">
+                    <input type="tel" name="phone-number" id="phone_num" class="order-field" placeholder="+7"/>
+                    <label for="phone_num" class="order-label">Телефон</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="order-field-wrapper">
+                    <input type="email" name="email" id="email" class="order-field"/>
+                    <label for="email" class="order-label">Электронная почта</label>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="order-field-wrapper">
+                    <label for="order_checkbox" class="order-checkbox-label check">
+                        <input type="checkbox" id="order_checkbox" name="order-checkbox" data-buttonid="send_order" class="order-checkbox" />
+                        <span class="label"></span>
+                        <span class="order-checkbox-label-text">Настоящим подтверждаю, что я ознакомлен и согласен с
+                            <a href="#" class="order-checkbox-label-link">условиями политики конфиденциальности.</a>
+                        </span>
+                    </label>
+                </div>
+
+            </aside>
+
+            <footer class="order__footer">
+
+                <section class="order-footer__container">
+                    <p class="order-footer-text">Курьер: <span id="courier_price">300</span> <span class="rub">₽</span></p>
+                    <p class="order-footer-text">персональная скидка <span id="discount">10</span> %</p>
+                    <p class="order-footer-text"><span id="payment">Наличный</span> расчет</p>
+                    <p class="order-footer-text">Итого: <span id="total_price">2 460</span> <span class="rub">₽</span></p>
+                </section>
+
+                <button type="button" class="order-btn" id="send_order">Завершить</button>
+
+            </footer>
 
         </form>
 
