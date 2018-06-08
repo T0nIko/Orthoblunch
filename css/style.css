@@ -121,13 +121,14 @@ input::-webkit-inner-spin-button {
   align-items: flex-end;
   max-width: 1570px;
   width: 100%;
-  height: 75px;
-  margin-bottom: 10px;
+  height: 85px;
+  margin-bottom: 12px;
   position: relative;
   z-index: 2; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .header__container {
-      max-width: 1175px; } }
+      max-width: 1175px;
+      height: 70px; } }
 
 .header.fixed .header__container {
   -webkit-box-align: center;
@@ -193,7 +194,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   position: absolute;
   width: 200px;
-  height: 65px;
+  height: 70px;
   bottom: 0;
   left: calc(50% - 100px);
   cursor: pointer; }
@@ -218,11 +219,20 @@ input::-webkit-inner-spin-button {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  width: 40px;
-  height: 25px; }
+  width: 54px;
+  height: 33px;
+  margin-bottom: 15px; }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .header-logo {
+      width: 40px;
+      height: 25px;
+      margin-bottom: 15px; } }
+
+.header.fixed .header-logo {
+  margin: auto !important; }
 
 .header-logo-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
@@ -231,7 +241,7 @@ input::-webkit-inner-spin-button {
   color: #89A9BB;
   letter-spacing: 0.22em;
   text-align: center;
-  font-weight: normal !important; }
+  font-weight: 400 !important; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .header-logo-caption {
       font-size: 18px;
@@ -244,19 +254,20 @@ input::-webkit-inner-spin-button {
   pointer-events: none; }
 
 .header-item {
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 25px;
   color: #4C7790; }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .header-item {
+      font-size: 14px; } }
 
 .header-item-link.auth {
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 25px;
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -269,7 +280,7 @@ input::-webkit-inner-spin-button {
     height: 1px;
     background: #4C7790;
     left: 0;
-    bottom: -2px;
+    bottom: 2px;
     -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
     -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
     transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1); }
@@ -277,14 +288,16 @@ input::-webkit-inner-spin-button {
     opacity: .7; }
     .header-item-link.auth:hover:after {
       opacity: .7; }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .header-item-link.auth {
+      font-size: 14px; } }
 
 .header-item #user_name,
 .header-list:last-child .header-item-link {
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 25px;
   cursor: pointer;
   color: #4C7790;
   position: relative; }
@@ -295,7 +308,7 @@ input::-webkit-inner-spin-button {
     position: absolute;
     width: 0;
     height: 1px;
-    bottom: -2px;
+    bottom: 2px;
     background: #4C7790; }
   .header-item #user_name:before,
   .header-list:last-child .header-item-link:before {
@@ -319,6 +332,10 @@ input::-webkit-inner-spin-button {
     background: transparent;
     width: 100%;
     transition: 0s; }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .header-item #user_name,
+    .header-list:last-child .header-item-link {
+      font-size: 14px; } }
 
 .header-good-link {
   display: -webkit-box;
@@ -328,15 +345,14 @@ input::-webkit-inner-spin-button {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 25px;
   color: #59BCCC; }
 
 .header-good-link span:first-child {
-  margin-right: 20px;
+  margin-right: 25px;
   position: relative; }
   .header-good-link span:first-child:before, .header-good-link span:first-child:after {
     content: '';
@@ -441,7 +457,7 @@ input::-webkit-inner-spin-button {
       left: calc(50% - 4px); }
 
 .header-good-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -482,7 +498,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   max-width: 1570px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 14px;
   background: #3EC2CF;
   height: 40px;
   position: relative;
@@ -532,10 +548,10 @@ input::-webkit-inner-spin-button {
   z-index: 2; }
 
 .header-special-text {
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -556,6 +572,9 @@ input::-webkit-inner-spin-button {
     opacity: .7; }
     .header-special-text:hover:after {
       opacity: .7; }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .header-special-text {
+      font-size: 14px; } }
 
 /*END*/
 /*Main header container*/
@@ -645,7 +664,7 @@ input::-webkit-inner-spin-button {
   -ms-flex-align: end;
   align-items: flex-end;
   position: absolute;
-  top: 145px;
+  top: 165px;
   left: 0;
   height: 640px;
   width: 100%;
@@ -771,7 +790,7 @@ input::-webkit-inner-spin-button {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
@@ -934,7 +953,7 @@ input::-webkit-inner-spin-button {
   pointer-events: unset !important; }
 
 .navigation-all-item-caption {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: bold;
@@ -961,7 +980,7 @@ input::-webkit-inner-spin-button {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1044,7 +1063,7 @@ input::-webkit-inner-spin-button {
   -moz-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1063,7 +1082,7 @@ input::-webkit-inner-spin-button {
   -moz-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -1077,7 +1096,7 @@ input::-webkit-inner-spin-button {
 /*END*/
 /*Main*/
 .main-header__container ~ .navigation ~ .wrapper .main {
-  margin: 145px 0 100px; }
+  margin: 185px 0 100px; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .main-header__container ~ .navigation ~ .wrapper .main {
       margin: 115px 0 80px; } }
@@ -1097,7 +1116,7 @@ input::-webkit-inner-spin-button {
       max-width: 1175px; } }
 
 .main-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -1111,7 +1130,7 @@ input::-webkit-inner-spin-button {
       font-size: 24px; } }
 
 .main-good__block {
-  margin: 80px auto 0;
+  margin: 70px auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1213,7 +1232,7 @@ article.main-good__container {
       max-height: 200px; } }
 
 .main-good-state {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -1235,18 +1254,18 @@ article.main-good__container {
   color: #FF5C00; }
 
 .main-good-caption {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
   cursor: default;
   color: #0057FF;
-  line-height: 26px;
+  line-height: 1;
   position: relative;
   z-index: 2; }
 
 .main-good-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1276,13 +1295,13 @@ article.main-good__container {
   z-index: 2; }
 
 .main-good-box-text {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
   width: 100%;
   color: #012D48;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-weight: bold !important;
   cursor: default; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
@@ -1293,7 +1312,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -1343,11 +1362,10 @@ article.main-good__container {
   overflow: hidden; }
 
 .main-good-tag {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: normal;
+  font-size: 14px;
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -1355,7 +1373,7 @@ article.main-good__container {
   color: #012D48;
   background: #A1DBE4;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 5px 10px;
   cursor: pointer;
   border: 1px solid #A1DBE4;
   margin: 0 10px 10px 0; }
@@ -1369,6 +1387,9 @@ article.main-good__container {
     -ms-transform: translateY(2px);
     -o-transform: translateY(2px);
     transform: translateY(2px); }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .main-good-tag {
+      font-size: 12px; } }
 
 .main-catalog__container {
   width: 685px;
@@ -1474,7 +1495,7 @@ article.main-good__container {
   transform: rotate(-130deg); }
 
 .main-catalog-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -1494,7 +1515,7 @@ article.main-good__container {
       font-size: 24px; } }
 
 .main-catalog-btn {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1548,7 +1569,7 @@ article.main-good__container {
   background: #FFFFFF;
   width: 100%;
   margin: 0 auto;
-  padding: 55px 0 140px;
+  padding: 70px 0 140px;
   position: relative;
   overflow: hidden; }
   .brand-good-wrapper:after {
@@ -1573,7 +1594,7 @@ article.main-good__container {
   height: auto; }
 
 .brand-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -1624,11 +1645,12 @@ article.main-good__container {
   -ms-flex-pack: justify;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 95px auto 0;
+  margin: 85px auto 0;
   max-width: 1570px;
   width: 100%;
   position: relative;
-  z-index: 3; }
+  z-index: 3;
+  cursor: default; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .brand__box {
       max-width: 1175px; } }
@@ -1637,13 +1659,13 @@ article.main-good__container {
   max-width: 300px; }
 
 .brand-good-caption {
-  margin-bottom: 40px; }
+  margin-bottom: 35px; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .brand-good-caption {
       margin-bottom: 25px; } }
 
 .brand-good-caption a {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: bold;
@@ -1652,7 +1674,8 @@ article.main-good__container {
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   position: relative;
   cursor: pointer;
-  color: #012D48; }
+  color: #012D48;
+  text-transform: uppercase; }
   .brand-good-caption a:after {
     position: absolute;
     content: '';
@@ -1670,7 +1693,7 @@ article.main-good__container {
       font-size: 18px; } }
 
 .brand-good-text {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -1685,7 +1708,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1710,14 +1733,14 @@ article.main-good__container {
 /*Articles*/
 .article-wrapper {
   width: 100%;
-  margin: 25px 0 120px;
+  margin: 5px 0 120px;
   position: relative; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .article-wrapper {
       margin: 35px 0 80px; } }
 
 .articles-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -1754,7 +1777,7 @@ article.main-good__container {
   position: relative;
   width: 100%;
   max-width: 1570px;
-  margin: 55px auto 0; }
+  margin: 50px auto 0; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .articles__container {
       max-width: 1175px;
@@ -1871,7 +1894,7 @@ article.main-good__container {
       height: 260px; } }
 
 .article-text {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -1889,7 +1912,7 @@ article.main-good__container {
   text-align: center; }
 
 .article-btn {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1940,7 +1963,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
@@ -1970,7 +1993,7 @@ article.main-good__container {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -2038,10 +2061,10 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  margin: 85px auto 100px;
+  margin: 90px auto 100px;
   font-family: 'Century Gothic', sans-serif;
-  line-height: 36px;
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 1;
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2054,7 +2077,7 @@ article.main-good__container {
     transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
     position: absolute;
     content: '';
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     background: #012D48;
     width: 100%;
@@ -2065,20 +2088,21 @@ article.main-good__container {
       opacity: 0; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .choose-brush-link {
-      margin: 65px auto 75px; } }
+      margin: 65px auto 75px;
+      font-size: 14px; } }
 
 /*end*/
 /*Spetial request*/
 .special-wrapper {
   width: 100%;
   background: #DDE7EA;
-  margin: 120px 0 0;
-  padding: 65px 0 0;
+  margin: 180px 0 0;
+  padding: 70px 0 0;
   position: relative;
   overflow-x: hidden; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .special-wrapper {
-      margin: 80px 0 0;
+      margin: 120px 0 0;
       padding: 75px 0 0; } }
 
 .special-btn {
@@ -2208,7 +2232,7 @@ article.main-good__container {
       transform: translateX(-10px); }
 
 .special-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -2228,7 +2252,7 @@ article.main-good__container {
 
 .special__container {
   width: 100%;
-  margin: 45px auto 0; }
+  margin: 30px auto 0; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .special__container {
       margin: 40px auto 0; } }
@@ -2263,7 +2287,7 @@ article.main-good__container {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 200px;
+  max-width: 245px;
   width: 100%;
   min-height: 550px;
   position: relative; }
@@ -2273,6 +2297,9 @@ article.main-good__container {
     opacity: 1; }
   .special-item:hover .special-footer__container {
     opacity: 1; }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .special-item {
+      max-width: 200px; } }
 
 .special-item-wrapper {
   width: 100%;
@@ -2295,8 +2322,8 @@ article.main-good__container {
 
 .special-img-wrapper {
   width: 100%;
-  height: 240px;
-  margin-bottom: 20px;
+  height: 300px;
+  margin-bottom: 10px;
   background: #FFFFFF;
   position: relative;
   overflow: hidden;
@@ -2307,6 +2334,9 @@ article.main-good__container {
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1); }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .special-img-wrapper {
+      height: 240px; } }
 
 .special-img-link {
   display: -webkit-box;
@@ -2317,38 +2347,46 @@ article.main-good__container {
   -ms-flex-direction: row;
   flex-direction: row;
   width: 100%;
-  height: 240px; }
+  height: 300px; }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .special-img-link {
+      height: 240px; } }
 
 .special-img {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  max-height: 200px;
+  max-height: 220px;
   width: auto;
   margin: auto; }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .special-img {
+      max-height: 200px; } }
 
 .special-item-caption {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
   cursor: default;
   color: #0057FF;
-  line-height: 26px;
+  line-height: 1;
   position: relative;
   z-index: 2; }
 
 .special-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: normal;
+  font-size: 14px;
   color: #4C7790;
   margin: 10px auto 25px;
   cursor: default;
   position: relative;
   z-index: 2; }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .special-text {
+      font-size: 12px; } }
 
 .special__box {
   display: -webkit-box;
@@ -2367,7 +2405,7 @@ article.main-good__container {
   z-index: 2; }
 
 .special-state {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -2397,25 +2435,10 @@ article.main-good__container {
   -ms-flex-align: center;
   align-items: center;
   justify-content: space-around;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 25px; }
-
-.special-box-text {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 25px;
-  cursor: default;
-  width: 100%;
-  color: #012D48;
-  margin-bottom: 20px;
-  font-weight: bold !important; }
-
-.special-box-btn {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -2424,11 +2447,22 @@ article.main-good__container {
   border-radius: 5px;
   padding: 10px 20px; }
 
+.special-box-text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  cursor: default;
+  width: 100%;
+  color: #012D48;
+  margin-bottom: 15px;
+  font-weight: bold !important; }
+
 .main-good-box-btn {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -2478,17 +2512,16 @@ article.main-good__container {
   opacity: 0; }
 
 .special-tag {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: normal;
+  font-size: 14px;
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   letter-spacing: 0.05em;
   color: #012D48;
-  background: #CBD6DC;
+  background: #A1DBE4;
   border-radius: 5px;
   padding: 4px 9px;
   cursor: pointer;
@@ -2504,6 +2537,9 @@ article.main-good__container {
     -ms-transform: translateY(2px);
     -o-transform: translateY(2px);
     transform: translateY(2px); }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .special-tag {
+      font-size: 12px; } }
 
 .special-scrollbar {
   height: 6px;
@@ -2517,32 +2553,36 @@ article.main-good__container {
 .trouble-wrapper {
   max-width: 1570px;
   width: 100%;
-  margin: 80px auto 0; }
+  margin: 100px auto 0; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .trouble-wrapper {
-      max-width: 1175px; } }
+      max-width: 1175px;
+      margin: 80px auto 0; } }
 
 .trouble-caption {
   font-family: 'Arapey Italic', sans-serif;
   text-align: center;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 300;
   letter-spacing: 0.05em;
   color: #012D48;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   cursor: default; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .trouble-caption {
-      margin-bottom: 25px; } }
+      margin-bottom: 25px;
+      font-size: 24px; } }
 
 .trouble-text {
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 25px;
   text-align: center;
   color: #768E9C; }
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    .trouble-text {
+      font-size: 14px; } }
 
 .trouble__container {
   width: 100%; }
@@ -2558,7 +2598,7 @@ article.main-good__container {
       padding: 75px 0 60px; } }
 
 .trouble-container-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -2572,7 +2612,7 @@ article.main-good__container {
       font-size: 24px; } }
 
 .trouble-tag__container {
-  margin: 80px auto;
+  margin: 80px auto 85px;
   max-width: 740px;
   width: 100%;
   text-align: center; }
@@ -2584,7 +2624,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -2627,11 +2667,12 @@ article.main-good__container {
 .trouble-field {
   outline: none;
   border: none;
-  width: 865px;
+  width: 100%;
+  max-width: 865px;
   height: 40px;
   background: #FFFFFF;
   padding: 0 20px;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -2639,7 +2680,7 @@ article.main-good__container {
   letter-spacing: 0.05em;
   color: #012D48; }
   .trouble-field::placeholder {
-    font-family: 'PT Sans';
+    font-family: 'PT Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -2742,7 +2783,7 @@ article.main-good__container {
       margin: auto 0 0 auto; } }
 
 .trouble-box-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -2750,7 +2791,7 @@ article.main-good__container {
   text-transform: uppercase;
   cursor: default;
   color: #012D48;
-  margin-bottom: 40px; }
+  margin-bottom: 35px; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .trouble-box-caption {
       font-size: 24px; } }
@@ -2759,7 +2800,7 @@ article.main-good__container {
       margin-bottom: 45px; } }
 
 .trouble-box-text {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -2830,13 +2871,13 @@ article.main-good__container {
     margin-bottom: 0; }
 
 .footer-item-caption {
-  margin-bottom: 40px; }
+  margin-bottom: 35px; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .footer-item-caption {
       margin-bottom: 25px; } }
 
 .footer-item-caption .footer-item-link {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: bold;
@@ -2846,7 +2887,7 @@ article.main-good__container {
       font-size: 18px; } }
 
 .footer-item {
-  margin-bottom: 20px; }
+  margin-bottom: 15px; }
   .footer-item:last-child {
     margin-bottom: 0; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
@@ -2856,7 +2897,8 @@ article.main-good__container {
         margin-bottom: 0; } }
 
 .non-cursor .footer-item-link {
-  cursor: default; }
+  cursor: default;
+  line-height: 37px; }
 
 .footer-item.tel .footer-item-link {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -2865,6 +2907,7 @@ article.main-good__container {
   font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
+  line-height: 1;
   font-size: 24px;
   margin-bottom: 25px !important;
   color: #012D48;
@@ -2876,7 +2919,7 @@ article.main-good__container {
       font-size: 18px; } }
 
 .footer-item .footer-item-link {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -2967,7 +3010,7 @@ article.main-good__container {
   top: 105px;
   z-index: 2;
   position: absolute;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -3009,25 +3052,25 @@ article.main-good__container {
   max-width: 1570px;
   width: 100%;
   height: 40px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 10px; }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     .footer__box {
       max-width: 1175px; } }
 
 .footer-year,
 .footer-text {
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 25px;
   color: #012D48;
   cursor: default; }
 
 .footer-xdes {
   font-family: 'Futura Bold', sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 18px;
   color: #012D48; }
 
 /*end*/
@@ -3533,7 +3576,7 @@ article.main-good__container {
       max-width: 685px; } }
 
 .auth-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -3548,7 +3591,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -3624,7 +3667,7 @@ article.main-good__container {
     margin-top: 0; }
 
 .auth-field {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -3657,7 +3700,7 @@ article.main-good__container {
   transition: 0.4s; }
 
 .auth-field ~ .auth-label {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -3711,7 +3754,7 @@ article.main-good__container {
   position: relative; }
 
 .auth-checkbox-label-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -3835,7 +3878,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -3925,7 +3968,7 @@ article.main-good__container {
     background: rgba(90, 136, 163, 0.6); }
 
 .auth-catalog-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -3985,7 +4028,7 @@ article.main-good__container {
       left: 53px; } }
 
 .auth-catalog-btn {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -4030,7 +4073,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -4091,7 +4134,7 @@ article.main-good__container {
       max-width: 685px; } }
 
 .profile-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -4107,7 +4150,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -4201,7 +4244,7 @@ article.main-good__container {
   color: #3EC2CF; }
 
 .profile-special__container.right .profile-special-caption {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -4209,7 +4252,7 @@ article.main-good__container {
   font-weight: 500; }
 
 .profile-special__container.left .profile-special-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -4218,7 +4261,7 @@ article.main-good__container {
   color: #4C7790; }
 
 .profile-special__container.right .profile-special-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -4259,7 +4302,7 @@ article.main-good__container {
   padding-right: 100px; }
 
 .profile-purchase-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
@@ -4285,7 +4328,7 @@ article.main-good__container {
     margin-bottom: 0; }
 
 .profile-purchase__container .profile-purchase-caption {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -4295,7 +4338,7 @@ article.main-good__container {
   margin-bottom: 0; }
 
 .profile-purchase-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -4309,7 +4352,7 @@ article.main-good__container {
   color: #012D48; }
 
 .profile-purchase-description {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -4330,7 +4373,7 @@ article.main-good__container {
   flex-direction: column; }
 
 .profile-articles-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
@@ -4348,7 +4391,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -4397,7 +4440,7 @@ article.main-good__container {
   width: 100%; }
 
 .contact-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -4417,7 +4460,7 @@ article.main-good__container {
   padding: 35px; }
 
 .contact-phone {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: bold;
@@ -4427,7 +4470,7 @@ article.main-good__container {
   display: block; }
 
 .contact-text {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -4450,7 +4493,7 @@ article.main-good__container {
   border-top: 1px dashed #4C7790; }
 
 .contact-block-footer-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -4458,7 +4501,7 @@ article.main-good__container {
   margin-right: 40px; }
 
 .contact-block-footer-time {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: bold;
@@ -4592,7 +4635,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
@@ -4604,7 +4647,7 @@ article.main-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -4805,7 +4848,7 @@ article.main-good__container {
   margin-bottom: 50px; }
 
 .result-header-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -4845,7 +4888,7 @@ article.main-good__container {
     padding-bottom: 0; }
 
 span.result-info-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -4855,7 +4898,7 @@ span.result-info-text {
   cursor: default; }
 
 p.result-info-text {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -4878,7 +4921,7 @@ p.result-info-text {
   width: 100%; }
 
 .result-text {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -4891,7 +4934,7 @@ p.result-info-text {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -4943,7 +4986,7 @@ p.result-info-text {
   margin: auto auto 0; }
 
 .result-aside-caption {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -4982,7 +5025,7 @@ p.result-info-text {
       max-width: 1175px; } }
 
 .order-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -5067,7 +5110,7 @@ p.result-info-text {
     width: 1%; }
 
 .order-item-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
@@ -5078,7 +5121,7 @@ p.result-info-text {
   margin-bottom: 5px; }
 
 .order-item-description {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -5086,7 +5129,7 @@ p.result-info-text {
   color: #4C7790; }
 
 .order-item-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -5131,7 +5174,7 @@ p.result-info-text {
   margin-bottom: 40px; }
 
 .order-footer-text {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
@@ -5150,7 +5193,7 @@ p.result-info-text {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -5217,7 +5260,7 @@ p.result-info-text {
       padding: 40px 50px; } }
 
 .order-container-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -5239,14 +5282,14 @@ p.result-info-text {
     padding-left: 50px; }
 
 .order-wrapper .order-checkbox-label span {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
   color: #012D48; }
 
 .order-wrapper .order-field-hint {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -5266,7 +5309,7 @@ p.result-info-text {
         padding: 0 10px 10px 50px; } }
 
 .order-wrapper .order-field-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -5286,7 +5329,7 @@ p.result-info-text {
   position: relative; }
 
 .order-checkbox-label-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -5367,7 +5410,7 @@ p.result-info-text {
   position: relative; }
 
 .order-checkbox-label-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -5454,7 +5497,7 @@ p.result-info-text {
       max-width: 545px; } }
 
 .order-aside-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -5478,7 +5521,7 @@ p.result-info-text {
       margin-bottom: 55px; } }
 
 .order-field {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -5511,7 +5554,7 @@ p.result-info-text {
   transition: 0.4s; }
 
 .order-field ~ .order-label {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -5552,7 +5595,7 @@ p.result-info-text {
       max-width: 1175px; } }
 
 .basket-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -5637,7 +5680,7 @@ p.result-info-text {
   flex-wrap: wrap; }
 
 .basket-name {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
@@ -5648,7 +5691,7 @@ p.result-info-text {
   margin-bottom: 10px; }
 
 .basket-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -5658,7 +5701,7 @@ p.result-info-text {
   margin-bottom: 35px; }
 
 .basket-color {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -5667,7 +5710,7 @@ p.result-info-text {
   margin-right: 30px; }
 
 .basket-size {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -5709,7 +5752,7 @@ p.result-info-text {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
@@ -5731,7 +5774,7 @@ p.result-info-text {
   background: #FCFCFC; }
 
 .basket-value {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -5808,7 +5851,7 @@ p.result-info-text {
   margin-top: 20px; }
 
 .basket-footer-text {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
@@ -5821,7 +5864,7 @@ p.result-info-text {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -5847,7 +5890,7 @@ p.result-info-text {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -5905,7 +5948,7 @@ p.result-info-text {
     border-radius: 0 20px 20px 0; }
 
 .basket-special-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 18px;
   font-style: normal;
   text-transform: uppercase;
@@ -5984,7 +6027,7 @@ p.result-info-text {
   width: calc(100% - 150px); }
 
 .basket-special-name {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
@@ -5993,7 +6036,7 @@ p.result-info-text {
   margin-bottom: 10px; }
 
 .basket-special-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -6003,7 +6046,7 @@ p.result-info-text {
   margin-bottom: 10px; }
 
 .basket-special-price {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
@@ -6015,7 +6058,7 @@ p.result-info-text {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -6067,7 +6110,7 @@ p.result-info-text {
   position: relative; }
 
 .post-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -6119,7 +6162,7 @@ p.result-info-text {
   -ms-flex-align: center;
   align-items: center;
   justify-content: space-around;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -6256,7 +6299,7 @@ p.result-info-text {
       max-width: 295px; } }
 
 .post-aside-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -6274,7 +6317,7 @@ p.result-info-text {
     margin-bottom: 0; }
 
 .post-aside-container-caption {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
@@ -6350,7 +6393,7 @@ p.result-info-text {
   height: 100%; }
 
 .post-aside-img-caption {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -6368,7 +6411,7 @@ p.result-info-text {
   text-align: center; }
 
 .post-aside-img-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -6429,7 +6472,7 @@ p.result-info-text {
       max-width: 1175px; } }
 
 .catalog-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -6479,7 +6522,7 @@ p.result-info-text {
     border-radius: 0 20px 20px 0; }
 
 .catalog-special-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -6561,7 +6604,7 @@ p.result-info-text {
   width: calc(100% - 150px); }
 
 .catalog-special-name {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
@@ -6570,7 +6613,7 @@ p.result-info-text {
   margin-bottom: 10px; }
 
 .catalog-special-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -6580,7 +6623,7 @@ p.result-info-text {
   margin-bottom: 10px; }
 
 .catalog-special-price {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
@@ -6592,7 +6635,7 @@ p.result-info-text {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -6614,7 +6657,7 @@ p.result-info-text {
     transform: translateY(-5px); }
 
 .catalog-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -6731,7 +6774,7 @@ article.catalog-good__container {
       max-height: 200px; } }
 
 .catalog-good-state {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -6754,7 +6797,7 @@ article.catalog-good__container {
   color: #FF5C00; }
 
 .catalog-good-caption {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
@@ -6765,7 +6808,7 @@ article.catalog-good__container {
   z-index: 2; }
 
 .catalog-good-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -6792,7 +6835,7 @@ article.catalog-good__container {
   z-index: 2; }
 
 .catalog-good-box-text {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -6809,7 +6852,7 @@ article.catalog-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -6859,7 +6902,7 @@ article.catalog-good__container {
   overflow: hidden; }
 
 .catalog-good-tag {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -6934,7 +6977,7 @@ article.catalog-good__container {
   margin-right: 60px; }
 
 .catalog-tag-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -6958,7 +7001,7 @@ article.catalog-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -7036,7 +7079,7 @@ article.catalog-good__container {
       max-width: 1175px; } }
 
 .blog-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -7073,7 +7116,7 @@ article.catalog-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -7146,7 +7189,7 @@ article.catalog-good__container {
       font-size: 8px; } }
 
 .product-header-name {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -7161,7 +7204,7 @@ article.catalog-good__container {
       font-size: 24px; } }
 
 .product-header-description {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -7305,7 +7348,7 @@ article.catalog-good__container {
   width: calc(100% - 500px); }
 
 .product-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -7318,7 +7361,7 @@ article.catalog-good__container {
       font-size: 18px; } }
 
 .product-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -7337,7 +7380,7 @@ article.catalog-good__container {
   width: 100%; }
 
 .product-form-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -7390,7 +7433,7 @@ article.catalog-good__container {
   align-items: center; }
 
 .product-price {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
@@ -7414,7 +7457,7 @@ article.catalog-good__container {
   margin-right: 25px; }
 
 .product-value {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
@@ -7479,7 +7522,7 @@ article.catalog-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -7505,7 +7548,7 @@ article.catalog-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -7563,7 +7606,7 @@ article.catalog-good__container {
   z-index: 2; }
 
 .product-field-text {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -7608,7 +7651,7 @@ article.catalog-good__container {
   -webkit-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   -o-transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -7678,7 +7721,7 @@ article.catalog-good__container {
       margin: auto 0 auto auto; } }
 
 .compare-aside-caption {
-  font-family: "Century Gothic";
+  font-family: "Century Gothic", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: normal;
@@ -7712,7 +7755,7 @@ article.catalog-good__container {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -7810,7 +7853,7 @@ article.catalog-good__container {
     border: 0; }
 
 .compare-good-name {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
