@@ -19,6 +19,8 @@ $(document).ready(function () {
             $(this).attr('style', 'left: calc(50% - ' + (width / 2) + 'px);');
         });
 
+        $('#product_img').attr('src', $('.product-item-img').attr('src'));
+
     });
 
     // Закрыть блок, если жмякнули мимо блока
@@ -107,7 +109,7 @@ $(document).ready(function () {
     }
 
     // Слайдер на главной
-    let swiper = new Swiper('.swiper-container', {
+    let swiper = new Swiper('.special-list-wrapper', {
         slidesPerView: 'auto',
         spaceBetween: 125,
         grabCursor: true,
@@ -122,8 +124,40 @@ $(document).ready(function () {
         }
     });
 
+    // Слайдер на странице продукта #1
+    let swiper_2 = new Swiper('.product-aside__slider', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: '.product-btn.next',
+            prevEl: '.product-btn.prev',
+        }
+    });
+
+    // Слайдер на странице продукта #2
+    let swiper_3 = new Swiper('.compare-slider-wrapper', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        grabCursor: true,
+    });
+
+    $(document).on('click', '.product-item-img', function () {
+        let img_addess = $(this).attr('src');
+        $('.product-item-img').closest('.product-item').removeClass('img-active');
+        $(this).closest('.product-item').addClass('img-active');
+
+        $('#product_img').attr('src', img_addess);
+    });
+
     // Открыть список
     $(document).on('click', '.open-list', function () {
+        let list_id = $(this).data('listid');
+
+
+        $('[data-list = ' + list_id + ']').addClass('active');
+
         if ($(this).hasClass('cart-select-wrapper')) {
             $(this).addClass('active');
             $(this).siblings('.choose-list').addClass('active');
@@ -178,7 +212,7 @@ $(document).ready(function () {
 
     // Изменение количества товара
     let count = 1;
-    $(document).on('click', '.cart-control.add', function () {
+    $(document).on('click', '.add', function () {
         let input_id = '#' + $(this).data('countid');
         let price_id = '#' + $(this).data('priceid');
         let base_summ = $(price_id).text();
@@ -190,7 +224,7 @@ $(document).ready(function () {
         console.log(new_summ);
         //$(price_id).text(new_summ);
     });
-    $(document).on('click', '.cart-control.remove', function () {
+    $(document).on('click', '.remove', function () {
         let input_id = '#' + $(this).data('countid');
         let price_id = '#' + $(this).data('priceid');
         let base_summ = $(price_id).text();
@@ -205,6 +239,10 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.choose-item', function () {
+        $(this).closest('div').find('p.open-list').text($(this).data('name'));
+        $(this).closest('div').find('input[type=hidden]').attr('value', $(this).data('valueid'));
+        $('.choose-list').removeClass('active');
+
         if ($(this).hasClass('catalog-tag-item')) {
             $(this).toggleClass('active-item');
         }

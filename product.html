@@ -790,7 +790,48 @@
         <!-- Инфа товара -->
         <div class="product__container">
 
-            <aside class="product__aside"></aside>
+            <!-- Слайдер -->
+            <aside class="product__aside">
+
+                <div class="product-aside-wrapper">
+                    <div class="product-aside__slider swiper-container">
+                        <ul class="product-list swiper-wrapper">
+                            <li class="product-item swiper-slide">
+                                <img src="assets/img/png/19.png" class="product-item-img" alt="" />
+                            </li>
+                            <li class="product-item swiper-slide">
+                                <img src="assets/img/png/15.png" class="product-item-img" alt="" />
+                            </li>
+                            <li class="product-item swiper-slide">
+                                <img src="assets/img/png/16.png" class="product-item-img" alt="" />
+                            </li>
+                            <li class="product-item swiper-slide">
+                                <img src="assets/img/png/17.png" class="product-item-img" alt="" />
+                            </li>
+                            <li class="product-item swiper-slide">
+                                <img src="assets/img/png/18.png" class="product-item-img" alt="" />
+                            </li>
+                            <li class="product-item swiper-slide">
+                                <img src="assets/img/png/17.png" class="product-item-img" alt="" />
+                            </li>
+                            <li class="product-item swiper-slide">
+                                <img src="assets/img/png/18.png" class="product-item-img" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <span class="product-btn prev"></span>
+                    <span class="product-btn next"></span>
+                </div>
+
+                <!-- Мейн-картинка -->
+                <div class="product-img-wrapper">
+                    <img src="" class="product-img" id="product_img" alt="" />
+                </div>
+                <!-- end -->
+
+            </aside>
+            <!-- end -->
 
             <div class="product__info">
                 <h3 class="product-caption">Описание</h3>
@@ -807,47 +848,47 @@
 
                     <section class="product__fields">
                         <div class="product-field__container">
-                            <div class="product-select-wrapper open-list">
-                                <p class="product-field-text open-list">Blue</p>
+                            <div class="product-select-wrapper open-list" data-listid="color-list">
+                                <p class="product-field-text open-list" data-listid="color-list">Blue</p>
                                 <input type="hidden" class="product-field" id="product_color" name="product-color"/>
-                                <label for="product_color" class="product-label open-list"></label>
+                                <label for="product_color" class="product-label open-list" data-listid="color-list"></label>
                             </div>
 
-                            <ul class="product-list choose-list">
-                                <li class="product-item choose-item" data-valueid="1" data-name="blue">Blue</li>
-                                <li class="product-item choose-item" data-valueid="2" data-name="orange">Orange</li>
-                                <li class="product-item choose-item" data-valueid="3" data-name="yellow">Yellow</li>
-                                <li class="product-item choose-item" data-valueid="4" data-name="pink">Pink</li>
+                            <ul class="product-field-list choose-list" data-list="color-list">
+                                <li class="product-field-item choose-item" data-valueid="1" data-name="blue">Blue</li>
+                                <li class="product-field-item choose-item" data-valueid="2" data-name="orange">Orange</li>
+                                <li class="product-field-item choose-item" data-valueid="3" data-name="yellow">Yellow</li>
+                                <li class="product-field-item choose-item" data-valueid="4" data-name="pink">Pink</li>
                             </ul>
                         </div>
 
-                        <div class="product-select__container">
-                            <div class="product-select-wrapper open-list">
-                                <p class="product-field-text open-list">Размер №1</p>
+                        <div class="product-field__container">
+                            <div class="product-select-wrapper open-list" data-listid="size-list">
+                                <p class="product-field-text open-list" data-listid="size-list">Размер №1</p>
                                 <input type="hidden" class="product-field" id="product_size" name="product-size"/>
-                                <label for="product_size" class="product-label open-list"></label>
+                                <label for="product_size" class="product-label open-list" data-listid="size-list"></label>
                             </div>
 
-                            <ul class="product-list choose-list">
-                                <li class="product-item choose-item" data-valueid="1" data-name="Размер №3">Размер №1</li>
-                                <li class="product-item choose-item" data-valueid="1" data-name="Размер №3">Размер №3</li>
-                                <li class="product-item choose-item" data-valueid="1" data-name="Размер №5">Размер №5</li>
-                                <li class="product-item choose-item" data-valueid="1" data-name="Размер №7">Размер №7</li>
-                                <li class="product-item choose-item" data-valueid="1" data-name="Размер №9">Размер №9</li>
+                            <ul class="product-field-list choose-list" data-list="size-list">
+                                <li class="product-field-item choose-item" data-valueid="1" data-name="Размер №3">Размер №1</li>
+                                <li class="product-field-item choose-item" data-valueid="1" data-name="Размер №3">Размер №3</li>
+                                <li class="product-field-item choose-item" data-valueid="1" data-name="Размер №5">Размер №5</li>
+                                <li class="product-field-item choose-item" data-valueid="1" data-name="Размер №7">Размер №7</li>
+                                <li class="product-field-item choose-item" data-valueid="1" data-name="Размер №9">Размер №9</li>
                             </ul>
                         </div>
 
-                        <div class="product-select__container">
-                            <div class="product-select-wrapper open-list">
-                                <p class="product-field-text open-list">Жесткость №1</p>
+                        <div class="product-field__container">
+                            <div class="product-select-wrapper open-list" data-listid="hard-list">
+                                <p class="product-field-text open-list" data-listid="hard-list">Жесткость №1</p>
                                 <input type="hidden" class="product-field" id="product_hard" name="product-hard"/>
-                                <label for="product_hard" class="product-label open-list"></label>
+                                <label for="product_hard" class="product-label open-list" data-listid="hard-list"></label>
                             </div>
 
-                            <ul class="product-list choose-list">
-                                <li class="product-item choose-item" data-valueid="1" data-name="Жесткость №1">Жесткость №1</li>
-                                <li class="product-item choose-item" data-valueid="1" data-name="Жесткость №2">Жесткость №2</li>
-                                <li class="product-item choose-item" data-valueid="1" data-name="Жесткость №3">Жесткость №3</li>
+                            <ul class="product-field-list choose-list" data-list="hard-list">
+                                <li class="product-field-item choose-item" data-valueid="1" data-name="Жесткость №1">Жесткость №1</li>
+                                <li class="product-field-item choose-item" data-valueid="1" data-name="Жесткость №2">Жесткость №2</li>
+                                <li class="product-field-item choose-item" data-valueid="1" data-name="Жесткость №3">Жесткость №3</li>
                             </ul>
                         </div>
                     </section>
@@ -855,7 +896,7 @@
                     <footer class="product-form__footer">
                         <p class="product-price"><span id="price">2456</span> <span class="rub">₽</span></p>
 
-                        <div class="product-select__container value">
+                        <div class="product-select__container-value">
                             <input type="number" id="product_value" min="1" name="product-value" value="1" class="product-value"/>
                             <div class="product-control-wrapper">
                                 <span class="product-control add" data-countid="product_value" data-priceid="price"></span>
@@ -863,7 +904,7 @@
                             </div>
                         </div>
 
-                        <button class="product-btn" type="submit">Добавить в корзину</button>
+                        <button class="product-button" type="submit">Добавить в корзину</button>
                         <a href="#" class="product-link">Задать вопрос</a>
                     </footer>
 
@@ -990,7 +1031,175 @@
 
 
         <!-- Таблица сравнений -->
-        <div class="">
+        <div class="compare-wrapper">
+
+            <aside class="compare__aside">
+                <h2 class="compare-aside-caption">TАБЛИЦА СРАВНЕНИЙ</h2>
+
+                <ul class="compare-aside-list">
+                    <li class="compare-aside-item">Бренд</li>
+                    <li class="compare-aside-item">Для чувствительных зубов</li>
+                    <li class="compare-aside-item">Фтор содержащие</li>
+                    <li class="compare-aside-item">Для детей и беременных</li>
+                </ul>
+            </aside>
+
+            <main class="compare__container">
+
+                <!-- Сравниваемый товар -->
+                <article class="compare__main">
+                    <div class="compare-item-img-wrapper">
+                        <img src="assets/img/png/1.png" class="compare-item-img" alt="" />
+                    </div>
+
+                    <ul class="compare-sub-list">
+                        <li class="compare-sub-item">
+                            <h3 class="compare-good-name">Curaprox</h3>
+                        </li>
+                        <li class="compare-sub-item">
+                            <span class="compare-sub-item-icon"></span>
+                        </li>
+                        <li class="compare-sub-item">
+                            <span class="compare-sub-item-icon"></span>
+                        </li>
+                        <li class="compare-sub-item">
+                            <span class="compare-sub-item-icon"></span>
+                        </li>
+                    </ul>
+                </article>
+                <!-- end -->
+
+                <!-- Слайдер сравниваемых товаров -->
+                <div class="compare-slider-wrapper swiper-container">
+                    <ul class="compare-slider-list swiper-wrapper">
+                        <li class="compare-slider-item swiper-slide">
+                            <div class="compare-item-img-wrapper">
+                                <img src="assets/img/png/2.png" class="compare-item-img" alt="" />
+                            </div>
+
+                            <ul class="compare-sub-list">
+                                <li class="compare-sub-item">
+                                    <h3 class="compare-good-name">Curaprox CS 1006 single</h3>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="compare-slider-item swiper-slide">
+                            <div class="compare-item-img-wrapper">
+                                <img src="assets/img/png/3.png" class="compare-item-img" alt="" />
+                            </div>
+
+                            <ul class="compare-sub-list">
+                                <li class="compare-sub-item">
+                                    <h3 class="compare-good-name">Curaprox BDC 150/152
+                                    </h3>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="compare-slider-item swiper-slide">
+                            <div class="compare-item-img-wrapper">
+                                <img src="assets/img/png/2.png" class="compare-item-img" alt="" />
+                            </div>
+
+                            <ul class="compare-sub-list">
+                                <li class="compare-sub-item">
+                                    <h3 class="compare-good-name">Curaprox CS 1006 single</h3>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="compare-slider-item swiper-slide">
+                            <div class="compare-item-img-wrapper">
+                                <img src="assets/img/png/3.png" class="compare-item-img" alt="" />
+                            </div>
+
+                            <ul class="compare-sub-list">
+                                <li class="compare-sub-item">
+                                    <h3 class="compare-good-name">Curaprox BDC 150/152
+                                    </h3>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="compare-slider-item swiper-slide">
+                            <div class="compare-item-img-wrapper">
+                                <img src="assets/img/png/2.png" class="compare-item-img" alt="" />
+                            </div>
+
+                            <ul class="compare-sub-list">
+                                <li class="compare-sub-item">
+                                    <h3 class="compare-good-name">Curaprox CS 1006 single</h3>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="compare-slider-item swiper-slide">
+                            <div class="compare-item-img-wrapper">
+                                <img src="assets/img/png/3.png" class="compare-item-img" alt="" />
+                            </div>
+
+                            <ul class="compare-sub-list">
+                                <li class="compare-sub-item">
+                                    <h3 class="compare-good-name">Curaprox BDC 150/152
+                                    </h3>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                                <li class="compare-sub-item">
+                                    <span class="compare-sub-item-icon"></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end -->
+
+            </main>
 
         </div>
         <!-- end -->
