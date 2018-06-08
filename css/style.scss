@@ -2300,6 +2300,7 @@ article.main-good__container {
   max-width: 1570px;
   width: 100%;
   margin: 0 auto;
+  color: #012D48;
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     max-width: 1175px;
   }
@@ -3030,17 +3031,20 @@ article.main-good__container {
 
 /*Main page pop-up*/
 .cart__popup {
+  @include ease-in-out-3s;
   max-width: 880px;
+  opacity: 0;
   padding: 40px 90px;
   background: #FFFFFF;
   box-shadow: 0 2px 20px #BBD8E0;
   border-radius: 20px;
   position: fixed;
-  top: 110%;
+  top: -110%;
   left: calc(50% - 440px);
   z-index: 100;
   &.active {
-    top: 0;
+    opacity: 1;
+    top: 200px;
   }
 }
 
@@ -4451,7 +4455,6 @@ article.main-good__container {
 
 .contact-list {
   position: relative;
-  overflow: hidden;
   width: 100%;
   flex: 1;
 }
@@ -4469,6 +4472,11 @@ article.main-good__container {
     z-index: 1;
     opacity: 1;
   }
+  &.photo {
+    @include flex-horizontal;
+    @include space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .contact-map {
@@ -4477,6 +4485,55 @@ article.main-good__container {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+}
+
+.photo-slider__container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 15px !important;
+
+}
+
+.photo-item-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.photo-btn {
+  @include transition-cb-all;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  &.next {
+    border-top: 2px solid #3EC2CF;
+    border-right: 2px solid #3EC2CF;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  &.prev {
+    border-left: 2px solid #3EC2CF;
+    border-bottom: 2px solid #3EC2CF;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.photo-btn.swiper-button-disabled,
+.photo-btn.swiper-button-disabled {
+  opacity: 1 !important;
+  border-color: #9FA8AA;
 }
 /*end*/
 

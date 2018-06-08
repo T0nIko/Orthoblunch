@@ -4,6 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/png/orthoblunch-logo.png" type="image/png">
     <title>Регистрация</title>
 
     <!-- Google fonts -->
@@ -788,37 +789,37 @@
         <form class="auth-form" action="" method="post">
 
             <div class="auth-field-wrapper">
-                <input type="text" name="first-name" id="first_name" class="auth-field"/>
+                <input type="text" name="user_first_name" id="first_name" class="auth-field"/>
                 <label for="first_name" class="auth-label">Имя</label>
                 <span class="focus-border"></span>
             </div>
 
             <div class="auth-field-wrapper">
-                <input type="text" name="last-name" id="last_name" class="auth-field"/>
+                <input type="text" name="user_last_name" id="last_name" class="auth-field"/>
                 <label for="last_name" class="auth-label">Фамилия</label>
                 <span class="focus-border"></span>
             </div>
 
             <div class="auth-field-wrapper">
-                <input type="tel" name="phone-number" id="phone_num" class="auth-field" placeholder="+7"/>
+                <input type="tel" name="user_phone" id="phone_num" class="auth-field" placeholder="+7"/>
                 <label for="phone_num" class="auth-label">Телефон</label>
                 <span class="focus-border"></span>
             </div>
 
             <div class="auth-field-wrapper">
-                <input type="email" name="email" id="email" class="auth-field"/>
+                <input type="email" name="user_email" id="email" class="auth-field"/>
                 <label for="email" class="auth-label">Электронная почта</label>
                 <span class="focus-border"></span>
             </div>
 
             <div class="auth-field-wrapper">
-                <input type="password" name="password" id="password" class="auth-field"/>
+                <input type="password" name="user_password" id="password" class="auth-field"/>
                 <label for="password" class="auth-label">Пароль</label>
                 <span class="focus-border"></span>
             </div>
 
             <div class="auth-field-wrapper">
-                <input type="password" name="repeat-password" id="repeat_password" class="auth-field"/>
+                <input type="password" name="user_repeat_password" id="repeat_password" class="auth-field"/>
                 <label for="repeat_password" class="auth-label">Подтвердите пароль</label>
                 <span class="focus-border"></span>
             </div>
@@ -827,7 +828,7 @@
 
                 <div class="auth-field-wrapper">
                     <label for="auth_checkbox" class="auth-checkbox-label check">
-                        <input type="checkbox" id="auth_checkbox" name="auth-checkbox" data-buttonid="sign_in" class="auth-checkbox" />
+                        <input type="checkbox" name="auth-checkbox" id="auth_checkbox" data-buttonid="sign_in" class="auth-checkbox" />
                         <span class="label"></span>
                         <span class="auth-checkbox-label-text">Настоящим подтверждаю, что я ознакомлен и согласен с
                             <a href="#" class="auth-checkbox-label-link">условиями политики конфиденциальности.</a>

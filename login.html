@@ -4,6 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/png/orthoblunch-logo.png" type="image/png">
     <title>Добро пожаловать</title>
 
     <!-- Google fonts -->
@@ -788,14 +789,14 @@
         <form class="auth-form" action="" method="post">
 
             <div class="auth-field-wrapper">
-                <input type="text" name="first-name" id="first_name" class="auth-field"/>
-                <label for="first_name" class="auth-label">Телефон или электронная почта</label>
+                <input type="text" name="user_login" id="login" class="auth-field"/>
+                <label for="login" class="auth-label">Телефон или электронная почта</label>
                 <span class="focus-border"></span>
             </div>
 
             <div class="auth-field-wrapper">
-                <input type="text" name="last-name" id="last_name" class="auth-field"/>
-                <label for="last_name" class="auth-label">Пароль</label>
+                <input type="password" name="user_password" id="password" class="auth-field"/>
+                <label for="password" class="auth-label">Пароль</label>
                 <span class="focus-border"></span>
             </div>
 
@@ -803,7 +804,7 @@
 
                 <div class="auth-field-wrapper">
                     <label for="auth_checkbox" class="auth-checkbox-label check">
-                        <input type="checkbox" id="auth_checkbox" name="auth-checkbox" class="auth-checkbox" />
+                        <input type="checkbox" name="auth-checkbox" id="auth_checkbox" class="auth-checkbox" />
                         <span class="label"></span>
                         <p class="auth-checkbox-label-text">Запомнить меня</p>
                     </label>

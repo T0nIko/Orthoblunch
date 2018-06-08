@@ -4,6 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/png/orthoblunch-logo.png" type="image/png">
     <title>Контакты</title>
 
     <!-- Google fonts -->
@@ -20,6 +21,7 @@
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.2/amplify.core.min.js"></script>
@@ -810,17 +812,40 @@
         <div class="contact__container right">
 
             <header class="contact__header">
-                <h3 class="contact-caption active-btn" data-itemid="map">Карта</h3>
+                <h3 class="contact-caption" data-itemid="map">Карта</h3>
                 <h3 class="contact-caption" data-itemid="parking">Парковка</h3>
-                <h3 class="contact-caption" data-itemid="photo">Фото</h3>
+                <h3 class="contact-caption active-btn" data-itemid="photo">Фото</h3>
             </header>
 
             <ul class="contact-list">
-                <li class="contact-item active-item" data-item="map">
+                <li class="contact-item" data-item="map">
                     <section class="contact-map" id="contact_map"></section>
                 </li>
                 <li class="contact-item" data-item="parking"></li>
-                <li class="contact-item" data-item="photo"></li>
+                <li class="contact-item photo active-item" data-item="photo">
+                    <div class="photo-slider__container swiper-container">
+                        <ul class="photo-list swiper-wrapper">
+                            <li class="photo-item swiper-slide">
+                                <img src="assets/img/jpg/1.jpeg" class="photo-item-img" alt="" />
+                            </li>
+                            <li class="photo-item swiper-slide">
+                                <img src="assets/img/jpg/2.jpeg" class="photo-item-img" alt="" />
+                            </li>
+                            <li class="photo-item swiper-slide">
+                                <img src="assets/img/jpg/3.jpeg" class="photo-item-img" alt="" />
+                            </li>
+                            <li class="photo-item swiper-slide">
+                                <img src="assets/img/jpg/4.jpeg" class="photo-item-img" alt="" />
+                            </li>
+                            <li class="photo-item swiper-slide">
+                                <img src="assets/img/jpg/5.jpeg" class="photo-item-img" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Add Arrows -->
+                    <span class="photo-btn prev swiper-button-prev"></span>
+                    <span class="photo-btn next swiper-button-next"></span>
+                </li>
             </ul>
 
         </div>

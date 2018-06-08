@@ -21,6 +21,7 @@
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.2/amplify.core.min.js"></script>
@@ -846,12 +847,14 @@
 
                     <h4 class="product-form-caption">Характеристики</h4>
 
+                    <input type="hidden" name="good_id" /> <!-- Айди товара!!!!!111 -->
+
                     <section class="product__fields">
                         <div class="product-field__container">
                             <div class="product-select-wrapper open-list" data-listid="color-list">
                                 <p class="product-field-text open-list" data-listid="color-list">Blue</p>
-                                <input type="hidden" class="product-field" id="product_color" name="product-color"/>
-                                <label for="product_color" class="product-label open-list" data-listid="color-list"></label>
+                                <input type="hidden" name="good_param_1"/>
+                                <label class="product-label open-list" data-listid="color-list"></label>
                             </div>
 
                             <ul class="product-field-list choose-list" data-list="color-list">
@@ -865,8 +868,8 @@
                         <div class="product-field__container">
                             <div class="product-select-wrapper open-list" data-listid="size-list">
                                 <p class="product-field-text open-list" data-listid="size-list">Размер №1</p>
-                                <input type="hidden" class="product-field" id="product_size" name="product-size"/>
-                                <label for="product_size" class="product-label open-list" data-listid="size-list"></label>
+                                <input type="hidden" name="good_param_2"/>
+                                <label class="product-label open-list" data-listid="size-list"></label>
                             </div>
 
                             <ul class="product-field-list choose-list" data-list="size-list">
@@ -881,8 +884,8 @@
                         <div class="product-field__container">
                             <div class="product-select-wrapper open-list" data-listid="hard-list">
                                 <p class="product-field-text open-list" data-listid="hard-list">Жесткость №1</p>
-                                <input type="hidden" class="product-field" id="product_hard" name="product-hard"/>
-                                <label for="product_hard" class="product-label open-list" data-listid="hard-list"></label>
+                                <input type="hidden" name="good_param_3"/>
+                                <label class="product-label open-list" data-listid="hard-list"></label>
                             </div>
 
                             <ul class="product-field-list choose-list" data-list="hard-list">
@@ -894,13 +897,15 @@
                     </section>
 
                     <footer class="product-form__footer">
-                        <p class="product-price"><span id="price">2456</span> <span class="rub">₽</span></p>
+                        <p class="product-price"><span class="price">2456</span> <span class="rub">₽</span></p>
+                        <input type="hidden" name="good_price" id="price"/>
+                        <input type="hidden" name="good_price_default" id="base" value="2456"/>
 
                         <div class="product-select__container-value">
-                            <input type="number" id="product_value" min="1" name="product-value" value="1" class="product-value"/>
+                            <input type="number" name="good_quantity" id="quantity" min="1" value="1" class="product-value"/>
                             <div class="product-control-wrapper">
-                                <span class="product-control add" data-countid="product_value" data-priceid="price"></span>
-                                <span class="product-control remove" data-countid="product_value" data-priceid="price"></span>
+                                <span class="product-control add" data-countid="quantity" data-baseid="base" data-priceid="price"></span>
+                                <span class="product-control remove" data-countid="quantity" data-baseid="base" data-priceid="price"></span>
                             </div>
                         </div>
 
@@ -1028,7 +1033,6 @@
 
         </div>
         <!-- end -->
-
 
         <!-- Таблица сравнений -->
         <div class="compare-wrapper">

@@ -19,6 +19,11 @@ $(document).ready(function () {
             $(this).attr('style', 'left: calc(50% - ' + (width / 2) + 'px);');
         });
 
+        $('.photo-item-img').each(function () {
+            let height= $(this).height();
+            $(this).attr('style', 'top: calc(50% - ' + (height / 2) + 'px);');
+        });
+
         $('#product_img').attr('src', $('.product-item-img').attr('src'));
 
     });
@@ -52,7 +57,6 @@ $(document).ready(function () {
     let $sidebarHeight = $sidebar.innerHeight();
     let $sidebarOffset = $sidebar.offset();
 
-    let $headerHeight = $header.innerHeight();
     let $headerOffset = $header.offset();
 
     let $footerOffsetTop = $(".footer").offset().top;
@@ -143,6 +147,15 @@ $(document).ready(function () {
         grabCursor: true,
     });
 
+    // Слайдер фоток
+    let swiper_4 = new Swiper('.photo-slider__container', {
+        grabCursor: true,
+        navigation: {
+            nextEl: '.photo-btn.next',
+            prevEl: '.photo-btn.prev',
+        },
+    });
+
     $(document).on('click', '.product-item-img', function () {
         let img_addess = $(this).attr('src');
         $('.product-item-img').closest('.product-item').removeClass('img-active');
@@ -154,7 +167,6 @@ $(document).ready(function () {
     // Открыть список
     $(document).on('click', '.open-list', function () {
         let list_id = $(this).data('listid');
-
 
         $('[data-list = ' + list_id + ']').addClass('active');
 
@@ -213,31 +225,40 @@ $(document).ready(function () {
     // Изменение количества товара
     let count = 1;
     $(document).on('click', '.add', function () {
-        let input_id = '#' + $(this).data('countid');
-        let price_id = '#' + $(this).data('priceid');
-        let base_summ = $(price_id).text();
+        let input_id = '#' + $(this).data('countid'); // куда вписывать количество
+        let price_id = $(this).data('priceid'); // куда вписывать сумму
+        let base_summ = '#' + $(this).data('baseid'); // обратиться к инпуту с базовой суммой
+        base_summ = $(base_summ).attr('value'); // взять базовую сумму
 
         count++;
-        $(input_id).attr('value',count);
-
         let new_summ = base_summ * count;
-        console.log(new_summ);
-        //$(price_id).text(new_summ);
+
+        $(input_id).attr('value',count); // запись нового количества
+        $('.' + price_id).text(new_summ); // запись суммы в видимый блок
+        $('#' + price_id).attr('value', new_summ); // запись суммы в скрытый инпут
     });
     $(document).on('click', '.remove', function () {
-        let input_id = '#' + $(this).data('countid');
-        let price_id = '#' + $(this).data('priceid');
-        let base_summ = $(price_id).text();
+        let input_id = '#' + $(this).data('countid'); // куда вписывать количество
+        let price_id = $(this).data('priceid'); // куда вписывать сумму
+        let summ = $('.' + price_id).text(); // взять сумму после умножения
+        let base_summ = '#' + $(this).data('baseid'); // обратиться к инпуту с базовой суммой
+        base_summ = $(base_summ).attr('value'); // взять базовую сумму
 
         if (count > 1) {
             count--;
-            $(input_id).attr('value',count);
+            let new_summ = summ - base_summ;
 
-            let new_summ = base_summ / count;
-            console.log(new_summ);
+            $(input_id).attr('value',count); // запись нового количества
+            $('.' + price_id).text(new_summ); // запись суммы в видимый блок
+            $('#' + price_id).attr('value', new_summ); // запись суммы в скрытый инпут
+        }
+        // теги в каталоге
+        else if ($(this).hasClass('catalog-tag-item-icon')) {
+            $(this).parent('.catalog-tag-item').toggleClass('active-item');
         }
     });
 
+    // перезаписать значение юзерского выбора и закрыть блок
     $(document).on('click', '.choose-item', function () {
         $(this).closest('div').find('p.open-list').text($(this).data('name'));
         $(this).closest('div').find('input[type=hidden]').attr('value', $(this).data('valueid'));
@@ -248,10 +269,11 @@ $(document).ready(function () {
         }
     });
 
-    $(document).on('click', '.remove', function () {
-        if ($(this).hasClass('catalog-tag-item-icon')) {
-            $(this).parent('.catalog-tag-item').toggleClass('active-item');
-        }
+    // Открыть попап
+    $(document).on('click', '.open-container', function () {
+        let container = $(this).data('containerid');
+        console.log(container);
+        $('[data-container = ' + container + ']').addClass('active');
     });
 
 });

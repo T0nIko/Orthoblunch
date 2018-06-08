@@ -21,6 +21,7 @@
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/swiper.min.js"></script>
     <!-- end -->
@@ -810,7 +811,7 @@
                         <p class="main-good-text">Зубная паста для комплексной защиты</p>
                         <section class="main-good__box">
                             <p class="main-good-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
-                            <p class="main-good-box-btn">Добавить в корзину</p>
+                            <p class="main-good-box-btn open-container" data-containerid="add_item">Добавить в корзину</p>
                         </section>
                         <footer class="main-good__footer">
                             <span class="main-good-tag">Восстановление эмали</span>
@@ -836,7 +837,7 @@
                         <p class="main-good-text">Зубная паста для комплексной защиты</p>
                         <section class="main-good__box">
                             <p class="main-good-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
-                            <p class="main-good-box-btn">Добавить в корзину</p>
+                            <p class="main-good-box-btn open-container" data-containerid="add_item">Добавить в корзину</p>
                         </section>
                         <footer class="main-good__footer">
                             <span class="main-good-tag">Восстановление эмали</span>
@@ -862,7 +863,7 @@
                         <p class="main-good-text">Зубная паста для комплексной защиты</p>
                         <section class="main-good__box">
                             <p class="main-good-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
-                            <p class="main-good-box-btn">Добавить в корзину</p>
+                            <p class="main-good-box-btn open-container" data-containerid="add_item">Добавить в корзину</p>
                         </section>
                         <footer class="main-good__footer">
                             <span class="main-good-tag">Восстановление эмали</span>
@@ -888,7 +889,7 @@
                         <p class="main-good-text">Зубная паста для комплексной защиты</p>
                         <section class="main-good__box">
                             <p class="main-good-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
-                            <p class="main-good-box-btn">Добавить в корзину</p>
+                            <p class="main-good-box-btn open-container" data-containerid="add_item">Добавить в корзину</p>
                         </section>
                         <footer class="main-good__footer">
                             <span class="main-good-tag">Восстановление эмали</span>
@@ -914,7 +915,7 @@
                         <p class="main-good-text">Зубная паста для комплексной защиты</p>
                         <section class="main-good__box">
                             <p class="main-good-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
-                            <p class="main-good-box-btn">Добавить в корзину</p>
+                            <p class="main-good-box-btn open-container" data-containerid="add_item">Добавить в корзину</p>
                         </section>
                         <footer class="main-good__footer">
                             <span class="main-good-tag">Восстановление эмали</span>
@@ -940,7 +941,7 @@
                         <p class="main-good-text">Зубная паста для комплексной защиты</p>
                         <section class="main-good__box">
                             <p class="main-good-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
-                            <p class="main-good-box-btn">Добавить в корзину</p>
+                            <p class="main-good-box-btn open-container" data-containerid="add_item">Добавить в корзину</p>
                         </section>
                         <footer class="main-good__footer">
                             <span class="main-good-tag">Восстановление эмали</span>
@@ -1361,8 +1362,8 @@
                 <!-- Add Scrollbar -->
                 <div class="swiper-scrollbar special-scrollbar"></div>
 
-                <span class="special-btn prev"></span>
-                <span class="special-btn next"></span>
+                <span class="special-btn prev swiper-button-prev"></span>
+                <span class="special-btn next swiper-button-next"></span>
             </div>
 
         </div>
@@ -1577,7 +1578,7 @@
 </footer>
 <!-- end -->
 
-<div class="cart__popup">
+<div class="cart__popup" data-container="add_item">
     <span class="cart-popup--close"></span>
 
     <form class="cart-form" action="" method="">
@@ -1587,11 +1588,16 @@
                 <img src="assets/img/png/2.png" class="cart-img" alt=""/>
             </div>
             <div class="cart__information">
-                <span class="cart-state state-in-stock">Товар есть в наличии</span> <!-- В наличии/нет -->
-                <input type="text" name="good-name" class="cart-field cart-name" value="Swiss Smile diamond glow"
-                       readonly/> <!-- Наименование -->
-                <input type="hidden" name="good-id" value="1"/> <!-- Краткое описание -->
-                <p class="cart-text">Набор ультрамягких щеток</p>
+                <span class="cart-state state-in-stock">Товар есть в наличии</span>
+                <input type="hidden" name="good_state" value="in stock" />
+
+                <h2 class="cart-field cart-name">Swiss Smile diamond glow</h2>
+                <input type="hidden" name="good_name" value="Swiss Smile diamond glow"/>
+
+                <p class="cart-field cart-text">Набор ультрамягких щеток</p>
+                <input type="hidden" name="good_text" value="Набор ультрамягких щеток"/>
+
+                <input type="hidden" name="good_id" value="1"/>
             </div>
         </header>
 
@@ -1610,8 +1616,8 @@
                 <div class="cart-select__container">
                     <div class="cart-select-wrapper open-list">
                         <p class="cart-field-text open-list">Blue</p>
-                        <input type="hidden" class="cart-field" id="cart_color" name="cart-color"/>
-                        <label for="cart_color" class="cart-label open-list"></label>
+                        <input type="hidden" name="good_param_1"/>
+                        <label class="cart-label open-list"></label>
                     </div>
 
                     <ul class="cart-list choose-list">
@@ -1625,8 +1631,8 @@
                 <div class="cart-select__container">
                     <div class="cart-select-wrapper open-list">
                         <p class="cart-field-text open-list">Размер №1</p>
-                        <input type="hidden" class="cart-field" id="cart_size" name="cart-size"/>
-                        <label for="cart_size" class="cart-label open-list"></label>
+                        <input type="hidden" name="good_param_2"/>
+                        <label class="cart-label open-list"></label>
                     </div>
 
                     <ul class="cart-list choose-list">
@@ -1641,8 +1647,8 @@
                 <div class="cart-select__container">
                     <div class="cart-select-wrapper open-list">
                         <p class="cart-field-text open-list">Жесткость №1</p>
-                        <input type="hidden" class="cart-field" id="cart_hard" name="cart-hard"/>
-                        <label for="cart_hard" class="cart-label open-list"></label>
+                        <input type="hidden" name="good_param_3"/>
+                        <label class="cart-label open-list"></label>
                     </div>
 
                     <ul class="cart-list choose-list">
@@ -1655,17 +1661,19 @@
             </section>
 
             <footer class="cart__footer">
-                <p class="cart-price"><span id="price">2456</span> <span class="rub">₽</span></p>
+                <p class="cart-price"><span class="price">2456</span> <span class="rub">₽</span></p>
+                <input type="hidden" name="good_price" id="price"/>
+                <input type="hidden" name="good_price_default" id="base" value="2456"/>
 
                 <div class="cart-select__container value">
-                    <input type="number" id="cart_value" min="1" name="cart-value" value="1" class="cart-value"/>
+                    <input type="number" name="good_quantity" id="quantity" min="1" value="1" class="cart-value"/>
                     <div class="cart-control-wrapper">
-                        <span class="cart-control add" data-countid="cart_value" data-priceid="price"></span>
-                        <span class="cart-control remove" data-countid="cart_value" data-priceid="price"></span>
+                        <span class="cart-control add" data-countid="quantity" data-baseid="base" data-priceid="price"></span>
+                        <span class="cart-control remove" data-countid="quantity" data-baseid="base" data-priceid="price"></span>
                     </div>
                 </div>
 
-                <button class="cart-btn" type="submit">Добавить в конрзину</button>
+                <button class="cart-btn" type="submit">Добавить в корзину</button>
             </footer>
 
         </main>

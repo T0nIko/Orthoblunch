@@ -795,22 +795,24 @@
                 </div>
 
                 <div class="basket__description">
+                    <input type="hidden" name="good_id" value="1">
+
                     <h2 class="basket-name">Swiss Smile diamond glow</h2>
-                    <input type="hidden" name="good-name" value="Swiss Smile diamond glow">
+                    <input type="hidden" name="good_name" value="Swiss Smile diamond glow">
 
                     <p class="basket-text">Набор ультрамягких щеток</p>
-                    <input type="hidden" name="good-description" value="Набор ультрамягких щеток">
+                    <input type="hidden" name="good_text" value="Набор ультрамягких щеток">
 
                     <p class="basket-color">Blue</p>
-                    <input type="hidden" name="good-color" value="Blue">
+                    <input type="hidden" name="good_param_1" value="Blue">
 
                     <p class="basket-size">Размер № 9</p>
-                    <input type="hidden" name="good-size" value="Размер № 9">
+                    <input type="hidden" name="good_param_2" value="Размер № 9">
                 </div>
 
                 <div class="basket__container">
                     <div class="basket__value">
-                        <input type="number" name="good-value" id="basket_value" class="basket-value" min="1" value="1" />
+                        <input type="number" name="good_quantity" id="basket_value" class="basket-value" min="1" value="1" />
                         <label for="basket_value"></label>
                         <div class="basket-value__container">
                             <span class="basket-control add"></span>
@@ -819,6 +821,7 @@
                     </div>
 
                     <p class="basket-price"><span id="basket_price">2 460</span> <span class="rub">₽</span></p>
+                    <input type="hidden" name="good_price" value="">
                 </div>
 
             </section>
@@ -837,86 +840,50 @@
             <h2 class="basket-special-caption">Вы недавно смотрели</h2>
 
             <div class="basket-special-wrapper">
-                <form class="basket-special__container" method="post" action="">
-
+                <div class="basket-special__container">
                     <div class="basket-special-img-wrapper">
                         <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
                     </div>
-
                     <div class="basket-special__description">
                         <h3 class="basket-special-name">Mirafluor C</h3>
-                        <input type="hidden" name="good-name" value="Mirafluor C" />
-
                         <p class="basket-special-text">Зубная паста для комплексной защиты</p>
-                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
-
                         <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
-                        <input type="hidden" name="good-price" value="350" />
-
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                        <p class="basket-special-btn">Добавить в корзину</p>
                     </div>
-
-                </form>
-                <form class="basket-special__container" method="post" action="">
-
+                </div>
+                <div class="basket-special__container">
                     <div class="basket-special-img-wrapper">
                         <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
                     </div>
-
                     <div class="basket-special__description">
                         <h3 class="basket-special-name">Mirafluor C</h3>
-                        <input type="hidden" name="good-name" value="Mirafluor C" />
-
-                        <p class="basket-special-text">Зубная паста для комплексной защитЗубная паста для комплексной защитыЗубная паста для комплексной защитыы</p>
-                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
-
-                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
-                        <input type="hidden" name="good-price" value="350" />
-
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
-                    </div>
-
-                </form>
-                <form class="basket-special__container" method="post" action="">
-
-                    <div class="basket-special-img-wrapper">
-                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
-                    </div>
-
-                    <div class="basket-special__description">
-                        <h3 class="basket-special-name">Mirafluor C</h3>
-                        <input type="hidden" name="good-name" value="Mirafluor C" />
-
                         <p class="basket-special-text">Зубная паста для комплексной защиты</p>
-                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
-
                         <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
-                        <input type="hidden" name="good-price" value="350" />
-
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                        <p class="basket-special-btn">Добавить в корзину</p>
                     </div>
-
-                </form>
-                <form class="basket-special__container" method="post" action="">
-
+                </div>
+                <div class="basket-special__container">
                     <div class="basket-special-img-wrapper">
                         <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
                     </div>
-
                     <div class="basket-special__description">
                         <h3 class="basket-special-name">Mirafluor C</h3>
-                        <input type="hidden" name="good-name" value="Mirafluor C" />
-
                         <p class="basket-special-text">Зубная паста для комплексной защиты</p>
-                        <input type="hidden" name="good-description" value="Зубная паста для комплексной защиты" />
-
                         <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
-                        <input type="hidden" name="good-price" value="350" />
-
-                        <button type="submit" class="basket-special-btn">Добавить в корзину</button>
+                        <p class="basket-special-btn">Добавить в корзину</p>
                     </div>
-
-                </form>
+                </div>
+                <div class="basket-special__container">
+                    <div class="basket-special-img-wrapper">
+                        <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                    </div>
+                    <div class="basket-special__description">
+                        <h3 class="basket-special-name">Mirafluor C</h3>
+                        <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                        <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                        <p class="basket-special-btn">Добавить в корзину</p>
+                    </div>
+                </div>
             </div>
 
         </section>
