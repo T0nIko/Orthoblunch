@@ -115,7 +115,6 @@ $(document).ready(function () {
     // Слайдер на главной
     let swiper = new Swiper('.special-list-wrapper', {
         slidesPerView: 'auto',
-        spaceBetween: 195,
         grabCursor: true,
         scrollbar: {
             el: '.swiper-scrollbar',
