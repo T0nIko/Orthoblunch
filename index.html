@@ -21,7 +21,6 @@
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/swiper.min.js"></script>
     <!-- end -->
@@ -34,7 +33,7 @@
     <div class="header__container">
 
         <ul class="header-list">
-            <li class="header-item">Добрый день, <a href="#" id="user_name">авторизуйтесь</a></li>
+            <li class="header-item">Добрый день, <a href="#" class="user_name">авторизуйтесь</a></li>
             <li class="header-item">
                 <a href="#" class="header-item-link auth">Вход</a>
             </li>
@@ -78,6 +77,14 @@
         <a href="#" class="header-special-text">Специальное предложение. Брекеты со скидкой 30%</a>
     </section>
 
+</header>
+<!-- end -->
+
+<!-- Общая мобильная шапка -->
+<header class="header--mob">
+    <span class="header-btn open-container" data-containerid="mobil-menu">Меню</span>
+    <a href="#" class="header-logo--mob"></a>
+    <a href="#" class="header-btn">Корзина</a>
 </header>
 <!-- end -->
 
@@ -789,6 +796,45 @@
 </nav>
 <!-- end -->
 
+<!-- Общая мобильная навигация -->
+<nav class="navigation--mob" data-container="mobil-menu">
+    <span class="navigation-close close-container" data-containerid="mobil-menu"></span>
+    <a href="#" class="navigation-basket">Корзина</a>
+    <h4 class="nav-caption">Добрый день,
+        <span class="user-name">Константин</span>
+    </h4>
+
+    <a href="#" class="nav-link">Смена пользователя</a>
+    <a href="#" class="nav-link">Выход</a>
+
+    <ul class="nav-list">
+        <li class="nav-item">
+            <a href="#" class="nav-item-link">Гигиена полости рта</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-item-link">Съемные аппараты</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-item-link">Ортодонтическая продукция</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-item-link">Аппараты для занятий с логопедом</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-item-link">Полезные материалы</a>
+        </li>
+    </ul>
+
+    <footer class="nav__footer">
+        <a href="#" class="nav-footer-link">Доставка</a>
+        <a href="#" class="nav-footer-link">Контакты</a>
+        <a href="#" class="nav-footer-link">Оплата</a>
+    </footer>
+
+    <span class="nav-bg"></span>
+</nav>
+<!-- end -->
+
 <div class="wrapper">
 
     <main class="main home">
@@ -967,6 +1013,93 @@
                 </div>
 
             </div>
+
+            <!-- Дублирует верхний блок, появится только на мобиле, потому что архитектура другая :( -->
+            <div class="main-good__block-mob">
+
+                <div class="main-good-list-wrapper swiper-container">
+                    <ul class="main-good-list swiper-wrapper">
+                        <li class="main-good-item swiper-slide">
+                            <div class="main-good-item-wrapper">
+                                <div class="main-good-img-wrapper">
+                                    <a href="#">
+                                        <img src="assets/img/png/1.png" class="main-good-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="main-good-state state state-in-stock"></span>
+                                <h3 class="main-good-caption">Mirafluor C</h3>
+                                <p class="main-good-text">Зубная паста для комплексной защиты</p>
+                                <section class="main-good__box">
+                                    <p class="main-good-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="main-good-box-btn open-container" data-containerid="add_item">Добавить в корзину</p>
+                                </section>
+                            </div>
+                        </li>
+                        <li class="main-good-item swiper-slide">
+                            <div class="main-good-item-wrapper">
+                                <div class="main-good-img-wrapper">
+                                    <a href="#">
+                                        <img src="assets/img/png/1.png" class="main-good-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="main-good-state state state-in-stock"></span>
+                                <h3 class="main-good-caption">Mirafluor C</h3>
+                                <p class="main-good-text">Зубная паста для комплексной защиты</p>
+                                <section class="main-good__box">
+                                    <p class="main-good-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="main-good-box-btn open-container" data-containerid="add_item">Добавить в корзину</p>
+                                </section>
+                            </div>
+                        </li>
+                        <li class="main-good-item swiper-slide">
+                            <div class="main-good-item-wrapper">
+                                <div class="main-good-img-wrapper">
+                                    <a href="#">
+                                        <img src="assets/img/png/1.png" class="main-good-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="main-good-state state state-in-stock"></span>
+                                <h3 class="main-good-caption">Mirafluor C</h3>
+                                <p class="main-good-text">Зубная паста для комплексной защиты</p>
+                                <section class="main-good__box">
+                                    <p class="main-good-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="main-good-box-btn open-container" data-containerid="add_item">Добавить в корзину</p>
+                                </section>
+                            </div>
+                        </li>
+                        <li class="main-good-item swiper-slide">
+                            <div class="main-good-item-wrapper">
+                                <div class="main-good-img-wrapper">
+                                    <a href="#">
+                                        <img src="assets/img/png/1.png" class="main-good-img" alt=""/>
+                                    </a>
+                                </div>
+                                <span class="main-good-state state state-in-stock"></span>
+                                <h3 class="main-good-caption">Mirafluor C</h3>
+                                <p class="main-good-text">Зубная паста для комплексной защиты</p>
+                                <section class="main-good__box">
+                                    <p class="main-good-box-text"><span class="main-price">350 <span class="rub">₽</span></span></p>
+                                    <p class="main-good-box-btn open-container" data-containerid="add_item">Добавить в корзину</p>
+                                </section>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <span class="main-good-btn prev swiper-button-prev"></span>
+                <span class="main-good-btn next swiper-button-prev"></span>
+
+                <div class="main-catalog__container">
+                    <a href="#" class="main-catalog-link">
+                        <h2 class="main-catalog-caption">Каталог</h2>
+                        <a href="#" class="main-catalog-btn">Посмотреть весь</a>
+                        <img src="assets/img/png/cap.png" class="main-catalog-img cap" alt="Каталог"/>
+                        <img src="assets/img/png/tube.png" class="main-catalog-img tube" alt="Каталог"/>
+                    </a>
+                </div>
+
+            </div>
+            <!-- end -->
 
         </div>
         <!-- end -->
@@ -1576,6 +1709,26 @@
         </div>
     </div>
 
+</footer>
+<!-- end -->
+
+<!-- Общий мобильный подвал -->
+<footer class="footer-mob">
+    <a href="#" class="footer-link">Новинки и специальные <br/>предложения</a>
+    <a href="#" class="footer-link">Продукты</a>
+    <a href="#" class="footer-link">Бренды</a>
+    <a href="#" class="footer-link">Проблемы</a>
+
+
+    <a href="tel:88312222222" class="footer-tel">8 (831) 222 22 22</a>
+    <p class="footer-address">Нижний Новогород ул. Белинского, 153</p>
+
+    <div class="footer__container">
+        <div class="footer__box">
+            <span class="footer-year">2018</span>
+            <p class="footer-text">Разработано в <span class="footer-xdes">x-design</span></p>
+        </div>
+    </div>
 </footer>
 <!-- end -->
 

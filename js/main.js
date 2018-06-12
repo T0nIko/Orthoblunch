@@ -155,6 +155,15 @@ $(document).ready(function () {
         },
     });
 
+    // Слайдер фоток
+    let swiper_5 = new Swiper('.main-good-list-wrapper.swiper-container', {
+        grabCursor: true,
+        navigation: {
+            nextEl: '.main-good-btn.next',
+            prevEl: '.main-good-btn.prev',
+        },
+    });
+
     $(document).on('click', '.product-item-img', function () {
         let img_addess = $(this).attr('src');
         $('.product-item-img').closest('.product-item').removeClass('img-active');
@@ -273,6 +282,13 @@ $(document).ready(function () {
         let container = $(this).data('containerid');
         console.log(container);
         $('[data-container = ' + container + ']').addClass('active');
+    });
+
+    // Закрыть попап
+    $(document).on('click', '.close-container', function () {
+        let container = $(this).data('containerid');
+        console.log(container);
+        $('[data-container = ' + container + ']').removeClass('active');
     });
 
 });
