@@ -61,31 +61,40 @@ $(document).ready(function () {
 
     let $footerOffsetTop = $(".footer").offset().top;
 
-    // Скролл до определенного момента
-    $window.scroll(function () {
-        if ($window.scrollTop() > $sidebarOffset.top - 80) {
-            $sidebar.addClass("fixed");
-            let width = $sidebar.width();
-            $sidebar.attr('style', 'left: calc(50% - ' + (width / 2) + 'px);');
+    function fixIt() {
+        if (window.screen.width > 767) {
+            $window.scroll(function () {
+                if ($window.scrollTop() > $sidebarOffset.top - 80) {
+                    $sidebar.addClass("fixed");
+                    let width = $sidebar.width();
+                    $sidebar.attr('style', 'left: calc(50% - ' + (width / 2) + 'px);');
+                }
+                else {
+                    $sidebar.removeClass("fixed");
+                    $sidebar.attr('style', '');
+                }
+                if ($window.scrollTop() > $headerOffset.top + 65) {
+                    $header.addClass("fixed");
+                }
+                else {
+                    $header.removeClass("fixed");
+                }
+                if ($window.scrollTop() + $sidebarHeight > $footerOffsetTop) {
+                    $sidebar.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
+                    $header.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
+                }
+                else {
+                    console.log('It is work');
+                }
+            });
         }
-        else {
-            $sidebar.removeClass("fixed");
-            $sidebar.attr('style', '');
-        }
-        if ($window.scrollTop() > $headerOffset.top + 65) {
-            $header.addClass("fixed");
-        }
-        else {
-            $header.removeClass("fixed");
-        }
-        if ($window.scrollTop() + $sidebarHeight > $footerOffsetTop) {
-            $sidebar.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
-            $header.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
-        }
-        else {
-            console.log('It is work');
-        }
+    }
+    fixIt();
+
+    $( window ).resize(function() {
+        fixIt();
     });
+
 
     // Иницализация параллакса
     $(window).scroll(function (e) {
@@ -163,6 +172,17 @@ $(document).ready(function () {
             prevEl: '.main-good-btn.prev',
         },
     });
+
+    if (window.screen.width < 768) {
+        // Слайдер промсмотренных
+        let mobil_slider = new Swiper('.mobil-slider.swiper-container', {
+            grabCursor: true,
+            navigation: {
+                nextEl: '.catalog-special.next',
+                prevEl: '.catalog-special.prev',
+            },
+        });
+    }
 
     $(document).on('click', '.product-item-img', function () {
         let img_addess = $(this).attr('src');
