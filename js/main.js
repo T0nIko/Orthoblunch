@@ -177,6 +177,7 @@ $(document).ready(function () {
         // Слайдер промсмотренных
         let mobil_slider = new Swiper('.mobil-slider.swiper-container', {
             grabCursor: true,
+            loop: true,
             navigation: {
                 nextEl: '.catalog-special.next',
                 prevEl: '.catalog-special.prev',
