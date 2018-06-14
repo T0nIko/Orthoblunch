@@ -864,7 +864,16 @@ input::-webkit-inner-spin-button {
   margin-top: 190px;
 }
 
+.header--mob.fixed .header-btn {
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
 .header-btn {
+  @include ease-in-out-3s;
   font-family: 'Century Gothic', sans-serif;
   line-height: normal;
   font-size: 10px;
@@ -877,7 +886,7 @@ input::-webkit-inner-spin-button {
     margin-left: 15px;
   }
   &:nth-child(3) {
-    margin-right: 15px;
+    margin-right: 10px;
   }
 }
 
@@ -912,11 +921,11 @@ input::-webkit-inner-spin-button {
 }
 
 .header--mob.fixed .header-logo--mob {
-  -webkit-transform: translateY(-11px)scale(.7);
-  -moz-transform: translateY(-11px)scale(.7);
-  -ms-transform: translateY(-11px)scale(.7);
-  -o-transform: translateY(-11px)scale(.7);
-  transform: translateY(-11px)scale(.7);
+  -webkit-transform: translateY(-14px)scale(.7);
+  -moz-transform: translateY(-14px)scale(.7);
+  -ms-transform: translateY(-14px)scale(.7);
+  -o-transform: translateY(-14px)scale(.7);
+  transform: translateY(-14px)scale(.7);
 }
 
 .header-logo--mob {
@@ -1932,7 +1941,7 @@ article.main-good__container {
   @media screen and (max-width: 767px) {
     height: 220px;
     max-width: 180px;
-    margin-bottom: 10px;
+    margin:0 auto 10px;
   }
 }
 
