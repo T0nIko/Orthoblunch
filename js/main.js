@@ -20,7 +20,7 @@ $(document).ready(function () {
         });
 
         $('.photo-item-img').each(function () {
-            let height= $(this).height();
+            let height = $(this).height();
             $(this).attr('style', 'top: calc(50% - ' + (height / 2) + 'px);');
         });
 
@@ -53,48 +53,48 @@ $(document).ready(function () {
 
     let $sidebar = $("#navigation");
     let $header = $(".header");
+    let $headerMob = $(".header--mob");
 
     let $sidebarHeight = $sidebar.innerHeight();
     let $sidebarOffset = $sidebar.offset();
 
     let $headerOffset = $header.offset();
 
+    let $headerMobOffset = $headerMob.offset();
+
     let $footerOffsetTop = $(".footer").offset().top;
 
-    function fixIt() {
-        if (window.screen.width > 767) {
-            $window.scroll(function () {
-                if ($window.scrollTop() > $sidebarOffset.top - 80) {
-                    $sidebar.addClass("fixed");
-                    let width = $sidebar.width();
-                    $sidebar.attr('style', 'left: calc(50% - ' + (width / 2) + 'px);');
-                }
-                else {
-                    $sidebar.removeClass("fixed");
-                    $sidebar.attr('style', '');
-                }
-                if ($window.scrollTop() > $headerOffset.top + 65) {
-                    $header.addClass("fixed");
-                }
-                else {
-                    $header.removeClass("fixed");
-                }
-                if ($window.scrollTop() + $sidebarHeight > $footerOffsetTop) {
-                    $sidebar.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
-                    $header.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
-                }
-                else {
-                    console.log('It is work');
-                }
-            });
+
+    $window.scroll(function () {
+        if ($window.scrollTop() > $sidebarOffset.top - 80) {
+            $sidebar.addClass("fixed");
+            let width = $sidebar.width();
+            $sidebar.attr('style', 'left: calc(50% - ' + (width / 2) + 'px);');
         }
-    }
-    fixIt();
-
-    $( window ).resize(function() {
-        fixIt();
+        else {
+            $sidebar.removeClass("fixed");
+            $sidebar.attr('style', '');
+        }
+        if ($window.scrollTop() > $headerOffset.top + 65) {
+            $header.addClass("fixed");
+        }
+        else {
+            $header.removeClass("fixed");
+        }
+        if ($window.scrollTop() > $headerMobOffset.top + 20) {
+            $headerMob.addClass("fixed");
+        }
+        else {
+            $headerMob.removeClass("fixed");
+        }
+        if ($window.scrollTop() + $sidebarHeight > $footerOffsetTop) {
+            $sidebar.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
+            $header.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
+        }
+        else {
+            console.log('It is work');
+        }
     });
-
 
     // Иницализация параллакса
     $(window).scroll(function (e) {
@@ -213,7 +213,7 @@ $(document).ready(function () {
     let show = 'show';
     $('input').on('checkval', function () {
         let label = $(this).next('label');
-        if(this.value !== '') {
+        if (this.value !== '') {
             label.addClass(show);
         } else {
             label.removeClass(show);
@@ -234,7 +234,7 @@ $(document).ready(function () {
         if ($(this).find('input[type = checkbox]').prop('checked') === true) {
             $(button).addClass('active-btn');
         }
-        else  {
+        else {
             $(button).removeClass('active-btn');
             console.log(button);
         }
@@ -262,7 +262,7 @@ $(document).ready(function () {
         count++;
         let new_summ = base_summ * count;
 
-        $(input_id).attr('value',count); // запись нового количества
+        $(input_id).attr('value', count); // запись нового количества
         $('.' + price_id).text(new_summ); // запись суммы в видимый блок
         $('#' + price_id).attr('value', new_summ); // запись суммы в скрытый инпут
     });
@@ -277,7 +277,7 @@ $(document).ready(function () {
             count--;
             let new_summ = summ - base_summ;
 
-            $(input_id).attr('value',count); // запись нового количества
+            $(input_id).attr('value', count); // запись нового количества
             $('.' + price_id).text(new_summ); // запись суммы в видимый блок
             $('#' + price_id).attr('value', new_summ); // запись суммы в скрытый инпут
         }
