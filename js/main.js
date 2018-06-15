@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     $(function () {
 
         // Изменение текста в зависимости от состояния: есть или нет в наличии
@@ -17,11 +18,6 @@ $(document).ready(function () {
         $('.navigation-all-special-image').each(function () {
             let width = $(this).width();
             $(this).attr('style', 'left: calc(50% - ' + (width / 2) + 'px);');
-        });
-
-        $('.photo-item-img').each(function () {
-            let height = $(this).height();
-            $(this).attr('style', 'top: calc(50% - ' + (height / 2) + 'px);');
         });
 
         $('#product_img').attr('src', $('.product-item-img').attr('src'));
@@ -177,6 +173,7 @@ $(document).ready(function () {
         // Слайдер промсмотренных
         let mobil_slider = new Swiper('.mobil-slider.swiper-container', {
             grabCursor: true,
+            slidesPerView: 'auto',
             loop: true,
             navigation: {
                 nextEl: '.catalog-special.next',
