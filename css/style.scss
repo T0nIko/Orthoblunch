@@ -284,9 +284,6 @@ input::-webkit-inner-spin-button {
   @media screen and (min-width: 1366px){
     margin-top: 300px;
   }
-  @media screen and (min-width: 993px) and (max-width: 1365px){
-    margin-top: 280px;
-  }
 }
 
 .header.fixed ~ .main-header__container ~ .wrapper {
@@ -859,9 +856,18 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.header--mob.fixed ~ .main-header__container ~ .navigation ~ .navigation--mob ~ .wrapper .main,
-.header--mob.fixed ~ .navigation ~ .navigation--mob ~ .wrapper .main{
+.header.fixed ~ .main-header__container ~ .navigation ~ .navigation--mob ~ .wrapper .main.home {
   margin-top: 190px;
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    margin-top: 80px;
+  }
+}
+
+.header.fixed ~ .navigation ~ .navigation--mob ~ .wrapper .main{
+  margin-top: 190px;
+  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    margin-top: 200px;
+  }
 }
 
 .header--mob.fixed .header-btn {
@@ -948,7 +954,6 @@ input::-webkit-inner-spin-button {
 .main-header__container {
   width: 100%;
   height: 540px;
-  z-index: -10;
   @media screen and (min-width: 1024px) and (max-width: 1600px) {
     height: 420px;
   }
@@ -990,16 +995,17 @@ input::-webkit-inner-spin-button {
       background: linear-gradient(360deg, #0F3B57 0%, rgba(15, 59, 87, 0) 89.24%);
     }
   }
-  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+  @media screen and (min-width: 1175px) and (max-width: 1600px) {
     &:after {
       left: calc(50% - 588px);
       max-width: 1175px;
     }
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1024px) and (max-width: 1174px) {
     &:after {
       left: calc(50% - 512px);
       max-width: 1024px;
+      width: 100%;
     }
   }
 }
@@ -1031,7 +1037,7 @@ input::-webkit-inner-spin-button {
     width: 220px;
     background: rgba(255,255,255,.5);
   }
-  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+  @media screen and (min-width: 1175px) and (max-width: 1600px) {
     &:before {
       left: calc(50% - 807px);
       height: 420px;
@@ -1041,7 +1047,7 @@ input::-webkit-inner-spin-button {
       height: 420px;
     }
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1024px) and (max-width: 1174px) {
     display: none;
   }
 }
@@ -1204,17 +1210,16 @@ h2.main-header-caption {
       transform: translateX(-50%);
       box-shadow: 0 2px 10px rgba(180, 203, 207, .4);
     }
-    @media screen and (min-width: 1024px) and (max-width: 1365px) {
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
       padding: 0;
       max-width: 1000px;
-
     }
   }
-  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+  @media screen and (min-width: 1280px) and (max-width: 1600px) {
     max-width: 1175px;
     height: 80px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
     @include space-between;
     padding: 0 15px;
   }
@@ -1838,7 +1843,18 @@ article.main-good__container {
     max-width: 200px;
     margin: 0 125px 70px 0;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1360px) and (max-width: 1365px) {
+    min-height: 530px;
+    max-width: 200px;
+    margin: 0 115px 70px 0;
+  }
+  @media screen and (min-width: 1280px) and (max-width: 1359px) {
+    min-height: 560px;
+    max-width: 200px;
+    margin: 0 10% 50px 0;
+
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
     min-height: 560px;
     max-width: 200px;
     margin: 0 6.5% 50px 0;
@@ -2190,7 +2206,25 @@ article.main-good__container {
       transform: translateY(-95px) translateX(-95px) rotate(-130deg) scale(1.05);
     }
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1280px) and (max-width: 1365px) {
+    width: 515px;
+    height: 425px;
+    &:hover .main-catalog-img.tube {
+      -webkit-transform: translateY(55px) translateX(55px) rotate(-130deg) scale(1.05);
+      -moz-transform: translateY(55px) translateX(55px) rotate(-130deg) scale(1.05);
+      -ms-transform: translateY(55px) translateX(55px) rotate(-130deg) scale(1.05);
+      -o-transform: translateY(55px) translateX(55px) rotate(-130deg) scale(1.05);
+      transform: translateY(55px) translateX(55px) rotate(-130deg) scale(1.05);
+    }
+    &:hover .main-catalog-img.cap {
+      -webkit-transform: translateY(-55px) translateX(-55px) rotate(-130deg) scale(1.05);
+      -moz-transform: translateY(-55px) translateX(-55px) rotate(-130deg) scale(1.05);
+      -ms-transform: translateY(-55px) translateX(-55px) rotate(-130deg) scale(1.05);
+      -o-transform: translateY(-55px) translateX(-55px) rotate(-130deg) scale(1.05);
+      transform: translateY(-55px) translateX(-55px) rotate(-130deg) scale(1.05);
+    }
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
     width: 465px;
     height: 425px;
     &:hover .main-catalog-img.tube {
@@ -2615,7 +2649,7 @@ article.main-good__container {
   width: 100%;
   max-width: 1570px;
   margin: 45px auto 0;
-  @media screen and (min-width: 1601px) {
+  @media screen and (min-width: 1280px) {
     @include space-between;
   }
   @media screen and (min-width: 1024px) and (max-width: 1600px) {
@@ -2637,7 +2671,10 @@ article.main-good__container {
 }
 
 .main.product .all-article {
-  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+  @media screen and (min-width: 1025px) and (max-width: 1366px) {
+    right: -110px !important;
+  }
+  @media screen and (width: 1024px) {
     right: -125px !important;
   }
 }
@@ -3221,7 +3258,10 @@ article.main-good__container {
   @media screen and (min-width: 1601px) {
     padding: 20px !important;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1600px) {
+  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+    max-width: 1175px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1365px) {
     max-width: 900px;
   }
   @media screen and (max-width: 767px) {
@@ -3262,7 +3302,7 @@ article.main-good__container {
       margin-right: 0;
     }
   }
-  @media screen and (min-width: 1024px) and (max-width: 13650px) {
+  @media screen and (min-width: 1024px) and (max-width: 1365px) {
     max-width: 200px;
     margin-right: 150px;
     &:last-child {
@@ -4658,10 +4698,10 @@ article.main-good__container {
   max-width: 1570px;
   width: 100%;
   margin: 50px auto 60px;
-  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+  @media screen and (min-width: 1280px) and (max-width: 1600px) {
     max-width: 1175px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
     padding: 0 15px;
   }
   @media screen and (max-width: 767px) {
@@ -4865,6 +4905,9 @@ article.main-good__container {
 
 .main.login .auth__footer {
   margin-top: 0;
+  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+    margin-top: 20px;
+  }
   @media screen and (max-width: 767px) {
     margin-top: 20px;
   }
@@ -5053,6 +5096,12 @@ article.main-good__container {
 
 .main.auth .auth-catalog__container {
   @media screen and (min-width: 1024px) and (max-width: 1365px) {
+    margin-top: -125px;
+  }
+}
+
+.main.login .auth-catalog__container {
+  @media screen and (min-width: 1024px) and (max-width: 1365px) {
     margin-top: -55px;
   }
 }
@@ -5070,7 +5119,12 @@ article.main-good__container {
     width: 395px;
     height: 240px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1280px) and (max-width: 1365px) {
+    width: 445px;
+    height: 220px;
+    margin-top: 50px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
     width: 345px;
     height: 220px;
     margin-top: 50px;
@@ -5642,10 +5696,11 @@ article.main-good__container {
   max-width: 1570px;
   width: 100%;
   margin: 55px auto 100px;
-  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+  @media screen and (min-width: 1280px) and (max-width: 1600px) {
     max-width: 1175px;
+
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
     padding: 0 15px;
   }
   @media screen and (max-width: 767px) {
@@ -6003,7 +6058,7 @@ article.main-good__container {
   left: 0;
   right: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   @media screen and (max-width: 767px) {
     height: 300px;
     width: auto;
@@ -6061,12 +6116,11 @@ article.main-good__container {
   max-width: 1570px;
   width: 100%;
   margin: 35px auto 60px;
-  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+  @media screen and (min-width: 1280px) and (max-width: 1600px) {
     max-width: 1175px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
     padding: 0 15px;
-
   }
   @media screen and (max-width: 767px) {
     margin: 30px 0;
@@ -6258,10 +6312,11 @@ p.result-info-text {
   max-width: 1570px;
   width: 100%;
   margin: 55px auto 60px;
-  @media screen and (min-width: 1366px) and (max-width: 1600px) {
+  @media screen and (min-width: 1280px) and (max-width: 1600px) {
     max-width: 1175px;
+
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
     padding: 0 15px;
   }
   @media screen and (max-width: 767px) {
@@ -6506,12 +6561,11 @@ p.result-info-text {
   @include space-between;
   max-width: 785px;
   width: 100%;
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
     max-width: 590px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     max-width: 450px;
-
   }
 }
 
@@ -6785,10 +6839,10 @@ p.result-info-text {
   &:nth-last-child(2) {
     margin-bottom: 40px;
   }
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
     margin-bottom: 55px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     margin-bottom: 70px;
   }
   @media screen and (max-width: 1600px){
@@ -6865,10 +6919,10 @@ p.result-info-text {
   max-width: 1570px;
   width: 100%;
   margin: 55px auto 30px;
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
     max-width: 1175px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     padding: 0 15px;
   }
   @media screen and (max-width: 767px){
@@ -7223,9 +7277,17 @@ p.result-info-text {
   }
 }
 
+.mobil-slider {
+  width: 100%;
+}
+
 .basket-special-wrapper {
   @include flex-horizontal;
   width: 100%;
+  @media screen and (min-width: 1280px) and (max-width: 1365px){
+    @include space-between;
+    width: 100%;
+  }
   @media screen and (min-width: 768px){
     @include stretch;
   }
@@ -7242,6 +7304,7 @@ p.result-info-text {
     margin-right: 0;
   }
   @media screen and (min-width: 1366px) and (max-width: 1600px){
+    max-width: 330px;
     &:nth-child(3n) {
       margin-right: 0;
     }
@@ -7353,6 +7416,9 @@ p.result-info-text {
     -o-transform: translateY(-5px);
     transform: translateY(-5px);
   }
+  @media screen and (min-width: 1366px) and (max-width: 1600px){
+    padding: 10px;
+  }
   @media screen and (min-width: 1024px) and (max-width: 1365px){
     padding: 10px;
     font-size: 14px;
@@ -7387,13 +7453,14 @@ p.result-info-text {
   margin-right: auto;
   margin-left: auto;
   margin-top: 45px;
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
     max-width: 1175px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     max-width: 900px;
   }
   @media screen and (max-width: 767px){
+
     margin-bottom: 30px;
   }
 }
@@ -7410,10 +7477,10 @@ p.result-info-text {
   max-width: 1570px;
   width: 100%;
   margin: 0 auto 30px;
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
     max-width: 1175px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     max-width: 900px;
   }
   @media screen and (max-width: 767px){
@@ -7429,10 +7496,10 @@ p.result-info-text {
   overflow: hidden;
   max-width: 1570px;
   margin: 0 auto;
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
     max-width: 1175px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     max-width: 900px;
     height: 280px;
   }
@@ -7447,7 +7514,7 @@ p.result-info-text {
   right: 0;
   width: 100%;
   height: auto;
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     width: 100%;
     height: 100%;
   }
@@ -7466,7 +7533,7 @@ p.result-info-text {
   &:hover {
     background: #012D48;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     @include flex-horizontal;
     @include center;
     @include space-around;
@@ -7482,7 +7549,7 @@ p.result-info-text {
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
   }
-  @media screen and (min-width: 1366px){
+  @media screen and (min-width: 1280px){
     @include flex-horizontal;
     @include center;
     @include space-around;
@@ -7854,10 +7921,10 @@ p.result-info-text {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
     max-width: 1175px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     padding: 0 15px;
   }
   @media screen and (max-width: 767px){
@@ -7955,6 +8022,9 @@ p.result-info-text {
 .catalog-special-wrapper {
   @include flex-horizontal;
   width: 100%;
+  @media screen and (min-width: 1024px) and (max-width: 1365px){
+    @include space-between;
+  }
   @media screen and (min-width: 768px){
     @include stretch;
   }
@@ -8180,6 +8250,9 @@ p.result-info-text {
   margin: 35px auto 0;
   @include flex-horizontal;
   align-items: stretch;
+  @media screen and (min-width: 1024px) and (max-width: 1365px){
+    @include space-between;
+  }
   @media screen and (min-width: 768px){
     flex-wrap: wrap;
   }
@@ -8671,12 +8744,11 @@ article.catalog-good__container {
   max-width: 1570px;
   width: 100%;
   margin: 55px auto 80px;
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
     max-width: 1175px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     padding: 0 15px;
-
   }
   @media screen and (max-width: 767px){
     @include space-around;
@@ -8760,7 +8832,7 @@ article.catalog-good__container {
   flex-wrap: wrap;
   width: 100%;
   margin: 40px auto 60px;
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     padding: 0 15px;
   }
   @media screen and (max-width: 767px){
@@ -8777,7 +8849,7 @@ article.catalog-good__container {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
     max-width: 1175px;
   }
 }
@@ -9315,10 +9387,11 @@ article.catalog-good__container {
   max-width: 245px;
   height: 415px;
   width: 100%;
-  @media screen and (min-width: 1366px) and (max-width: 1600px){
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
     margin: auto 0 auto auto;
+
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px){
+  @media screen and (min-width: 1024px) and (max-width: 1279px){
     max-width: 200px;
     margin: auto 0;
   }
