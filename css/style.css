@@ -676,12 +676,6 @@ img.o-fit-polyfill {
 
 .header.fixed ~ .navigation ~ .navigation--mob ~ .wrapper .main {
   margin-top: 190px; }
-  @media screen and (min-width: 1024px) and (max-width: 1600px) {
-    .header.fixed ~ .navigation ~ .navigation--mob ~ .wrapper .main {
-      margin-top: 200px; } }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
-    .header.fixed ~ .navigation ~ .navigation--mob ~ .wrapper .main {
-      margin-top: 200px; } }
 
 @media screen and (max-width: 1023px) {
   .header--mob.fixed ~ .main-header__container ~ .navigation ~ .navigation--mob ~ .wrapper .main.home {
