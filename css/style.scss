@@ -285,10 +285,13 @@ input::-webkit-inner-spin-button {
   font-family: 'Roboto', sans-serif;
 }
 
+.wrapper {
+  position: relative;
+}
+
 .wrapper ~ .footer {
   @media screen and (min-width: 1024px) and (max-width: 1365px){
     margin: auto 0 0 0;
-
   }
 }
 
@@ -8168,7 +8171,7 @@ p.result-info-text {
   width: 100%;
   margin-bottom: 100px;
   @media screen and (max-width: 767px){
-    margin: 70px 0;
+    margin: 30px 0;
   }
 }
 
@@ -8304,25 +8307,7 @@ p.result-info-text {
     transform: rotate(90deg);
   }
   @media screen and (max-width: 1023px){
-    right: auto;
-    left: 15px;
-    height: 14px;
-    color: #3EC2CF;
-    padding-left: 20px;
-    &:before {
-      @include description-text;
-      position: absolute;
-      content:'<<';
-      color: #3EC2CF;
-      top: 0;
-      left: 0;
-    }
-  }
-  @media screen and (min-width: 768px) and (max-width: 1023px){
-    top: -30px;
-  }
-  @media screen and (max-width: 767px){
-    top: -40px;
+    display: none;
   }
 }
 
@@ -10536,3 +10521,63 @@ article.catalog-good__container {
   margin: auto;
 }
 /*end*/
+
+/**/
+.path-list {
+  @include flex-horizontal;
+  @include flex-end;
+  position: absolute;
+  left: calc(50% - 785px);
+  top: -47px;
+  max-width: 1570px;
+  width: 100%;
+  @media screen and (min-width: 1280px) and (max-width: 1600px) {
+    max-width: 1175px;
+    left: calc(50% - 587px);
+    top: 15px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding: 0 15px;
+    left: 0;
+    top: 15px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0 15px;
+    left: 0;
+    top: -25px;
+  }
+}
+
+.path-item {
+  @include transition-cb-all;
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    opacity: .7;
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: 5px;
+    right: -12px;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background: #4C7790;
+  }
+  &:last-child {
+    margin-right: 0;
+    &:after {
+      display: none;
+    }
+  }
+  &:last-child a {
+    color: #012D48;
+  }
+}
+
+.path-item a {
+  @include description-text;
+  color: #4C7790;
+}
