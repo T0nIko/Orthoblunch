@@ -863,17 +863,17 @@ img.o-fit-polyfill {
     position: absolute;
     content: '';
     top: 0;
-    left: calc(50% - 1005px);
+    left: calc(50% - 1385px);
     height: 580px;
-    width: 220px;
+    width: 600px;
     background: rgba(255, 255, 255, 0.5); }
   .main-header-overlay:after {
     position: absolute;
     content: '';
     top: 0;
-    right: calc(50% - 1005px);
+    right: calc(50% - 1385px);
     height: 580px;
-    width: 220px;
+    width: 600px;
     background: rgba(255, 255, 255, 0.5); }
   @media screen and (min-width: 1175px) and (max-width: 1600px) {
     .main-header-overlay:before {
@@ -889,6 +889,11 @@ img.o-fit-polyfill {
 .main-header-img.mount--big {
   position: absolute;
   z-index: 5; }
+  @media screen and (min-width: 1921px) {
+    .main-header-img.mount--big {
+      left: 0;
+      top: 170px;
+      width: 100%; } }
   @media screen and (min-width: 1601px) and (max-width: 1920px) {
     .main-header-img.mount--big {
       left: calc(50% - 960px);
@@ -904,6 +909,10 @@ img.o-fit-polyfill {
 .main-header-img.mount--medium {
   position: absolute;
   z-index: 3; }
+  @media screen and (min-width: 1921px) {
+    .main-header-img.mount--medium {
+      right: calc(50% - 1220px);
+      top: 230px; } }
   @media screen and (min-width: 1601px) and (max-width: 1920px) {
     .main-header-img.mount--medium {
       right: calc(50% - 910px);
