@@ -1,5 +1,40 @@
 $(document).ready(function () {
 
+    // Изменение количества товара
+    let count = 1;
+    $(document).on('click', '.add', function () {
+        let input_id = '#' + $(this).data('countid'); // куда вписывать количество
+        let price_id = $(this).data('priceid'); // куда вписывать сумму
+        let base_summ = '#' + $(this).data('baseid'); // обратиться к инпуту с базовой суммой
+        base_summ = $(base_summ).attr('value'); // взять базовую сумму
+
+        count++;
+        let new_summ = base_summ * count;
+
+        $(input_id).attr('value', count); // запись нового количества
+        $('.' + price_id).text(new_summ); // запись суммы в видимый блок
+        $('#' + price_id).attr('value', new_summ); // запись суммы в скрытый инпут
+    });
+    $(document).on('click', '.remove', function () {
+        let input_id = '#' + $(this).data('countid'); // куда вписывать количество
+        let price_id = $(this).data('priceid'); // куда вписывать сумму
+        let summ = $('.' + price_id).text(); // взять сумму после умножения
+        let base_summ = '#' + $(this).data('baseid'); // обратиться к инпуту с базовой суммой
+        base_summ = $(base_summ).attr('value'); // взять базовую сумму
+
+        if (count > 1) {
+            count--;
+            let new_summ = summ - base_summ;
+
+            $(input_id).attr('value', count); // запись нового количества
+            $('.' + price_id).text(new_summ); // запись суммы в видимый блок
+            $('#' + price_id).attr('value', new_summ); // запись суммы в скрытый инпут
+        }
+        // теги в каталоге
+        else if ($(this).hasClass('catalog-tag-item-icon')) {
+            $(this).parent('.catalog-tag-item').toggleClass('active-item');
+        }
+    });
 
     $(function () {
 
@@ -248,41 +283,7 @@ $(document).ready(function () {
         $('[data-item = ' + item_id + ']').addClass('active-item');
     });
 
-    // Изменение количества товара
-    let count = 1;
-    $(document).on('click', '.add', function () {
-        let input_id = '#' + $(this).data('countid'); // куда вписывать количество
-        let price_id = $(this).data('priceid'); // куда вписывать сумму
-        let base_summ = '#' + $(this).data('baseid'); // обратиться к инпуту с базовой суммой
-        base_summ = $(base_summ).attr('value'); // взять базовую сумму
 
-        count++;
-        let new_summ = base_summ * count;
-
-        $(input_id).attr('value', count); // запись нового количества
-        $('.' + price_id).text(new_summ); // запись суммы в видимый блок
-        $('#' + price_id).attr('value', new_summ); // запись суммы в скрытый инпут
-    });
-    $(document).on('click', '.remove', function () {
-        let input_id = '#' + $(this).data('countid'); // куда вписывать количество
-        let price_id = $(this).data('priceid'); // куда вписывать сумму
-        let summ = $('.' + price_id).text(); // взять сумму после умножения
-        let base_summ = '#' + $(this).data('baseid'); // обратиться к инпуту с базовой суммой
-        base_summ = $(base_summ).attr('value'); // взять базовую сумму
-
-        if (count > 1) {
-            count--;
-            let new_summ = summ - base_summ;
-
-            $(input_id).attr('value', count); // запись нового количества
-            $('.' + price_id).text(new_summ); // запись суммы в видимый блок
-            $('#' + price_id).attr('value', new_summ); // запись суммы в скрытый инпут
-        }
-        // теги в каталоге
-        else if ($(this).hasClass('catalog-tag-item-icon')) {
-            $(this).parent('.catalog-tag-item').toggleClass('active-item');
-        }
-    });
 
     // перезаписать значение юзерского выбора и закрыть блок
     $(document).on('click', '.choose-item', function () {

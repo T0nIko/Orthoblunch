@@ -231,6 +231,17 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  -moz-appearance: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
 }
 
 ul {
@@ -238,6 +249,7 @@ ul {
 }
 
 body {
+  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   &::-webkit-scrollbar {
@@ -903,6 +915,7 @@ img.o-fit-polyfill {
   color: #012D48;
   margin-top: 17px;
   font-weight: 600;
+  cursor: default;
   &:first-child {
     margin-left: 15px;
   }
@@ -1430,13 +1443,26 @@ h2.main-header-caption {
     -ms-transform: translateY(540px);
     -o-transform: translateY(540px);
     transform: translateY(540px);
-    @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    @media screen and (min-width: 1366px) and (max-width: 1600px) {
       padding: 85px 55px 30px;
       -webkit-transform: translateY(380px);
       -moz-transform: translateY(380px);
       -ms-transform: translateY(380px);
       -o-transform: translateY(380px);
       transform: translateY(380px);
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1365px) {
+      -webkit-transform: translateY(360px);
+      -moz-transform: translateY(360px);
+      -ms-transform: translateY(360px);
+      -o-transform: translateY(360px);
+      transform: translateY(360px);
+    }
+    @media screen and (min-width: 1280px) and (max-width: 1365px) {
+      padding: 110px 60px 30px;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1279px) {
+      padding: 110px 15px 30px;
     }
   }
   @media screen and (min-width: 1024px) and (max-width: 1600px) {
@@ -3298,6 +3324,12 @@ article.main-good__container {
   }
 }
 
+.main.post .special-wrapper {
+  @media screen and (min-width: 1601px) {
+    margin-top: 80px !important;
+  }
+}
+
 .special-btn {
   @include transition-cb-all;
   @include flex-horizontal;
@@ -3532,6 +3564,7 @@ article.main-good__container {
 .special-list {
   @include flex-horizontal;
   @include stretch;
+  padding-bottom: 20px;
 }
 
 .special-item {
@@ -4448,6 +4481,7 @@ article.main-good__container {
   letter-spacing: .06em;
   line-height: 34px;
   color: #81A6B1;
+  cursor: default;
   @media screen and (min-width: 1024px) and (max-width: 1600px) {
     line-height: 30px;
     right: 10px;
@@ -6253,6 +6287,9 @@ article.main-good__container {
   @media screen and (max-width: 991px) {
     margin-top: 20px;
   }
+  @media screen and (max-width: 414px) {
+    padding: 0 15px;
+  }
 }
 
 .contact-footer-link {
@@ -6309,6 +6346,9 @@ article.main-good__container {
     background: url("../assets/img/svg/arrow-circle-down.svg") no-repeat 50% 50%;
     background-size: cover;
   }
+  @media screen and (max-width: 320px) {
+    margin-right: 10px;
+  }
 }
 
 .contact-footer-link-text {
@@ -6357,6 +6397,9 @@ article.main-good__container {
   }
   &:hover {
     color: #FFFFFF;
+  }
+  @media screen and (max-width: 320px) {
+    padding: 10px 15px;
   }
 }
 
@@ -6427,13 +6470,13 @@ article.main-good__container {
 .contact-list {
   position: relative;
   width: 100%;
+  height: 100%;
   flex: 1;
   @media screen and (min-width: 768px) and (max-width: 991px){
-    height: 400px;
+    min-height: 400px;
   }
-
   @media screen and (max-width: 767px) {
-    height: 300px;
+    min-height: 300px;
   }
 }
 
@@ -7489,6 +7532,7 @@ p.result-info-text {
   color: #012D48;
   width: 100%;
   margin-bottom: 5px;
+  cursor: default;
   @media screen and (max-width: 767px){
     font-size: 16px;
   }
@@ -7500,17 +7544,20 @@ p.result-info-text {
   color: #4C7790;
   width: 100%;
   margin-bottom: 30px;
+  cursor: default;
 }
 
 .basket-color {
   @include text-small;
   color: #012D48;
   margin-right: 30px;
+  cursor: default;
 }
 
 .basket-size {
   @include text-small;
   color: #012D48;
+  cursor: default;
 }
 
 .basket__container {
@@ -7535,8 +7582,12 @@ p.result-info-text {
   @include flex-horizontal;
   @include flex-end;
   @include medium-caption-bold-pt;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   color: #012D48;
-  margin-left: 35px;
+  width: 85px;
+  cursor: default;
   @media screen and (max-width: 767px){
     font-size: 16px;
   }
@@ -7558,6 +7609,7 @@ p.result-info-text {
   outline: none;
   border: 0;
   background: transparent;
+  cursor: default;
   @media screen and (max-width: 767px){
     font-size: 16px;
   }
@@ -7630,6 +7682,7 @@ p.result-info-text {
   color: #012D48;
   font-weight: 600;
   margin-right: auto;
+  cursor: default;
   @media screen and (max-width: 767px){
     font-size: 16px;
   }
@@ -7727,6 +7780,7 @@ p.result-info-text {
     }
   }
   @media screen and (max-width: 767px){
+    margin-top: 40px;
     border-radius: 20px;
     padding: 40px 40px 25px;
     &:before,
@@ -7743,6 +7797,7 @@ p.result-info-text {
   letter-spacing: 0.05em;
   color: #012D48;
   margin-bottom: 60px;
+  cursor: default;
   @media screen and (min-width: 768px) and (max-width: 1023px){
     margin-bottom: 30px;
   }
@@ -7874,6 +7929,7 @@ p.result-info-text {
   color: #012D48;
   width: 100%;
   margin-bottom: 5px;
+  cursor: default;
   @media screen and (min-width: 768px) and (max-width: 1023px){
     text-align: center;
   }
@@ -7884,6 +7940,7 @@ p.result-info-text {
   width: 100%;
   color: #4C7790;
   margin-bottom: 5px;
+  cursor: default;
   @media screen and (min-width: 768px) and (max-width: 1023px){
     text-align: center;
   }
@@ -7894,6 +7951,7 @@ p.result-info-text {
   width: 100%;
   color: #012D48;
   margin-bottom: 10px;
+  cursor: default;
   @media screen and (min-width: 768px) and (max-width: 1023px){
     text-align: center;
   }
@@ -7947,7 +8005,7 @@ p.result-info-text {
   width: 100%;
   margin-bottom: 100px;
   @media screen and (max-width: 767px){
-    margin: 100px 0;
+    margin: 70px 0;
   }
 }
 
@@ -8133,6 +8191,7 @@ p.result-info-text {
   text-transform: uppercase;
   color: #012D48;
   font-weight: 400;
+  cursor: default;
   &:last-child {
     margin-bottom: 0;
   }
@@ -8207,6 +8266,7 @@ p.result-info-text {
   font-size: 14px;
   color: #012D48;
   margin-bottom: 20px;
+  cursor: default;
   &:last-child {
     margin-bottom: 0;
   }
@@ -8224,6 +8284,7 @@ p.result-info-text {
   font-size: 14px;
   color: #012D48;
   font-weight: 600;
+  cursor: default;
 }
 
 .post__container i {
@@ -8231,14 +8292,14 @@ p.result-info-text {
   font-size: 14px;
   color: #012D48;
   font-style: italic;
+  cursor: default;
 }
 
 .post__container ul,
 .post__container ol {
   margin-bottom: 50px;
-  @media screen and (max-width: 1023px){
-    padding-left: 15px;
-  }
+  cursor: default;
+  padding-left: 15px;
   @media screen and (max-width: 767px){
     margin-bottom: 30px;
   }
@@ -8563,6 +8624,7 @@ p.result-info-text {
   text-transform: uppercase;
   color: #012D48;
   margin-bottom: 55px;
+  cursor: default;
   @media screen and (min-width: 1024px) and (max-width: 1600px){
     font-size: 18px;
   }
@@ -8751,6 +8813,7 @@ p.result-info-text {
   color: #012D48;
   width: 100%;
   margin-bottom: 5px;
+  cursor: default;
   @media screen and (min-width: 768px) and (max-width: 1023px){
     text-align: center;
   }
@@ -8761,6 +8824,7 @@ p.result-info-text {
   width: 100%;
   color: #4C7790;
   margin-bottom: 10px;
+  cursor: default;
   @media screen and (min-width: 768px) and (max-width: 1023px){
     text-align: center;
   }
@@ -8771,6 +8835,7 @@ p.result-info-text {
   width: 100%;
   color: #012D48;
   margin-bottom: 10px;
+  cursor: default;
   @media screen and (min-width: 768px) and (max-width: 1023px){
     text-align: center;
   }
@@ -8938,12 +9003,12 @@ article.catalog-good__container {
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
     max-width: 200px;
     margin: 0 125px 70px 0;
-    min-height: 560px;
+    min-height: 575px;
   }
   @media screen and (min-width: 1024px) and (max-width: 1365px) {
     max-width: 200px;
     margin: 0 6.5% 50px 0;
-    min-height: 560px;
+    min-height: 575px;
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     max-width: 200px;
@@ -9066,6 +9131,7 @@ article.catalog-good__container {
   position: relative;
   z-index: 2;
   max-height: 200px;
+  cursor: default;
   @media screen and (min-width: 1024px) and (max-width: 1600px) {
     margin-bottom: 5px;
     font-size: 8px;
@@ -9282,6 +9348,7 @@ article.catalog-good__container {
   color: #3A98A4;
   margin: 10px 20px auto 0;
   text-transform: uppercase;
+  cursor: default;
   @media screen and (min-width: 1024px) and (max-width: 1600px) {
     font-size: 18px;
   }
