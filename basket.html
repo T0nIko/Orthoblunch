@@ -861,16 +861,17 @@
 
                 <div class="basket__container">
                     <div class="basket__value">
-                        <input type="number" name="good_quantity" id="basket_value" class="basket-value" min="1" value="1" />
-                        <label for="basket_value"></label>
+                        <input type="number" name="good_quantity" readonly id="quantity" class="basket-value" min="1" value="1" />
+                        <label for="quantity"></label>
                         <div class="basket-value__container">
-                            <span class="basket-control add"></span>
-                            <span class="basket-control remove"></span>
+                            <span class="basket-control add" data-countid="quantity" data-baseid="base" data-priceid="price"></span>
+                            <span class="basket-control remove" data-countid="quantity" data-baseid="base" data-priceid="price"></span>
                         </div>
                     </div>
 
-                    <p class="basket-price"><span id="basket_price">2 460</span> <span class="rub">₽</span></p>
-                    <input type="hidden" name="good_price" value="">
+                    <p class="basket-price"><span class="price">2 460</span> <span class="rub">₽</span></p>
+                    <input type="hidden" name="good_price" id="price"/>
+                    <input type="hidden" name="good_price_default" id="base" value="2460"/>
                 </div>
 
             </section>

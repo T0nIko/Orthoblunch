@@ -184,6 +184,10 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         spaceBetween: 0,
         grabCursor: true,
+        navigation: {
+            nextEl: '.compare-btn.next',
+            prevEl: '.compare-btn.prev',
+        }
     });
 
     // Слайдер фоток

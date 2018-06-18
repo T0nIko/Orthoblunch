@@ -915,7 +915,7 @@ img.o-fit-polyfill {
   color: #012D48;
   margin-top: 17px;
   font-weight: 600;
-  cursor: default;
+  cursor: pointer;
   &:first-child {
     margin-left: 15px;
   }
@@ -2900,17 +2900,18 @@ article.main-good__container {
   }
   @media screen and (width: 1024px) {
     right: -125px !important;
+
   }
 }
 
 .main.product .article__container {
-  @media screen and (min-width: 768px) and (max-width: 1991px) {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
     max-width: 220px;
   }
 }
 
 .main.product .article__container .article-img-wrapper {
-  @media screen and (min-width: 768px) and (max-width: 1991px) {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
     max-height: 160px;
   }
 }
@@ -3529,7 +3530,7 @@ article.main-good__container {
   width: 100%;
   margin: 30px auto 0;
   @media screen and (min-width: 1024px) and (max-width: 1600px) {
-    margin: 35px auto 0;
+    margin: 15px auto 0;
   }
   @media screen and (max-width: 767px) {
     margin: 40px auto 0;
@@ -3541,14 +3542,14 @@ article.main-good__container {
   max-width: 1610px;
   margin: 0 auto;
   position: relative;
-  @media screen and (min-width: 1601px) {
+  @media screen and (min-width: 1024px) {
     padding: 20px !important;
   }
   @media screen and (min-width: 1366px) and (max-width: 1600px) {
-    max-width: 1175px;
+    max-width: 1215px;
   }
   @media screen and (min-width: 1024px) and (max-width: 1365px) {
-    max-width: 900px;
+    max-width: 940px;
   }
   @media screen and (min-width: 992px) and (max-width: 1023px) {
     max-width: 700px;
@@ -4043,7 +4044,7 @@ article.main-good__container {
   max-width: 865px;
   height: 40px;
   background: #FFFFFF;
-  padding: 0 20px;
+  padding: 10px 20px;
   @include text-nav;
   letter-spacing: 0.05em;
   color: #012D48;
@@ -4054,7 +4055,7 @@ article.main-good__container {
   }
   @media screen and (max-width: 767px) {
     height: 30px;
-    padding: 0 10px;
+    padding: 5px 10px;
   }
 }
 
@@ -4094,11 +4095,11 @@ article.main-good__container {
   &:hover {
     &:before {
       opacity: 1;
-      -webkit-transform: translateX(7px);
-      -moz-transform: translateX(7px);
-      -ms-transform: translateX(7px);
-      -o-transform: translateX(7px);
-      transform: translateX(7px);
+      -webkit-transform: translateX(10px);
+      -moz-transform: translateX(10px);
+      -ms-transform: translateX(10px);
+      -o-transform: translateX(10px);
+      transform: translateX(10px);
     }
     &:after {
       -webkit-transform: translateX(7px);
@@ -4113,6 +4114,16 @@ article.main-good__container {
   }
   @media screen and (max-width: 767px) {
     height: 30px;
+    &:hover {
+      &:before {
+        opacity: 1;
+        -webkit-transform: translateX(8px);
+        -moz-transform: translateX(8px);
+        -ms-transform: translateX(8px);
+        -o-transform: translateX(8px);
+        transform: translateX(8px);
+      }
+    }
   }
 }
 
@@ -5174,7 +5185,7 @@ article.main-good__container {
   @media screen and (min-width: 1024px) and (max-width: 1365px) {
     max-width: 600px;
   }
-  @media screen and (min-width: 992px) and (max-width: 1024px) {
+  @media screen and (min-width: 992px) and (max-width: 1023px) {
     @include flex-vertical;
     max-width: 450px;
   }
@@ -5470,7 +5481,7 @@ article.main-good__container {
 .main.login .auth-catalog__container {
   margin-top: 15px;
   @media screen and (min-width: 1024px) and (max-width: 1365px) {
-    margin-top: -55px;
+    margin-top: -55px !important;
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     max-width: 350px;
@@ -5904,6 +5915,7 @@ article.main-good__container {
   margin-left: -10px;
   padding-right: 30px;
   line-height: 64px;
+  cursor: default;
   @media screen and (max-width: 767px){
     margin: 0 auto;
     padding-right: 0;
@@ -5943,6 +5955,7 @@ article.main-good__container {
   font-size: 14px;
   font-weight: 400;
   color: #3EC2CF;
+  cursor: default;
   @media screen and (max-width: 767px){
     text-align: center;
     margin-bottom: 5px;
@@ -5953,6 +5966,7 @@ article.main-good__container {
   @include medium-caption-pt;
   color: #012D48;
   font-weight: 500;
+  cursor: default;
   @media screen and (max-width: 767px){
     margin: 0 auto 0 0;
     font-size: 14px;
@@ -5963,6 +5977,7 @@ article.main-good__container {
   @include text-small;
   letter-spacing: 0.05em;
   color: #4C7790;
+  cursor: default;
   @media screen and (max-width: 767px){
     text-align: center;
   }
@@ -5973,6 +5988,7 @@ article.main-good__container {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #012D48;
+  cursor: default;
   line-height: 1 !important;
   @media screen and (max-width: 767px){
     margin: 2px 0 0 auto;
@@ -6016,6 +6032,7 @@ article.main-good__container {
   font-weight: 400;
   color: #4C7790;
   margin-bottom: 40px;
+  cursor: default;
   @media screen and (max-width: 767px){
     text-align: center;
   }
@@ -6039,12 +6056,14 @@ article.main-good__container {
   margin-right: auto;
   margin-bottom: 0;
   text-transform: none !important;
+  cursor: default;
 }
 
 .profile-purchase-text {
   @include description-text;
   color: #012D48;
   margin-left: auto;
+  cursor: default;
   margin-right: 5px;
 }
 
@@ -6052,6 +6071,7 @@ article.main-good__container {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #012D48;
+  cursor: default;
 }
 
 .profile-purchase-description {
@@ -6061,6 +6081,7 @@ article.main-good__container {
   padding-top: 5px;
   width: 100%;
   border-top: 1px dashed #4C7790;
+  cursor: default;
 }
 
 .profile-articles-wrapper {
@@ -6092,6 +6113,7 @@ article.main-good__container {
   font-weight: 400;
   color: #4C7790;
   margin-bottom: 40px;
+  cursor: default;
 }
 
 .profile-articles__container {
@@ -6937,11 +6959,13 @@ p.result-info-text {
   color: #012D48;
   width: 100%;
   margin-bottom: 0;
+  cursor: default;
 }
 
 .order-item-description {
   @include text-nav;
   color: #4C7790;
+  cursor: default;
   @media screen and (max-width: 767px) {
     margin-top: 10px;
   }
@@ -6950,6 +6974,7 @@ p.result-info-text {
 .order-item-text {
   @include text-nav;
   color: #012D48;
+  cursor: default;
 }
 
 .order-item-remove {
@@ -7070,6 +7095,9 @@ p.result-info-text {
   @media screen and (min-width: 768px) and (max-width: 991px){
     max-width: 340px;
   }
+  @media screen and (max-width: 767px){
+    margin-bottom: 20px;
+  }
 }
 
 .order__container {
@@ -7129,6 +7157,7 @@ p.result-info-text {
   width: 100%;
   margin-bottom: 40px;
   font-weight: 400;
+  cursor: default;
   @media screen and (max-width: 1600px){
     font-size: 18px;
     margin-bottom: 20px;
@@ -7142,17 +7171,20 @@ p.result-info-text {
 .order-wrapper .order-checkbox-label span {
   @include medium-caption-pt;
   color: #012D48;
+  cursor: pointer;
 }
 
 .order-wrapper .order-field-hint {
   @include description-text;
   line-height: 22px;
   color: #4C7790;
+  cursor: default;
 }
 
 .order-wrapper .order-field-text {
   @include text-small;
   color: #012D48;
+  cursor: default;
 }
 
 .order-field-wrapper {
@@ -7339,6 +7371,7 @@ p.result-info-text {
   font-weight: 400;
   color: #012D48;
   margin-bottom: 52px;
+  cursor: default;
   @media screen and (max-width: 1600px){
     font-size: 18px;
     margin-bottom: 40px;
@@ -7808,6 +7841,9 @@ p.result-info-text {
 
 .mobil-slider {
   width: 100%;
+  @media screen and (min-width: 768px){
+    overflow: visible !important;
+  }
 }
 
 .basket-special-wrapper {
@@ -8553,6 +8589,7 @@ p.result-info-text {
   color: #012D48;
   text-transform: uppercase;
   margin-bottom: 35px;
+  padding: 0 20px;
   @media screen and (min-width: 768px) and (max-width: 1600px){
     font-size: 24px;
     margin-bottom: 15px;
@@ -8882,6 +8919,14 @@ p.result-info-text {
 .catalog-good-wrapper {
   width: 100%;
   margin-top: 95px;
+  max-width: 1610px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+  @media screen and (min-width: 1280px) and (max-width: 1600px){
+    max-width: 1215px;
+  }
   @media screen and (min-width: 1024px) and (max-width: 1365px){
     margin-top: 40px;
     padding: 0 5px;
@@ -8911,6 +8956,8 @@ p.result-info-text {
   margin: 35px auto 0;
   @include flex-horizontal;
   @include stretch;
+  padding: 0 20px;
+  width: auto !important;
   @media screen and (min-width: 768px) and (max-width: 1365px){
     @include space-between;
   }
@@ -9014,7 +9061,7 @@ article.catalog-good__container {
     max-width: 200px;
     margin: 0 0 50px 0;
   }
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     margin: 0 auto 50px;
     &:last-child {
       margin-bottom: 0;
@@ -9545,7 +9592,6 @@ article.catalog-good__container {
 
 .product__header,
 .product__container,
-.catalog-good-wrapper,
 .catalog__special {
   max-width: 1570px;
   width: 100%;
@@ -10074,6 +10120,39 @@ article.catalog-good__container {
   }
 }
 
+.compare-btn {
+  position: absolute;
+  width: 40px;
+  height: 38px;
+  bottom: 0;
+  background: #8CA7AF url('../assets/img/svg/arrow-white.svg') no-repeat 50% 50%;
+  background-size: 14px 14px;
+  cursor: pointer;
+  &.prev {
+    right: 650px;
+    @media screen and (min-width: 1280px) and (max-width: 1600px){
+      right: 450px;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1279px){
+      right: 380px;
+    }
+  }
+  &.next {
+    right: 400px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    @media screen and (min-width: 1280px) and (max-width: 1600px){
+      right: 200px;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1279px){
+      right: 140px;
+    }
+  }
+}
+
 .compare-wrapper {
   @include flex-horizontal;
   @include center;
@@ -10166,6 +10245,7 @@ article.catalog-good__container {
 .compare__container {
   @include flex-horizontal;
   @include center;
+  position: relative;
   width: calc(100% - 245px);
   @media screen and (min-width: 1024px) and (max-width: 1600px){
     max-width: 735px;
