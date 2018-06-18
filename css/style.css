@@ -9251,6 +9251,9 @@ p.result-info-text {
       position: relative;
       overflow-x: hidden; } }
 
+.main.catalog .catalog-caption {
+  padding: 0 !important; }
+
 .catalog-caption {
   font-family: "Century Gothic", sans-serif;
   font-size: 36px;
@@ -11471,6 +11474,37 @@ article.catalog-good__container {
     .not-found-icon {
       background: url("../assets/img/svg/not-found.svg") no-repeat 50.5% 5px;
       background-size: 300px auto; } }
+
+/*end*/
+/*Not found*/
+.catalog-good-icon {
+  width: 100%;
+  height: 62px;
+  display: block;
+  background: url("../assets/img/svg/search.svg") no-repeat 50% 50%;
+  background-size: 57px 62px;
+  margin-bottom: 30px; }
+
+.catalog-good-warning {
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: #012D48;
+  padding-bottom: 165px;
+  cursor: default; }
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .catalog-good-warning {
+      padding-bottom: 120px; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .catalog-good-warning {
+      padding: 0 15px 80px;
+      font-size: 18px; } }
+  @media screen and (max-width: 767px) {
+    .catalog-good-warning {
+      padding: 0 15px 20px;
+      font-size: 16px; } }
 
 /*end*/
 

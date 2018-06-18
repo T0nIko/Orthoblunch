@@ -826,6 +826,139 @@
 </nav>
 <!-- end -->
 
+<div class="wrapper">
+
+    <!-- Крошки -->
+    <ul class="path-list">
+        <li class="path-item">
+            <a href="#">Главная</a>
+        </li>
+        <li class="path-item">
+            <a href="#">Оформление заказа</a>
+        </li>
+    </ul>
+    <!-- end -->
+
+    <main class="main basket">
+
+        <h1 class="basket-caption">Оформление заказа</h1>
+
+        <form class="basket-form" method="post" action="">
+
+            <!-- Секций может быть N количество -->
+            <section class="basket__row">
+
+                <span class="basket-delete delete"></span>
+
+                <div class="basket-img-wrapper">
+                    <img src="assets/img/png/1.png" class="basket-img" alt="" />
+                </div>
+
+                <div class="basket__description">
+                    <input type="hidden" name="good_id" value="1">
+
+                    <h2 class="basket-name">Swiss Smile diamond glow</h2>
+                    <input type="hidden" name="good_name" value="Swiss Smile diamond glow">
+
+                    <p class="basket-text">Набор ультрамягких щеток</p>
+                    <input type="hidden" name="good_text" value="Набор ультрамягких щеток">
+
+                    <p class="basket-color">Blue</p>
+                    <input type="hidden" name="good_param_1" value="Blue">
+
+                    <p class="basket-size">Размер № 9</p>
+                    <input type="hidden" name="good_param_2" value="Размер № 9">
+                </div>
+
+                <div class="basket__container">
+                    <div class="basket__value">
+                        <input type="number" name="good_quantity" readonly id="quantity" class="basket-value" min="1" value="1" />
+                        <label for="quantity"></label>
+                        <div class="basket-value__container">
+                            <span class="basket-control add" data-countid="quantity" data-baseid="base" data-priceid="price"></span>
+                            <span class="basket-control remove" data-countid="quantity" data-baseid="base" data-priceid="price"></span>
+                        </div>
+                    </div>
+
+                    <p class="basket-price"><span class="price">2 460</span> <span class="rub">₽</span></p>
+                    <input type="hidden" name="good_price" id="price"/>
+                    <input type="hidden" name="good_price_default" id="base" value="2460"/>
+                </div>
+
+            </section>
+            <!-- end -->
+
+            <footer class="basket__footer">
+                <p class="basket-footer-text">Итого: <span id="basket_total_price">2 460</span> <span class="rub">₽</span></p>
+                <button type="submit" class="basket-btn">Оформить заказ</button>
+                <a href="#" class="basket-link">Продолжить покупки</a>
+            </footer>
+
+        </form>
+
+        <section class="basket__special">
+
+            <h2 class="basket-special-caption">Вы недавно смотрели</h2>
+
+            <div class="mobil-slider swiper-container">
+                <ul class="basket-special-wrapper swiper-wrapper">
+                    <li class="basket-special__container swiper-slide">
+                        <div class="basket-special-img-wrapper">
+                            <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                        </div>
+                        <div class="basket-special__description">
+                            <h3 class="basket-special-name">Mirafluor C</h3>
+                            <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                            <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                            <p class="basket-special-btn">Добавить в корзину</p>
+                        </div>
+                    </li>
+                    <li class="basket-special__container swiper-slide">
+                        <div class="basket-special-img-wrapper">
+                            <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                        </div>
+                        <div class="basket-special__description">
+                            <h3 class="basket-special-name">Mirafluor C</h3>
+                            <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                            <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                            <p class="basket-special-btn">Добавить в корзину</p>
+                        </div>
+                    </li>
+                    <li class="basket-special__container swiper-slide">
+                        <div class="basket-special-img-wrapper">
+                            <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                        </div>
+                        <div class="basket-special__description">
+                            <h3 class="basket-special-name">Mirafluor C</h3>
+                            <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                            <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                            <p class="basket-special-btn">Добавить в корзину</p>
+                        </div>
+                    </li>
+                    <li class="basket-special__container swiper-slide">
+                        <div class="basket-special-img-wrapper">
+                            <img src="assets/img/png/2.png" class="basket-special-img" alt="" />
+                        </div>
+                        <div class="basket-special__description">
+                            <h3 class="basket-special-name">Mirafluor C</h3>
+                            <p class="basket-special-text">Зубная паста для комплексной защиты</p>
+                            <p class="basket-special-price"><span class="basket-special-price">350</span> <span class="rub">₽</span></p>
+                            <p class="basket-special-btn">Добавить в корзину</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <span class="catalog-special prev"></span>
+            <span class="catalog-special next"></span>
+
+        </section>
+
+    </main>
+
+</div>
+
 <!-- Общий подвал -->
 <footer class="footer">
 
@@ -960,7 +1093,7 @@
     <div class="footer__container">
         <div class="footer__box">
             <span class="footer-year">2018</span>
-            <a href="#" class="footer-text">Разработано в <span class="footer-xdes">x-design</span></a>
+            <p class="footer-text">Разработано в <span class="footer-xdes">x-design</span></p>
         </div>
     </div>
 
@@ -981,7 +1114,7 @@
     <div class="footer__container">
         <div class="footer__box">
             <span class="footer-year">2018</span>
-            <a href="#" class="footer-text">Разработано в <span class="footer-xdes">x-design</span></a>
+            <p class="footer-text">Разработано в <span class="footer-xdes">x-design</span></p>
         </div>
     </div>
 </footer>
