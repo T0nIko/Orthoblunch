@@ -3,7 +3,7 @@ $(document).ready(function () {
     // Изменение количества товара
     let count = 1;
     $(document).on('click', '.add', function () {
-        let input_id = '#' + $(this).data('countid'); // куда вписывать количество
+        let input_id = '.' + $(this).data('countid'); // куда вписывать количество
         let price_id = $(this).data('priceid'); // куда вписывать сумму
         let base_summ = '#' + $(this).data('baseid'); // обратиться к инпуту с базовой суммой
         base_summ = $(base_summ).attr('value'); // взять базовую сумму
@@ -16,7 +16,7 @@ $(document).ready(function () {
         $('#' + price_id).attr('value', new_summ); // запись суммы в скрытый инпут
     });
     $(document).on('click', '.remove', function () {
-        let input_id = '#' + $(this).data('countid'); // куда вписывать количество
+        let input_id = '.' + $(this).data('countid'); // куда вписывать количество
         let price_id = $(this).data('priceid'); // куда вписывать сумму
         let summ = $('.' + price_id).text(); // взять сумму после умножения
         let base_summ = '#' + $(this).data('baseid'); // обратиться к инпуту с базовой суммой
@@ -286,7 +286,6 @@ $(document).ready(function () {
         $('.contact-item').removeClass('active-item');
         $('[data-item = ' + item_id + ']').addClass('active-item');
     });
-
 
 
     // перезаписать значение юзерского выбора и закрыть блок
