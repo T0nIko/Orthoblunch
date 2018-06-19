@@ -102,10 +102,12 @@ $(document).ready(function () {
             $sidebar.addClass("fixed");
             let width = $sidebar.width();
             $sidebar.attr('style', 'left: calc(50% - ' + (width / 2) + 'px);');
+            $(".main").addClass("active-main");
         }
         else {
             $sidebar.removeClass("fixed");
             $sidebar.attr('style', '');
+            $(".main").removeClass("active-main");
         }
         if ($window.scrollTop() > $headerOffset.top + 65) {
             $header.addClass("fixed");
