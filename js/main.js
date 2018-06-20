@@ -87,14 +87,11 @@ $(document).ready(function () {
     let $header = $(".header");
     let $headerMob = $(".header--mob");
 
-    let $sidebarHeight = $sidebar.innerHeight();
     let $sidebarOffset = $sidebar.offset();
 
     let $headerOffset = $header.offset();
 
     let $headerMobOffset = $headerMob.offset();
-
-    let $footerOffsetTop = $(".footer").offset().top;
 
 
     $window.scroll(function () {
@@ -120,13 +117,6 @@ $(document).ready(function () {
         }
         else {
             $headerMob.removeClass("fixed");
-        }
-        if ($window.scrollTop() + $sidebarHeight > $footerOffsetTop) {
-            $sidebar.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
-            $header.css({"top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
-        }
-        else {
-            console.log('It is work');
         }
     });
 
@@ -187,14 +177,33 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         spaceBetween: 0,
         grabCursor: true,
+        pagination: {
+            el: '.compare-num.swiper-pagination',
+            type: 'fraction',
+        },
         navigation: {
             nextEl: '.compare-btn.next',
             prevEl: '.compare-btn.prev',
         }
     });
 
+    // Слайдер на странице продукта #3
+    let swiper_4 = new Swiper('.gallery-wrapper', {
+        slidesPerView: 'auto',
+        loop: true,
+        grabCursor: true,
+        pagination: {
+            el: '.gallery-pagination.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.gallery-btn.next',
+            prevEl: '.gallery-btn.prev',
+        }
+    });
+
     // Слайдер фоток
-    let swiper_4 = new Swiper('.photo-slider__container', {
+    let swiper_5 = new Swiper('.photo-slider__container', {
         grabCursor: true,
         navigation: {
             nextEl: '.photo-btn.next',
@@ -203,7 +212,7 @@ $(document).ready(function () {
     });
 
     // Слайдер фоток
-    let swiper_5 = new Swiper('.main-good-list-wrapper.swiper-container', {
+    let swiper_6 = new Swiper('.main-good-list-wrapper.swiper-container', {
         grabCursor: true,
         navigation: {
             nextEl: '.main-good-btn.next',
@@ -308,6 +317,15 @@ $(document).ready(function () {
         if ($(this).hasClass('catalog-tag-item')) {
             $(this).toggleClass('active-item');
         }
+        else if ($(this).hasClass('color')) {
+            $(this).closest('div').find('p.open-list').text('');
+            $(this).closest('div').find('p.open-list').css('background', $(this).data('name'));
+            $(this).closest('div').find('input[type=hidden]').attr('value', $(this).data('name'));
+        }
+    });
+
+    $('.color').each(function () {
+        $(this).css('background', $(this).data('name'));
     });
 
     // Открыть попап

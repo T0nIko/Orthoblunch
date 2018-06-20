@@ -76,8 +76,8 @@
 
     <a href="#" class="header-link">интернет-магазин</a>
 
-    <section class="header-special__container">
-        <span class="header-special-icon"></span>
+    <section class="header-special__container" data-container="basket">
+        <span class="header-special-icon close-container" data-containerid="basket"></span>
         <a href="#" class="header-special-text">Специальное предложение. Брекеты со скидкой 30%</a>
     </section>
 
@@ -889,7 +889,7 @@
                 </div>
 
                 <!-- Мейн-картинка -->
-                <div class="product-img-wrapper">
+                <div class="product-img-wrapper open-container" data-containerid="gallery">
                     <img src="" class="product-img" id="product_img" alt="" />
                 </div>
                 <!-- end -->
@@ -915,16 +915,16 @@
                     <section class="product__fields">
                         <div class="product-field__container">
                             <div class="product-select-wrapper open-list" data-listid="color-list">
-                                <p class="product-field-text open-list" data-listid="color-list">Blue</p>
-                                <input type="hidden" name="good_param_1"/>
+                                <p class="product-field-color open-list" data-listid="color-list" style="background: #6cb4b8;"></p>
+                                <input type="hidden" name="good_param_1" value="#6cb4b8"/>
                                 <label class="product-label open-list" data-listid="color-list"></label>
                             </div>
 
                             <ul class="product-field-list choose-list" data-list="color-list">
-                                <li class="product-field-item choose-item" data-valueid="1" data-name="blue">Blue</li>
-                                <li class="product-field-item choose-item" data-valueid="2" data-name="orange">Orange</li>
-                                <li class="product-field-item choose-item" data-valueid="3" data-name="yellow">Yellow</li>
-                                <li class="product-field-item choose-item" data-valueid="4" data-name="pink">Pink</li>
+                                <li class="product-field-item color choose-item" data-valueid="1" data-name="#6cb4b8"></li>
+                                <li class="product-field-item color choose-item" data-valueid="2" data-name="#da7015"></li>
+                                <li class="product-field-item color choose-item" data-valueid="3" data-name="#de72da"></li>
+                                <li class="product-field-item color choose-item" data-valueid="4" data-name="#66a471"></li>
                             </ul>
                         </div>
 
@@ -1282,7 +1282,7 @@
             </main>
 
             <span class="compare-btn prev swiper-button-prev"></span>
-            <p class="compare-num">10</p>
+            <p class="compare-num swiper-pagination"></p>
             <span class="compare-btn next swiper-button-next"></span>
 
         </div>
@@ -1300,6 +1300,7 @@
                         <div class="article-img-wrapper">
                             <img src="assets/img/png/5.png" class="article-img" alt=""/>
                             <h4 class="article-text">Абразивные зубные пасты, в чем их опасность для эмали?</h4>
+                            <p class="article-description">Абразивные зубные пасты, в чем их опасность для эмали?</p>
                             <p class="article-btn">Читать статью</p>
                         </div>
                     </a>
@@ -1311,6 +1312,7 @@
                         <div class="article-img-wrapper">
                             <img src="assets/img/png/6.png" class="article-img" alt=""/>
                             <h4 class="article-text">Проблема прикуса, нужны ли брекеты?</h4>
+                            <p class="article-description">Абразивные зубные пасты, в чем их опасность для эмали?</p>
                             <p class="article-btn">Читать статью</p>
                         </div>
                     </a>
@@ -1321,6 +1323,7 @@
                         <div class="article-img-wrapper">
                             <img src="assets/img/png/7.png" class="article-img" alt=""/>
                             <h4 class="article-text">Как правильно чистить зубы ребенку? С какого возраста?</h4>
+                            <p class="article-description">Абразивные зубные пасты, в чем их опасность для эмали?</p>
                             <p class="article-btn">Читать статью</p>
                         </div>
                     </a>
@@ -1331,6 +1334,7 @@
                         <div class="article-img-wrapper">
                             <img src="assets/img/png/5.png" class="article-img" alt=""/>
                             <h4 class="article-text">Абразивные зубные пасты, в чем их опасность для эмали?</h4>
+                            <p class="article-description">Абразивные зубные пасты, в чем их опасность для эмали?</p>
                             <p class="article-btn">Читать статью</p>
                         </div>
                     </a>
@@ -1351,9 +1355,9 @@
                 <ul class="catalog-special-wrapper swiper-wrapper">
                     <li class="catalog-special__container swiper-slide">
 
-                        <div class="catalog-special-img-wrapper">
+                        <a href="#" class="catalog-special-img-wrapper">
                             <img src="assets/img/png/2.png" class="catalog-special-img" alt="" />
-                        </div>
+                        </a>
 
                         <div class="catalog-special__description">
                             <a href="#"><h3 class="catalog-special-name">Mirafluor C</h3></a>
@@ -1365,9 +1369,9 @@
                     </li>
                     <li class="catalog-special__container swiper-slide">
 
-                        <div class="catalog-special-img-wrapper">
+                        <a href="#" class="catalog-special-img-wrapper">
                             <img src="assets/img/png/2.png" class="catalog-special-img" alt="" />
-                        </div>
+                        </a>
 
                         <div class="catalog-special__description">
                             <a href="#"><h3 class="catalog-special-name">Mirafluor C</h3></a>
@@ -1379,9 +1383,9 @@
                     </li>
                     <li class="catalog-special__container swiper-slide">
 
-                        <div class="catalog-special-img-wrapper">
+                        <a href="#" class="catalog-special-img-wrapper">
                             <img src="assets/img/png/2.png" class="catalog-special-img" alt="" />
-                        </div>
+                        </a>
 
                         <div class="catalog-special__description">
                             <a href="#"><h3 class="catalog-special-name">Mirafluor C</h3></a>
@@ -1393,9 +1397,9 @@
                     </li>
                     <li class="catalog-special__container swiper-slide">
 
-                        <div class="catalog-special-img-wrapper">
+                        <a href="#" class="catalog-special-img-wrapper">
                             <img src="assets/img/png/2.png" class="catalog-special-img" alt="" />
-                        </div>
+                        </a>
 
                         <div class="catalog-special__description">
                             <a href="#"><h3 class="catalog-special-name">Mirafluor C</h3></a>
@@ -1568,6 +1572,40 @@
     </div>
 </footer>
 <!-- end -->
+
+<div class="gallery__container" data-container="gallery">
+    <span class="gallery-close close-container" data-containerid="gallery"></span>
+
+    <div class="gallery-wrapper swiper-container">
+        <ul class="gallery-list swiper-wrapper">
+            <li class="gallery-item swiper-slide">
+                <img src="assets/img/png/19.png" class="gallery-item-img" alt="" />
+            </li>
+            <li class="gallery-item swiper-slide">
+                <img src="assets/img/png/15.png" class="gallery-item-img" alt="" />
+            </li>
+            <li class="gallery-item swiper-slide">
+                <img src="assets/img/png/16.png" class="gallery-item-img" alt="" />
+            </li>
+            <li class="gallery-item swiper-slide">
+                <img src="assets/img/png/17.png" class="gallery-item-img" alt="" />
+            </li>
+            <li class="gallery-item swiper-slide">
+                <img src="assets/img/png/18.png" class="gallery-item-img" alt="" />
+            </li>
+            <li class="gallery-item swiper-slide">
+                <img src="assets/img/png/17.png" class="gallery-item-img" alt="" />
+            </li>
+            <li class="gallery-item swiper-slide">
+                <img src="assets/img/png/18.png" class="gallery-item-img" alt="" />
+        </ul>
+    </div>
+
+    <div class="gallery-pagination swiper-pagination"></div>
+
+    <span class="gallery-btn prev swiper-button-prev"></span>
+    <span class="gallery-btn next swiper-button-next"></span>
+</div>
 
 </body>
 </html>

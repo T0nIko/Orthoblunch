@@ -74,8 +74,8 @@
 
     <a href="#" class="header-link">интернет-магазин</a>
 
-    <section class="header-special__container">
-        <span class="header-special-icon"></span>
+    <section class="header-special__container" data-container="basket">
+        <span class="header-special-icon close-container" data-containerid="basket"></span>
         <a href="#" class="header-special-text">Специальное предложение. Брекеты со скидкой 30%</a>
     </section>
 
@@ -1589,10 +1589,13 @@
                         <a href="#" class="footer-item-link">Зубные щетки</a>
                     </li>
                     <li class="footer-item">
-                        <a href="#" class="footer-item-link">Корректоры</a>
+                        <a href="#" class="footer-item-link">Зубные пасты</a>
                     </li>
                     <li class="footer-item">
-                        <a href="#" class="footer-item-link">Брекет системы</a>
+                        <a href="#" class="footer-item-link">Ёршики</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item-link">Средства с хлоргексидином</a>
                     </li>
                 </ul>
             </li>
@@ -1600,25 +1603,40 @@
                 <ul class="footer-list">
                     <li class="footer-item-caption">Бренды</li>
                     <li class="footer-item">
-                        <a href="#" class="footer-item-link">Curaprox</a>
+                        <a href="#" class="footer-item-link">Curapox</a>
                     </li>
                     <li class="footer-item">
-                        <a href="#" class="footer-item-link">Swiss smile</a>
+                        <a href="#" class="footer-item-link">Swiss Smile</a>
                     </li>
                     <li class="footer-item">
                         <a href="#" class="footer-item-link">Paro</a>
                     </li>
                     <li class="footer-item">
-                        <a href="#" class="footer-item-link">Oral B</a>
+                        <a href="#" class="footer-item-link">GC</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item-link">Профессор Персин</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item-link">Ormco</a>
                     </li>
                     <li class="footer-item">
                         <a href="#" class="footer-item-link">MRS</a>
                     </li>
                     <li class="footer-item">
-                        <a href="#" class="footer-item-link">LM-активаторы</a>
+                        <a href="#" class="footer-item-link">Dr.Hinz</a>
                     </li>
                     <li class="footer-item">
-                        <a href="#" class="footer-item-link">dr.Hinz</a>
+                        <a href="#" class="footer-item-link">Ortho-Tain</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item-link">LM-Dental</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item-link">DMG</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item-link">KERR</a>
                     </li>
                 </ul>
             </li>
@@ -1627,37 +1645,61 @@
         <ul class="footer-list underline">
             <li class="footer-item-caption">Проблемы</li>
             <li class="footer-item">
-                <a href="#" class="footer-item-link">Отбеливание</a>
-            </li>
-            <li class="footer-item">
-                <a href="#" class="footer-item-link">Зубной налет</a>
-            </li>
-            <li class="footer-item">
-                <a href="#" class="footer-item-link">Кариес</a>
-            </li>
-            <li class="footer-item">
-                <a href="#" class="footer-item-link">Проблемы с деснами</a>
-            </li>
-            <li class="footer-item">
-                <a href="#" class="footer-item-link">Чувствительность</a>
-            </li>
-            <li class="footer-item">
-                <a href="#" class="footer-item-link">Неприятный запах изо рта</a>
-            </li>
-            <li class="footer-item">
-                <a href="#" class="footer-item-link">Защита эмали</a>
-            </li>
-            <li class="footer-item">
-                <a href="#" class="footer-item-link">Восстановление эмали</a>
-            </li>
-            <li class="footer-item">
                 <a href="#" class="footer-item-link">Уход за брекетами</a>
             </li>
             <li class="footer-item">
-                <a href="#" class="footer-item-link">Уход за детскими забами</a>
+                <a href="#" class="footer-item-link">Уход после имплантации</a>
             </li>
             <li class="footer-item">
-                <a href="#" class="footer-item-link">Уход за полостью рта младенцев</a>
+                <a href="#" class="footer-item-link">Уход после удаления</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Заболевание дёсен</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Уход за протезами</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Уход за ортодонтическими аппаратами</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Отбеливание</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Проблема с эмалью</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Вредные привычки</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Неправильное дыхание</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Речевые дефекты</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Неправильное положение языка</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Кривые зубы</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Зубной налёт</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Запах изо рта</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Детская гигиена</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Гигиена для онкобольных</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Гигиена для больных сахарным диабетом</a>
+            </li>
+            <li class="footer-item">
+                <a href="#" class="footer-item-link">Гигиена для беременных</a>
             </li>
         </ul>
 
@@ -1765,16 +1807,16 @@
 
                 <div class="cart-select__container">
                     <div class="cart-select-wrapper open-list">
-                        <p class="cart-field-text open-list">Blue</p>
-                        <input type="hidden" name="good_param_1"/>
+                        <p class="cart-field-color open-list" style="background: #6cb4b8;"></p>
+                        <input type="hidden" name="good_param_1" value="#6cb4b8"/>
                         <label class="cart-label open-list"></label>
                     </div>
 
                     <ul class="cart-list choose-list">
-                        <li class="cart-item choose-item" data-valueid="1" data-name="blue">Blue</li>
-                        <li class="cart-item choose-item" data-valueid="2" data-name="orange">Orange</li>
-                        <li class="cart-item choose-item" data-valueid="3" data-name="yellow">Yellow</li>
-                        <li class="cart-item choose-item" data-valueid="4" data-name="pink">Pink</li>
+                        <li class="cart-item-color color choose-item" data-valueid="1" data-name="#6cb4b8"></li>
+                        <li class="cart-item-color color choose-item" data-valueid="2" data-name="#da7015"></li>
+                        <li class="cart-item-color color choose-item" data-valueid="3" data-name="#de72da"></li>
+                        <li class="cart-item-color color choose-item" data-valueid="4" data-name="#66a471"></li>
                     </ul>
                 </div>
 
