@@ -6222,7 +6222,10 @@ article.main-good__container {
   font-weight: 400;
   color: #4C7790;
   margin-bottom: 40px;
-  cursor: default;
+  cursor: pointer;
+  &:hover {
+    opacity: .7;
+  }
   @-moz-document url-prefix() {
     margin-bottom: 35px;
   }
@@ -9963,6 +9966,7 @@ article.catalog-good__container {
   text-transform: uppercase;
   color: #012D48;
   margin-bottom: 5px;
+  display: block;
   @media screen and (min-width: 1024px) and (max-width: 1600px){
     font-size: 8px;
   }
