@@ -4712,10 +4712,36 @@ article.main-good__container {
   font-weight: 700;
   font-size: 18px;
   color: #012D48;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
   @media screen and (max-width: 1600px) {
     .footer-xdes {
       font-size: 14px; } }
+  .footer-xdes:before, .footer-xdes:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    background: #012D48; }
+  .footer-xdes:before {
+    left: 0; }
+  .footer-xdes:after {
+    right: 0;
+    background: #012D48;
+    -webkit-transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    -o-transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); }
+  .footer-xdes:hover:before {
+    background: #012D48;
+    width: 100%;
+    -webkit-transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    -o-transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); }
+  .footer-xdes:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s; }
 
 .footer-list.footer-list--last .footer-item-link {
   line-height: 37px; }
