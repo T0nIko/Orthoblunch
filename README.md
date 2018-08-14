@@ -1,6 +1,9 @@
 # Ортобланш
 ### Рабочее название - "Норма"
 
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 Технологии, используемые в проекте:
 1. HTML5;
 2. SASS (SCSS);
